@@ -17,6 +17,7 @@ symbols = \relative c, {
   \key ees \major
   \time 4/4
   \tempo 4 = 130
+  <>^\markup { Swung 8's }
   
   \tripletFeel 8 
   %%\applySwing 8 #'(3 2) 
