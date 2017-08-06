@@ -1,8 +1,11 @@
-% LilyBin
-
-% The Way You Do The Things You Do - The Temptations
-
 \version "2.16.2"
+
+#(load "swing.scm")
+
+\header {
+  piece = \markup { \fontsize #4 \bold "The Way You Do The Things You Do" }
+  opus = \markup { \italic "The Temptations" }
+}
 
 \paper {
   left-margin = 0.75\in
@@ -14,6 +17,10 @@ symbols = \relative c, {
   \key ees \major
   \time 4/4
   \tempo 4 = 130
+  
+  \tripletFeel 8 
+  %%\applySwing 8 #'(3 2) 
+  {
 
   %% 1
   r1 |
@@ -110,7 +117,7 @@ symbols = \relative c, {
   ees4.-> ees8->~ ees8 bes'8 bes8-> bes8 |
   ees,4.-> \< ees8-> ees8 bes'8 bes8-> bes8 \! |
   ees,4-.-^ r4 r2 |
-  \break
+  \pageBreak
 
   %% 51
   \mark \markup { \bold {[I]} Sax Solo}
@@ -140,7 +147,7 @@ symbols = \relative c, {
   e4. e8~ e8 b'8 \times 2/3 { b8 b8 b,8 } |
   e4. e8~ e8 b'8 b,8 b'8 |
   e,4. \< e8~ e8 b'8 b8 b8 |
-  e,4-^-. \f b4~ b4 b4-^-. |
+  e,4-^-. \f b4->~ b4 b4-. |
   \break
 
   %% 67
@@ -156,11 +163,14 @@ symbols = \relative c, {
   \repeat volta 2 {
     e4-> \f e4-> e4-> e4-> |
   } \alternative {
-    { e4-> e4-> e4-> e8-> b8 | }
+    { 
+      e4-> e4-> e4-> e8-> b8 | 
+    }
     {
       e4-> e4-> e4-> e8-> b8 |
       e4->-. \mf e,4->~ e2 \fermata
     }
+  }
   }
 }
 
@@ -174,17 +184,17 @@ these_chords = \chordmode {
   aes1 | s1 | ees1 | s1 | s1 | s1 | s1 | ees4 bes2. |
   bes1 | aes1 | bes1 | aes1 |
   ees1 | s1 | s1
-  e1 | s1 | s1 | s1 | b1 | a1 | e1 | s2. b4 |
-  e1 | s1 | s1 | s1 | s1 | s1 | s1 | s4 b2. |
+  e1 | s1 | s1 | s1 | 
+  b1 | a1 | e1 | s2. b4 |
+  e1 | s1 | s1 | s1 | 
+  s1 | s1 | s1 | s4 b2. |
   b1 | a1 | b1 | a1 |
-  e1 |
-}
-
-}
-
-\header {
-  piece = \markup { \fontsize #4 \bold "The Way You Do The Things You Do" }
-  opus = \markup { \italic "The Temptations" }
+  \repeat volta 2 { 
+    e1 | 
+  } \alternative {
+    { s1 }
+    { s1 | s1 }
+  }
 }
 
 \score {
