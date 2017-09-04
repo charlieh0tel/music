@@ -9,6 +9,8 @@
 
 \version "2.16.2"
 
+#(load "../scm/swing.scm")
+
 \paper { 
   left-margin = 0.75\in
   right-margin = 0.75\in
@@ -19,7 +21,11 @@ these_notes = \relative c, {
   \key f \major
   \time 4/4
   \tempo 4 = 150
+  <>^\markup { Swung 8's }
   
+  \tripletFeel 8 
+  {
+
   f4 a4 bes4 b4 | c4 bes4 d,4 g4 | f4 ees4 g4 b,4 | c4 f4 a4 b,4 |
   \break
   bes4 f'4 bes4 a4 | aes4 g4 c,4 e4 | f4 a4 g4 bes4 | a4 f4 d4 ges8 a8 |
@@ -43,6 +49,7 @@ these_notes = \relative c, {
   bes4 bes'4 aes4 g4 | d'4 des4 c4 bes4 | a4 f4 d4 b4 | c4 f4 d4 ges4 |
   \break
   g4 bes4 a4 aes4 | g4 e'4 g4 e4 | f4 f,4 a,4 d4 | g,4 aes4 a4 c4 | \bar "|."
+  }
 }
 
 these_chords = \chordmode {

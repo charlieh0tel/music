@@ -1,6 +1,6 @@
 \version "2.16.2"
 
-#(load "swing.scm")
+#(load "../scm/swing.scm")
 
 \header {
   piece = \markup { \fontsize #4 \bold "The Way You Do The Things You Do" }
