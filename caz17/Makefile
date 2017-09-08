@@ -10,6 +10,10 @@ rescue_me: rescue_me.pdf rescue_me.midi rescue_me.wav
 the_way_you_do_the_things_you_do: the_way_you_do_the_things_you_do.pdf the_way_you_do_the_things_you_do.midi the_way_you_do_the_things_you_do.wav
 .PHONY: the_way_you_do_the_things_you_do
 
+clean:
+	rm -f *.pdf *.midi *.wav
+.PHONY: clean
+
 %.pdf %.midi: %.ly
 	lilypond $<
 
