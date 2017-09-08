@@ -172,7 +172,7 @@ these_chords = \chordmode {
   a1 | d1:/a | a1 | d1:/a |
   a1 | d1:/a | d8 d4/cis d4/b d4/a e8:sus9 | s1 |
   a1 | d1 | a1 | d1 | a1 | d1 | d8 d4/cis d4/b d4/a e8:sus9 | s1 |
-  s4 a4 |
+  s4 a4 s2 |
 }
 
 \header {
