@@ -23,6 +23,7 @@ these_notes = \relative c, {
   \tempo 4 = 150
   <>^\markup { Swung 8's }
   
+  %%\applySwing 8 #'(3 2)
   \tripletFeel 8 
   {
 
