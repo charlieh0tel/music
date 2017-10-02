@@ -93,6 +93,7 @@ these_notes = \relative c, {
   d8. d16 e4 f4 fis8. g16 | g,4 gis4 a8. d16 dis4 | e4. a,8~ a8. a16 cis8. d16~ |
     d8. d16 fis8. g16~ g4 g,4 \bar "||" |
   \break
+
   c1 ^\markup { \huge \italic {ad lib}}| c1 \fermata | c4 r4 r2 \bar "|." |
 
 }
@@ -137,8 +138,9 @@ these_chords = \chordmode {
   c1:7 | f1:7 | c1:7 | g2:min c2:7 |
   f1:7 | fis1:7dim | c2:maj7 d2:min | e2:min ees2:min |
   d1:min | g1:7 | e2:min a2:7 | d2:min g2:7 |
+
+  %
   c1:7 | s1 | s1 |
-  
 }
 
 \header {
