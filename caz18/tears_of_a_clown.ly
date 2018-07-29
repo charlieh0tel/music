@@ -1,17 +1,21 @@
 % LilyBin
 
-% I Want You Back - The Jackson 5
-
 \include "english.ly"
 
 \version "2.18.0"
+
+\header {
+  piece = \markup { \fontsize #4 \bold "Tears of a Clown" }
+  opus = \markup { \italic "The Miracles" }
+}
+
 
 \paper { 
   left-margin = 1.0\in
   right-margin = 0.5\in
 }
 
-my_notes = \relative c {
+my_notes = {
   \clef "bass_8"
   \key cs \minor
   \time 4/4
@@ -94,11 +98,6 @@ my_notes = \relative c {
             fs,, 1 -\tenuto  |
             R1*4  |
             \bar "|."
-}
-
-\header {
-  piece = \markup { \fontsize #4 \bold "I Want You Back" }
-  opus = \markup { \italic "The Jackson 5" }
 }
 
 my_music = <<
