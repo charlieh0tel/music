@@ -9,7 +9,7 @@
   right-margin = 0.5\in
 }
 
-symbols = \relative c {
+my_notes = \relative c {
   \clef "bass_8"
   \key b \major
   \time 4/4
@@ -148,7 +148,7 @@ symbols = \relative c {
 
 }
 
-these_chords = \chordmode {
+my_chords = \chordmode {
   \set majorSevenSymbol = \markup { maj7 }
 
   \partial 8 s8 |
@@ -202,29 +202,30 @@ these_chords = \chordmode {
   opus = \markup { \italic "Ray Charles" }
 }
 
-music =   <<
-    \new ChordNames \these_chords
-    \new Staff \symbols
-    \new TabStaff
-    \with { stringTunings = #bass-tuning } 
-    { 
-      \set TabStaff.minimumFret = #3
-      \set TabStaff.restrainOpenStrings = ##t
-      \symbols
-    }
-  >>
+my_music = <<
+  \new ChordNames \my_chords
+  \new Staff \my_notes
+  \new TabStaff
+  \with { stringTunings = #bass-tuning } 
+  { 
+    \set TabStaff.minimumFret = #3
+    \set TabStaff.restrainOpenStrings = ##t
+    \my_notes
+  }
+>>
   
 \score {
-  \music
+  \my_music
   \layout {
     \context {
       \Score
     }
   }
 }
+
 \score {
   \unfoldRepeats
-  \music
+  \my_music
   \midi {}
 }
 
