@@ -5,8 +5,8 @@
 \version "2.18.0"
 
 \paper { 
-  left-margin = 0.75\in
-  right-margin = 0.75\in
+  left-margin = 1.0\in
+  right-margin = 0.5\in
 }
 
 symbols = \relative c {
@@ -189,11 +189,11 @@ these_chords = \chordmode {
   gis1:m6 | e:9 | dis:9 | r | s |
   %% 62
   \repeat volta 2 {
-     gis2:m cis4.:m gis8:m | s1 |
+     gis4.:m cis4.:m gis4:m | s1 |
   } \alternative {
     %% 64
-    { s4 cis4:m7 gis4:m s4 | s1 | }
-    { s4 cis4:m7 gis4:m s4 | s1 | }
+    { gis4.:m cis4.:m7 gis4:m | s1 | }
+    { gis4:.m cis4.:m7 gis4:m | s1 | }
   }
 }
 
@@ -217,9 +217,6 @@ these_chords = \chordmode {
   \layout {
     \context {
       \Score
-      %%proportionalNotationDuration = #(ly:make-moment 1/8)
-      %%voltaSpannerDuration = 
-      %%  #(ly:make-moment 3/4)
     }
   }
   \midi {}
