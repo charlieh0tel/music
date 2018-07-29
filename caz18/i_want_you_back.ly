@@ -147,13 +147,13 @@ my_notes = \relative c {
   %% 48
   \time 4/4
   \mark \markup { \bold {[H]} }
-  aes8.-> aes16 g8.-> g16 f16 f8-> ees16-> ~ ees16 ees16 ees8 |
+  aes8.-> aes16 g8.-> g16 f16 f8-> ees16-> ~ ees16 ees16 ees8-. |
   des16-> aes'16 des16 c,16-> ~ c16 c16 c16 bes16-> ~bes16 bes16 bes16 bes16
     ees8-> ees16-> e16 | 
   \break
   
   %% 50
-  f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
+  f8.-> f16 c8.-> c16 des16-> des8-> aes16-> ~aes8 r8 |
   bes8.-> bes16-. ees4-> r16 \ff aes,16-> aes16-> aes16-> aes4-.-^ |
   %% \bar "|]" 
   
