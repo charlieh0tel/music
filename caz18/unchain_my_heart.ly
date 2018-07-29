@@ -203,7 +203,10 @@ my_chords = \chordmode {
 
 my_music = <<
   \new ChordNames \my_chords
-  \new Staff \my_notes
+  \new Staff {
+    \set Staff.midiInstrument = #"electric bass (finger)"
+    \my_notes
+  }
   \new TabStaff
   \with { stringTunings = #bass-tuning } 
   { 
