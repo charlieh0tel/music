@@ -32,7 +32,7 @@ my_notes = \relative c, {
   \repeat volta 2 {
     %% 9
     \mark \default
-    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+    c8 \mf d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
     c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
     \break
     c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
@@ -42,10 +42,10 @@ my_notes = \relative c, {
     c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 g8-. |
     \break
     %% 21
-    c4  g'8 c8 f,4. f8 | bf,4 f'8 f,8 ~f8 c'8 c8 c8 | 
-    c4  g'8 c8 f,4. f8 | bf,4 f'8 f,8 ~f8 c'8 c8 c8 | 
-    c4  g'8 c8 f,4. f8 | bf,4 f'8 f,8 ~f8 c'8 c8 c8 | 
-    c4  g'8 c8 f,4. f8 | bf,4 f'8 f,8 ~f8 c'8 c8 c8 | 
+    c4-> \f g'8 c8 f,4.-> f8 | bf,4-> f'8 f,8-> ~f8 c'8 c8 c8 | 
+    c4-> g'8 c8 f,4.-> f8 | bf,4-> f'8 f,8-> ~f8 c'8 c8 c8 | 
+    c4-> g'8 c8 f,4.-> f8 | bf,4-> f'8 f,8-> ~f8 c'8 c8 c8 | 
+    c4-> g'8 c8 f,4.-> f8 | bf,4-> f'8 f,8-> ~f8 c'8 c8 c8 | 
     \break
     
     %% 29
@@ -54,7 +54,7 @@ my_notes = \relative c, {
     a8 a8 a8 a8 a8 a8 a8 a8 | f,2 f'4. r8 |
     \break
     %% 33
-    r1 | r1 | r1 | r2 r4 r8 c8->~ |
+    r1 \mf | r1 | r1 | r2 r4 r8 c8->~ |
   } \alternative {
     {     
       %% 37
@@ -67,8 +67,12 @@ my_notes = \relative c, {
       c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
     }
   }
-  c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
-  c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+  
+  %% 45
+  c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+  bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+  c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+  bf8 c8 d8 f8-> ~f8 d8 c8 g8-. |    %% CHECK last note
   
   %% 49
   r1 | r2 r4 r8 c8->~ |
