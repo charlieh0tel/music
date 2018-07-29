@@ -1,8 +1,11 @@
 % LilyBin
 
-% I Want You Back - The Jackson 5
-
 \version "2.18.0"
+
+\header {
+  piece = \markup { \fontsize #4 \bold "I Want You Back" }
+  opus = \markup { \italic "The Jackson 5" }
+}
 
 \paper { 
   left-margin = 1.0\in
@@ -230,11 +233,6 @@ my_chords = \chordmode {
   aes4 ees4/g f8.:m7 ees16*5 | des4 des4/c bes8.:m7 ees16*5 |
   f4:m7 c:m des:6 aes | bes:m7 ees8.:7 aes16 s2 |
   
-}
-
-\header {
-  piece = \markup { \fontsize #4 \bold "I Want You Back" }
-  opus = \markup { \italic "The Jackson 5" }
 }
 
 my_music = <<

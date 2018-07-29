@@ -1,8 +1,11 @@
 % LilyBin
 
-% Unchain My Heart - Ray Charles
-
 \version "2.18.0"
+
+\header {
+  piece = \markup { \fontsize #4 \bold "Unchain My Heart" }
+  opus = \markup { \italic "Ray Charles" }
+}
 
 \paper { 
   left-margin = 1.0\in
@@ -196,11 +199,6 @@ my_chords = \chordmode {
     { s2 cis4.:m7 gis8:m | s1 | }
     { s2 cis4.:m7 gis8:m | s1 | }
   }
-}
-
-\header {
-  piece = \markup { \fontsize #4 \bold "Unchain My Heart" }
-  opus = \markup { \italic "Ray Charles" }
 }
 
 my_music = <<
