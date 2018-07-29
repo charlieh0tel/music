@@ -36,7 +36,7 @@ my_notes = \relative c {
 
   %% 9
   \mark \markup { \bold {[B]} \italic {(Vocals)} }
-  aes'8.-> aes16 g8.-> g16 f16 f8-> ees16-> ~ ees16 c16 ees16 c16 |
+  aes'8.-> \f aes16 g8.-> g16 f16 f8-> ees16-> ~ ees16 c16 ees16 c16 |
   des8.-> des16 c8.-> c16 bes16 bes8-> ees16-> ~ees16 d16 ees16 e16 |
   \break
   
@@ -65,7 +65,7 @@ my_notes = \relative c {
     
     %% 21
     \mark \markup { \bold {[D]} }
-    aes8.-> aes16 g8.-> g16 f16 f8-> ees16-> ~ ees16 c16 ees16 c16 |
+    aes8.-> \f aes16 g8.-> g16 f16 f8-> ees16-> ~ ees16 c16 ees16 c16 |
     des8.-> des16 c8.-> c16 bes16 bes8-> ees16-> ~ees16 d16 ees16 e16 |
     \break
     
@@ -165,7 +165,71 @@ my_chords = \chordmode {
   \partial 4 s4 |
 
   aes16*15 des16 | s1 |
-  f4:m c4:m des8. aes16*3 s8 | bes4:m7  ees8.:7 aes16 s2 |
+  f4:m c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+  
+  %% 5
+  aes16*15 des16 | s1 |
+  f4:m7 c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+  
+  %% 9
+  aes4 ees4/g f8.:m7 ees16*5 | des4 des4/c bes8.:m7 ees16*5 |
+  
+  %% 11
+  f4:m7 c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+
+  \repeat volta 2 {
+    %% 13
+    aes16*15 des16 | s1 |
+    f4:m c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+  
+    %% 17
+    aes16*15 des16 | s1 |
+    f4:m7 c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+  
+    %% 21
+    aes4 ees4/g f8.:m7 ees16*5 | des4 des4/c bes8.:m7 ees16*5 |
+    
+    %% 23
+    f4:m7 c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+  
+    %% 25
+    aes4 ees4/g f8.:m7 ees16*5 | des4 des4/c bes8.:m7 ees16*5 |
+  } \alternative {
+    {
+      %% 27
+      f4:m7 c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+      s1 | s1 | s1 | s2 |
+    }
+    {
+      % 33
+      f4:m7 c4:m des8. aes16*3 s8 | s1 | s1 |
+    }
+  }
+  
+  %% 36
+  f4:m7 c:m7 des:6 aes | f:m7 c:m7 des:6 aes |
+  
+  %% 38
+  f4:m7 c:m7 des:6 aes | f:m7 c:m7 des:6 aes |
+  
+  %% 40
+  f4:m7 c:m7 des:6 aes | f:m7 c:m7 des:6 aes |
+  
+  %% 42
+  \repeat volta 2 {
+    aes4 ees4/g f8.:m7 ees16*5 | des4 des4/c bes8.:m7 ees16*5 |
+    
+    %% 44
+    f4:m7 c:m des:6 aes | bes:m7 ees8.:7 aes16 s2 | 
+    
+    %% 46
+    s1 | s2 |
+  }
+  
+  %% 48
+  aes4 ees4/g f8.:m7 ees16*5 | des4 des4/c bes8.:m7 ees16*5 |
+  f4:m7 c:m des:6 aes | bes:m7 ees8.:7 aes16 s2 |
+  
 }
 
 \header {
