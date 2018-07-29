@@ -22,4 +22,4 @@ clean:
 	timidity $< -Ow -o $@
 
 %.mp3: %.wav
-	ffmpeg -y -i $< $@
+	ffmpeg -y -loglevel warning -i $< $@
