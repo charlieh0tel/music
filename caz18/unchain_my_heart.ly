@@ -16,25 +16,26 @@ my_notes = \relative c {
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
-  \tempo 4 = 155
+  \tempo "Soul/Latin" 4 = 155
 
   \partial 8 g8 \mp |
 
   gis4-.-> b8 cis8-.-> r8 b8  gis8 fis8 | gis4-.-> r4 r4. \mf \cresc g8 |
-  gis4-.-> b8 cis8-.-> r8 b8  gis8 fis8 \f | gis4-.-^ r4 r2 |
+  gis4-.-> b8 cis8-.-> r8 b8  gis8 fis8 \f | gis4-.-^ r4 r2 \bar "||"
   \break
 
   \repeat volta 2 {
 
     %% 5
     \mark \markup { \bold {[A]} \italic {(Vocals)} }
+    \bar "[|:"
     gis4-.-> \mf b8 cis8-.-> r8 b8  gis8 fis8 | gis4-.-> r4 r4. g8 |
     gis4-.-> b8 cis8-.-> r8 b8  gis8 fis8 | gis4-.-> r4 r4. gis8 |
     %%\break
     
     %% 9
     e4-.-> b'8 cis8-.-> r8 b8  gis8 fis8 | e4-.-> r4 r4. g8 | 
-    gis4-.-> \mf b8 cis8-.-> r8 b8  gis8 fis8 | gis4-.-> r4 r2 |
+    gis4-.-> \mf b8 cis8-.-> r8 b8  gis8 fis8 | gis4-.-> r4 r2 \bar "||" |
     \break
 
     %% 13
@@ -49,8 +50,8 @@ my_notes = \relative c {
     gis4-.-> \f \< b8 cis8-.-> r8 b8  gis8 fis8 \! |
     
   } \alternative {
-    { gis4-.-^ r4 r2 | }
-    { gis4-.-^ r4 r2 | \bar "||" }
+    { gis4-.-^ r4 r2 \bar ":|]" }
+    { gis4-.-^ r4 r2 \bar "||" }
   }
   \break
   
@@ -114,7 +115,7 @@ my_notes = \relative c {
    %%\break
    
    %% 53
-   gis4-.-> r8 b8-> r8 b8->  gis8 fis8 |
+   gis4-.-> r8 b8-> r8 b8->  gis8 fis8 \bar "||" |
    \break %% NEW
    \mark \markup { \bold {[G]} } 
      e4.-> e8 ~e4 e8 e8 |
@@ -127,23 +128,23 @@ my_notes = \relative c {
    e4.-> \cresc gis8-> ~gis4 e8-> e8 |
    dis4.-> dis'8 ~dis8 cis8-> ais8 dis,8 |
    gis4-.-> \< b8 cis8-.-> r8 b8  gis8 fis8 \! |
-   gis4-.-^ r4 
-     \mark \markup { \italic { "D.S. al Coda" } }  
-     r2 \bar "||" |
+   gis4-.-^ r4 r2 _\markup { \bold { \italic { "D.S. al Coda" } } }
+   \bar "||"   % doesn't work
    \break
    
-   %%62
-   \mark \markup { \italic { "Coda" } \musicglyph #"scripts.coda" } 
    \repeat volta 2 {
+     %% 62
+     \mark \markup { \bold { \italic { "Coda" } \musicglyph #"scripts.coda" } } 
+     \bar "[|:"
      gis4-> b8 cis8-> ~cis8 b8 gis8 fis8 |
      gis2.-> r8 g8 |
      \break
    } \alternative {
      %% 64
      { gis4-> \mf b8 cis8-> ~cis8  b8  gis8 fis8 | 
-       gis2.-> r8 g8 | }
+       gis2.-> r8 g8 \bar ":|]" | }
      { gis4-.-> \f \< b8 cis8-.-> r8 b8  gis8 fis8 \! |
-       gis4-.-^ r4 r2  | }
+       gis4-.-^ r4 r2  \bar "|." }
    }
 
 }
@@ -198,7 +199,7 @@ my_chords = \chordmode {
 }
 
 \header {
-  piece = \markup { \fontsize #4 \bold "Unchain My heart" }
+  piece = \markup { \fontsize #4 \bold "Unchain My Heart" }
   opus = \markup { \italic "Ray Charles" }
 }
 
