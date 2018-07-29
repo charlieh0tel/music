@@ -154,7 +154,7 @@ my_notes = \relative c {
   
   %% 50
   f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
-  bes8.-> bes16-. ees4-> r16 \ff aes16-> aes16-> aes16-> aes4-.-^ |
+  bes8.-> bes16-. ees4-> r16 \ff aes,16-> aes16-> aes16-> aes4-.-^ |
   %% \bar "|]" 
   
 }
