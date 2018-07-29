@@ -201,9 +201,8 @@ these_chords = \chordmode {
   piece = \markup { \fontsize #4 \bold "Unchain My heart" }
   opus = \markup { \italic "Ray Charles" }
 }
-  
-\score {
-  <<
+
+music =   <<
     \new ChordNames \these_chords
     \new Staff \symbols
     \new TabStaff
@@ -214,11 +213,18 @@ these_chords = \chordmode {
       \symbols
     }
   >>
+  
+\score {
+  \music
   \layout {
     \context {
       \Score
     }
   }
+}
+\score {
+  \unfoldRepeats
+  \music
   \midi {}
 }
 
