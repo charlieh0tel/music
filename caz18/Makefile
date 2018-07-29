@@ -1,10 +1,14 @@
 all: unchain_my_heart i_want_you_back
 .PHONY: all
 
-unchain_my_heart: unchain_my_heart.pdf unchain_my_heart.midi unchain_my_heart.wav unchain_my_heart.mp3
+unchain_my_heart: \
+  unchain_my_heart.pdf unchain_my_heart.midi \
+  unchain_my_heart.wav unchain_my_heart.mp3
 .PHONY: unchain_my_heart
 
-i_want_you_back: i_want_you_back.pdf i_want_you_back.midi i_want_you_back.wav i_want_you_back.mp3
+i_want_you_back: \
+  i_want_you_back.pdf i_want_you_back.midi \
+  i_want_you_back.wav i_want_you_back.mp3
 .PHONY: i_want_you_back
 
 clean:

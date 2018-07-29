@@ -233,7 +233,7 @@ my_chords = \chordmode {
 }
 
 \header {
-  piece = \markup { \fontsize #4 \bold "Unchain My heart" }
+  piece = \markup { \fontsize #4 \bold "I Want You Back" }
   opus = \markup { \italic "The Jackson 5" }
 }
 
