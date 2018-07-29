@@ -17,7 +17,7 @@
 my_notes = \relative c, {
   \clef "bass_8"
   \time 4/4
-  \tempo 4 = 125
+  \tempo 4 = 130
   
   \key f \major
   %% WRONG KEY
@@ -29,7 +29,12 @@ my_notes = \relative c, {
   \set TabStaff.minimumFret = #14
   \set TabStaff.restrainOpenStrings = ##t
   c'8 g8 d'8 g,8 e'8 g,8 c8 g8 | 
-  c16 d16 e16 g16 c16 g16 e16 d16 c8 r8 c,8 g'8 |
+  c16 d16 e16 g16 c16 g16 e16 d16 c8 r8
+  \set TabStaff.minimumFret = #8
+  \set TabStaff.restrainOpenStrings = ##t 
+  c,8 g'8 |
+  \set TabStaff.minimumFret = #14
+  \set TabStaff.restrainOpenStrings = ##t
   c8 g8 d'8 g,8 e'8 g,8 c8 g8 | 
   c16 d16 e16 g16 c16 g16 e16 d16 c8 r8
   \set TabStaff.minimumFret = #1
@@ -137,9 +142,12 @@ my_chords = \chordmode {
 
 my_music = <<
   \new ChordNames \my_chords
-  \new Staff \my_notes
+  \new Staff {
+    \set Staff.midiInstrument = #"electric bass (finger)"
+    \my_notes
+  }
   \new TabStaff
-  \with { stringTunings = #bass-tuning } 
+    \with { stringTunings = #bass-tuning } 
   { 
     \set TabStaff.minimumFret = #1
     \set TabStaff.restrainOpenStrings = ##t
