@@ -5,7 +5,7 @@
 \version "2.18.0"
 
 \header {
-  piece = \markup { \fontsize #4 \bold "Tears of a Clown" }
+  piece = \markup { \fontsize #4 \bold "The Tears of a Clown" }
   opus = \markup { \italic "The Miracles" }
 }
 
@@ -14,93 +14,108 @@
   right-margin = 0.5\in
 }
 
-my_notes = {
+my_notes = \relative c, {
   \clef "bass_8"
-  \key cs \minor
   \time 4/4
-  \tempo 4 = 135
-
-  \partial 64*8
-
-  %% 5
-  cs, 8 -\tenuto  |
-  cs, 8 -\tenuto ds, -\tenuto es, -\tenuto fs, 4 -\tenuto gs,, 8 -\tenuto as,, b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, cs, -\tenuto  |
-  cs, 8 -\tenuto ds, -\tenuto es, -\tenuto fs, 4 -\tenuto gs,, 8 -\tenuto as,, -\tenuto b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, cs, -\tenuto  |
-  %% 10
-  cs, 8 -\tenuto ds, -\tenuto es, -\tenuto fs, 4 -\tenuto gs,, 8 -\tenuto as,, b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 -\tenuto cs, -\staccato cs, -\tenuto  |
-  cs, 8 -\tenuto ds, -\tenuto es, fs, 4 -\tenuto gs,, 8 as,, b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, -\staccato cs, -\tenuto  |
-  cs, 8 -\tenuto ds, -\tenuto es, -\tenuto fs, 4 -\tenuto gs,, 8 -\tenuto as,, -\tenuto b,, -\tenuto  |
-  %% 15
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, -\staccato cs, -\tenuto  |
-  cs, 8 -\tenuto ds, -\tenuto es, -\tenuto fs, 4 -\tenuto gs,, 8 -\tenuto as,, b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, -\staccato cs, -\tenuto  |
-  cs, 8 -\tenuto ds, -\tenuto es, -\tenuto fs, 4 -\tenuto gs,, 8 -\tenuto as,, -\tenuto b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, -\staccato cs, 
-  % warning: overlong bar truncated here |
-  %% 20
-  \skip 8 ds, 8 -\tenuto es, fs, 4 -\tenuto gs,, 8 -\tenuto as,, -\tenuto b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, r  |
-  cs, 2 -\tenuto fs, -\tenuto  |
-  b,, 4. as,, 4 -\tenuto gs,, 8 -\tenuto fs,, 4 -\tenuto  |
-  cs, 2 -\tenuto fs, -\tenuto  |
-  %% 25
-  b,, 4. -\tenuto as,, 4 -\tenuto gs,, 8 fs,, 4 -\tenuto  |
-  cs, 2 -\tenuto fs, -\tenuto  |
-  b,, 4. -\tenuto as,, 4 -\tenuto gs,, 8 fs,, 4 -\tenuto  |
-  cs, 2 -\tenuto fs, -\tenuto  |
-  b,, 4. -\tenuto as,, 4 -\tenuto gs,, 8 -\tenuto fs,, 4  |
-  %% 30
-  gs,, 8 gs,, gs,, gs,, gs,, gs,, gs,, gs,,  |
-  a,, 8 a,, a,, a,, a,, a,, a,, a,,  |
-  as,, 8 as,, as,, as,, as,, as,, gs,, fs,, -\tenuto  |
-  fs,, 1 -\tenuto  |
-  R1*3  |
-  r2 r4 r8 cs, -\tenuto _~  |
-  cs, 8 -\tenuto ds, -\tenuto es, -\tenuto fs, 4 -\tenuto gs,, 8 -\tenuto as,, b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, cs, -\tenuto  |
-  %% 40
-  cs, 8 -\tenuto ds, -\tenuto es, -\tenuto fs, 4 -\tenuto gs,, 8 -\tenuto as,, -\tenuto b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, cs, -\tenuto  |
-  cs, 8 -\tenuto ds, -\tenuto es, -\tenuto fs, 4 -\tenuto gs,, 8 -\tenuto as,, b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 -\tenuto cs, -\staccato cs, -\tenuto  |
-  cs, 8 -\tenuto ds, -\tenuto es, fs, 4 -\tenuto gs,, 8 as,, b,, -\tenuto  |
-  %% 45
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, -\staccato cs, -\tenuto  |
-  cs, 8 -\tenuto ds, -\tenuto es, -\tenuto fs, 4 -\tenuto gs,, 8 -\tenuto as,, -\tenuto b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, -\staccato cs, -\tenuto  |
-  cs, 8 -\tenuto ds, -\tenuto es, -\tenuto fs, 4 -\tenuto gs,, 8 -\tenuto as,, b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, -\staccato cs, -\tenuto  |
-  %% 50
-  cs, 8 -\tenuto ds, -\tenuto es, -\tenuto fs, 4 -\tenuto gs,, 8 -\tenuto as,, -\tenuto b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, -\staccato cs, 
-  % warning: overlong bar truncated here |
-  \skip 8 ds, 8 -\tenuto es, fs, 4 -\tenuto gs,, 8 -\tenuto as,, -\tenuto b,, -\tenuto  |
-  b,, 8 -\tenuto cs, -\tenuto ds, -\tenuto fs, 4 -\tenuto ds, 8 cs, r  |
-  cs, 2 -\tenuto fs, -\tenuto  |
-  %% 55
-  b,, 4. as,, 4 -\tenuto gs,, 8 -\tenuto fs,, 4 -\tenuto  |
-  cs, 2 -\tenuto fs, -\tenuto  |
-  b,, 4. -\tenuto as,, 4 -\tenuto gs,, 8 fs,, 4 -\tenuto  |
-  cs, 2 -\tenuto fs, -\tenuto  |
-  b,, 4. -\tenuto as,, 4 -\tenuto gs,, 8 fs,, 4 -\tenuto  |
-  %% 60
-  cs, 2 -\tenuto fs, -\tenuto  |
-  b,, 4. -\tenuto as,, 4 -\tenuto gs,, 8 -\tenuto fs,, 4  |
-  gs,, 8 gs,, gs,, gs,, gs,, gs,, gs,, gs,,  |
-  a,, 8 a,, a,, a,, a,, a,, a,, a,,  |
-  as,, 8 as,, as,, as,, as,, as,, gs,, fs,, -\tenuto  |
-  %% 65
-  fs,, 1 -\tenuto  |
-  R1*4  |
-  \bar "|."
+  \tempo 4 = 130
+  
+  \key f \major
+  %% WRONG KEY
+  %% f4-. \mf r4 r2 | r2 r4 f8-. c'8-. | f,4-. r4 r2 | r2 r4 r8 c8->~ \f |
+  %% c8 d8 e8 f8-> ~f8 c8 d8 ef8-> ~ef8 f8 g8 bf8-> ~bf8 bf8 g8 d8->~ |
+  
+  r1 | r1 | r1 | r2 r4 r8 c8->~ \f |
+  \break
+  c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+  c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+  \break
+  \repeat volta 2 {
+    %% 9
+    \mark \default
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+    \break
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+    \break
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 g8-. |
+    \break
+    %% 21
+    c4  g'8 c8 f,4. f8 | bf,4 f'8 f,8 ~f8 c'8 c8 c8 | 
+    c4  g'8 c8 f,4. f8 | bf,4 f'8 f,8 ~f8 c'8 c8 c8 | 
+    c4  g'8 c8 f,4. f8 | bf,4 f'8 f,8 ~f8 c'8 c8 c8 | 
+    c4  g'8 c8 f,4. f8 | bf,4 f'8 f,8 ~f8 c'8 c8 c8 | 
+    \break
+    
+    %% 29
+    \mark \default
+    g'8 g8 g8 g8 g8 g8 g8 g8 | gs8 gs8 gs8 gs8 gs8 gs8 gs8 gs8 |
+    a8 a8 a8 a8 a8 a8 a8 a8 | f,2 f'4. r8 |
+    \break
+    %% 33
+    r1 | r1 | r1 | r2 r4 r8 c8->~ |
+  } \alternative {
+    {     
+      %% 37
+      c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+      c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+      \break
+    }
+    {
+      c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+      c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+    }
+  }
+  c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+  c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+  
+  %% 49
+  r1 | r2 r4 r8 c8->~ |
+  \repeat volta 2 {
+    \bar "[|:"
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~
+    \bar ":|]"
+  }  
 }
 
 my_chords = \chordmode {
   \set majorSevenSymbol = \markup { maj7 }
+  c1 | s1 | s1 | s1 |
+  %% 5
+  c2 f2 | bf2 f2 | 
+  c2 f2 | bf2 f2 | 
+  \repeat volta 2 {
+    %% 9
+    c2 f2 | bf2 f2 |
+    c2 f2 | bf2 f2 |
+    c2 f2 | bf2 f2 |
+    c2 f2 | bf2 f2 |
+    c2 f2 | bf2 f2 |
+    c2 f2 | bf2 f2 |
+    c2 f2 | bf2 f2 |
+    c2 f2 | bf2 f2 |
+    c2 f2 | bf2 f2 |
+    c2 f2 | bf2 f2 |
+    g1 | e:7/gs | a:m | f:maj7
+    c1 | s1 | s1 | s1
+  } \alternative {
+    {
+      c2 f2 | bf2 f2 | c2 f2 | bf2 f2 |
+    }
+    {
+      c2 f2 | bf2 f2 | c2 f2 | bf2 f2 |
+    }
+  }
+  
+  %45
+  c2 f2 | bf2 f2 | c2 f2 | bf2 f2 |
+  c1 | s1 |
+  
+  \repeat volta 2 {
+    c2 f2 | bf2 f2 |
+  }
+  
 }
 
 my_music = <<
@@ -109,8 +124,8 @@ my_music = <<
   \new TabStaff
   \with { stringTunings = #bass-tuning } 
   { 
-    %%\set TabStaff.minimumFret = #3
-    %%\set TabStaff.restrainOpenStrings = ##t
+    \set TabStaff.minimumFret = #1
+    \set TabStaff.restrainOpenStrings = ##t
     \my_notes
   }
 >>
@@ -118,6 +133,7 @@ my_music = <<
 \score {
   \my_music
   \layout {
+    \set Score.markFormatter = #format-mark-box-alphabet
     \context {
       \Score
     }
