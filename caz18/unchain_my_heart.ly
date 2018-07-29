@@ -189,11 +189,11 @@ these_chords = \chordmode {
   gis1:m6 | e:9 | dis:9 | r | s |
   %% 62
   \repeat volta 2 {
-     gis4.:m cis4.:m gis4:m | s1 |
+     gis2:m cis4.:m7 gis8:m | s1 |
   } \alternative {
     %% 64
-    { gis4.:m cis4.:m7 gis4:m | s1 | }
-    { gis4:.m cis4.:m7 gis4:m | s1 | }
+    { s2 cis4.:m7 gis8:m | s1 | }
+    { s2 cis4.:m7 gis8:m | s1 | }
   }
 }
 
