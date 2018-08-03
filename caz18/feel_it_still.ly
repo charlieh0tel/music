@@ -40,7 +40,7 @@ my_notes = \relative c {
 
 my_music = <<
   \new Staff {
-    \set Staff.midiInstrument = #"electric bass (finger)"
+    \set Staff.midiInstrument = #"electric guitar (clean)"
     \my_notes
   }
   \new TabStaff
