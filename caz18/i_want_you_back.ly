@@ -114,14 +114,14 @@ my_notes = \relative c {
   
   %% 38
   \mark \markup { \bold {[F]} }
-  f'16->\3 aes16\2 c16 c,16->\4 ~c16 ees16\3 aes16\2 des,16-> ~des16 f16\3 aes16\2 aes,16->\3
+  f'16->\3 aes16\2 c16 c,16->\4 ~c16 ees16\3 aes16\2 des,16-> ~des16 f16\3 aes16\2 aes,16->\4
     ~aes16 c16\4 ees8\3 |
   f16->\3 aes16\2 c16\1 c,16->\4 ~c16 ees16\3 aes16\2 des,16->\3 ~des16 f16\3 aes16\2 aes,16-> 
     ~aes16 c16\4 ees8\3 |
   %%\break
   
   %% 40
-  f16->\3 aes16\2 c16 c,16->\4 ~c16 ees16\3 aes16\2 des,16-> ~des16 f16\3 aes16\2 aes,16->\3 
+  f16->\3 aes16\2 c16 c,16->\4 ~c16 ees16\3 aes16\2 des,16-> ~des16 f16\3 aes16\2 aes,16->\4 
     ~aes16 c16\4 ees8\3 |
   f16->\3 aes16\2 c16\1 c,16->\4 ~c16 ees16\3 aes16\2 des,16->\3 ~des16 f16\3 aes16\2 aes,16-> 
     ~aes16 c16\4 ees8\3 \bar "||"
