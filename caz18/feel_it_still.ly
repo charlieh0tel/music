@@ -15,7 +15,6 @@
 }
 
 my_notes = \relative c {
-  \clef "guitar_8"
   \key e \major
   \time 4/4
   \tempo 4 = 135
@@ -59,6 +58,7 @@ my_music = <<
   \layout {
     \context {
       \Score
+      \override StringNumber #'stencil = ##f 
     }
   }
 }
