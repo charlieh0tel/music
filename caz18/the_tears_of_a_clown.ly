@@ -20,11 +20,8 @@ my_notes = \relative c, {
   \tempo 4 = 130
   
   \key f \major
-  %% WRONG KEY
-  %% f4-. \mf r4 r2 | r2 r4 f8-. c'8-. | f,4-. r4 r2 | r2 r4 r8 c8->~ \f |
-  %% c8 d8 e8 f8-> ~f8 c8 d8 ef8-> ~ef8 f8 g8 bf8-> ~bf8 bf8 g8 d8->~ |
-  
-  %%r1 | r1 | r1 | r2 r4 r8 c8->~ \f |
+
+  %% r1 | r1 | r1 | r2 r4 r8 c8->~ \f |
 
   \set TabStaff.minimumFret = #14
   \set TabStaff.restrainOpenStrings = ##t
@@ -71,7 +68,23 @@ my_notes = \relative c, {
     a8 a8 a8 a8 a8 a8 a8 a8 | f,2 f'4. r8 |
     \break
     %% 33
-    r1 \mf | r1 | r1 | r2 r4 r8 c8->~ |
+    %% r1 \mf | r1 | r1 | r2 r4 r8 c8->~ |
+
+    \set TabStaff.minimumFret = #14
+    \set TabStaff.restrainOpenStrings = ##t
+    c'8 g8 d'8 g,8 e'8 g,8 c8 g8 | 
+    c16 d16 e16 g16 c16 g16 e16 d16 c8 r8
+    \set TabStaff.minimumFret = #8
+    \set TabStaff.restrainOpenStrings = ##t 
+    c,8 g'8 |
+    \set TabStaff.minimumFret = #14
+    \set TabStaff.restrainOpenStrings = ##t
+    c8 g8 d'8 g,8 e'8 g,8 c8 g8 | 
+    c16 d16 e16 g16 c16 g16 e16 d16 c8 r8
+    \set TabStaff.minimumFret = #1
+    \set TabStaff.restrainOpenStrings = ##t	
+    r8 c,8->~ \f |
+    
   } \alternative {
     {     
       %% 37
@@ -93,7 +106,16 @@ my_notes = \relative c, {
   bf8 c8 d8 f8-> ~f8 d8 c8 g8-. |    %% CHECK last note
   
   %% 49
-  r1 | r2 r4 r8 c8->~ |
+  %% r1 | r2 r4 r8 c8->~ |
+
+  \set TabStaff.minimumFret = #14
+  \set TabStaff.restrainOpenStrings = ##t
+  c'8 g8 d'8 g,8 e'8 g,8 c8 g8 | 
+  c16 d16 e16 g16 c16 g16 e16 d16 c8 r8
+  \set TabStaff.minimumFret = #1
+  \set TabStaff.restrainOpenStrings = ##t	
+  r8 c,8->~ \f |
+  
   \repeat volta 2 {
     \bar "[|:"
     c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~
