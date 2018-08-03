@@ -31,6 +31,11 @@ my_notes = \relative c {
   \set TabStaff.minimumFret = #4
   cs'8 cs8 b8 cs8 b8 gs8 fs8 e8 |
   fs8 e8 cs8 b8 cs8 e8 cs4 |
+  \break
+  
+  \set TabStaff.minimumFret = #8
+  cs'8\4 cs8\4 b8\4 cs\4 b8\4 gs8\5 fs\5 e8\5 |
+  fs8\5 e8\5 cs8\6 b8\6 cs8\6 e8\5 cs4\6 |
   
 }
 
@@ -44,6 +49,7 @@ my_music = <<
   { 
     \set TabStaff.minimumFret = #1
     \set TabStaff.restrainOpenStrings = ##t
+    \tabFullNotation
     \my_notes
   }
 >>
