@@ -41,7 +41,7 @@ my_notes = \relative c {
   \mark \markup { \bold {[B]} \italic {(Vocals)} }
   aes'8.->\2 \f aes16\2 g8.->\2 g16\2 f16\2 f8-> ees16-> ~ ees16 c16 ees16 c16 |
   des8.-> des16 c8.-> c16 bes16 bes8-> ees16-> ~ees16 d16 ees16 e16 |
-  \break
+  %%break
   
   %% 11
   f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
@@ -57,7 +57,7 @@ my_notes = \relative c {
     r2 r16 bes16 ces16 des16-> ~des16 d16 ees16 e16 |
     f4-> c4-> des8.-> aes16-> ~aes8 r8 |
     bes4->\4 ees8.->\3 aes,16->\4 r2
-    \break
+    %%\break
     
     %% 17
     aes4-.->  \mf r4 r8. bes16 c16-> ees16 f16 des16-> |
@@ -70,12 +70,12 @@ my_notes = \relative c {
     \mark \markup { \bold {[D]} }
     aes8.->\2 \f aes16\2 g8.->\2 g16\2 f16\2 f8-> ees16-> ~ ees16 c16 ees16 c16 |
     des8.-> des16 c8.-> c16 bes16 bes8-> ees16-> ~ees16 d16 ees16 e16 |
-    \break
+    %%\break
     
     %% 23
     f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
     bes4->\4 ees8.->\3 aes,16->\4 r8 ees'16\3 f16\3 aes16\2 f16\3 aes8-.\2 |
-    \break
+    %%\break
     
     %% 25
     aes8.->\2 aes16\2 g8.->\2 g16\2 f16\2 f8-> ees16-> ~ ees16 c16 ees16 c16 |
@@ -87,7 +87,7 @@ my_notes = \relative c {
       %% 27
       f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
       bes4->\4 ees8.->\3 aes,16-> r16 aes16-> r16 aes16-> aes4-> \bar "||"
-      \break
+      %%\break
       
       %% 29
       r2 r16 aes16-> aes16-> aes16-> aes4-.-> |
@@ -105,7 +105,7 @@ my_notes = \relative c {
       r2 r4 r16 f'16\3 aes16\2 c,16->~\4 \bar "||"
     }
   }
-  \break
+  %%\break
   
   %% 36
   c4\4 r16 ees16\3 f16\3 aes,16-> ~aes4 r16 f'16\3 aes16\2 c,16->~\4 |
@@ -118,7 +118,7 @@ my_notes = \relative c {
     ~aes16 c16\4 ees8\3 |
   f16->\3 aes16\2 c16\1 c,16->\4 ~c16 ees16\3 aes16\2 des,16->\3 ~des16 f16\3 aes16\2 aes,16-> 
     ~aes16 c16\4 ees8\3 |
-  \break
+  %%\break
   
   %% 40
   f16->\3 aes16\2 c16 c,16->\4 ~c16 ees16\3 aes16\2 des,16-> ~des16 f16\3 aes16\2 aes,16->\3 
@@ -139,7 +139,7 @@ my_notes = \relative c {
     %% 44 
     f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
     bes4->\4 ees8.->\3 aes,16-> r16 aes16-> aes16-> aes16-> aes4-.-> |
-    \break
+    %%\break
     
     %% 46
     r2 r16 aes16-> aes16-> aes16-> aes4-.-> |
@@ -154,7 +154,7 @@ my_notes = \relative c {
   aes8.->\2 aes16\2 g8.->\2 g16\2 f16\2 f8-> ees16-> ~ ees16 ees16 ees8-. |
   des16-> aes'16\2 des16 c,16-> ~ c16 c16 c16 bes16-> ~bes16 bes16 bes16 bes16
     ees8-> ees16-> e16 | 
-  \break
+  %%\break
   
   %% 50
   f8.-> f16 c8.-> c16 des16-> des8-> aes16-> ~aes8 r8 |
