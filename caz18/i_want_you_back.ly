@@ -26,7 +26,7 @@ my_notes = \relative c {
   aes,4-.-> \mf r4 r8. bes16 c16-> ees16 f16 des16-> |
   r2 r16 bes16 ces16 des16-> ~des16 d16 ees16 e16 |
   f4-> c4-> des8.-> aes16-> ~aes8 r8 |
-  bes4-> ees8.-> aes,16-> r2 \bar "||"
+  bes4->\4 ees8.->\3 aes,16-> r2 \bar "||"
   \break
   
   %% 5
@@ -34,18 +34,18 @@ my_notes = \relative c {
   aes4-.-> \mf \cresc r4 r8. bes16 c16-> ees16 f16 des16-> |
   r2 r16 bes16 ces16 des16-> ~des16 d16 ees16 e16 \f |
   f4-> c4-> des8.-> aes16-> ~aes8 r8 |
-  bes4-> \< ees8.-> aes,16-> \! r2 \bar "||"
+  bes4->\4 \< ees8.->\3 aes,16-> \! r2 \bar "||"
   \break
 
   %% 9
   \mark \markup { \bold {[B]} \italic {(Vocals)} }
-  aes'8.-> \f aes16 g8.-> g16 f16 f8-> ees16-> ~ ees16 c16 ees16 c16 |
+  aes'8.->\2 \f aes16\2 g8.->\2 g16\2 f16\2 f8-> ees16-> ~ ees16 c16 ees16 c16 |
   des8.-> des16 c8.-> c16 bes16 bes8-> ees16-> ~ees16 d16 ees16 e16 |
   \break
   
   %% 11
   f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
-  bes4-> ees8.-> aes,16-> r8 \> ees'16 f16 aes16 f16 aes8-. 
+  bes4->\4 ees8.->\3 aes,16-> r8 \> ees'16\3 f16\3 aes16\2 f16\3 aes8-.\2 
   \bar "||"  % doesn't work
   \break
   
@@ -56,29 +56,29 @@ my_notes = \relative c {
     aes,4-.->  \mf r4 r8. bes16 c16-> ees16 f16 des16-> |
     r2 r16 bes16 ces16 des16-> ~des16 d16 ees16 e16 |
     f4-> c4-> des8.-> aes16-> ~aes8 r8 |
-    bes4-> ees8.-> aes,16-> r2
+    bes4->\4 ees8.->\3 aes,16->\4 r2
     \break
     
     %% 17
     aes4-.->  \mf r4 r8. bes16 c16-> ees16 f16 des16-> |
     r2 r16 bes16 ces16 des16-> ~des16 d16 ees16 e16 |
     f4-> c4-> des8.-> aes16-> ~aes8 r8 |
-    bes4-> \< ees8.-> aes,16-> r8 ees'16 f16 aes16 f16 aes8-. \! \bar "||"
+    bes4->\4 \< ees8.->\3 aes,16->\4 r8 ees'16\3 f16\3 aes16\2 f16\3 aes8-.\2 \! \bar "||"
     \break
     
     %% 21
     \mark \markup { \bold {[D]} }
-    aes8.-> \f aes16 g8.-> g16 f16 f8-> ees16-> ~ ees16 c16 ees16 c16 |
+    aes8.->\2 \f aes16\2 g8.->\2 g16\2 f16\2 f8-> ees16-> ~ ees16 c16 ees16 c16 |
     des8.-> des16 c8.-> c16 bes16 bes8-> ees16-> ~ees16 d16 ees16 e16 |
     \break
     
     %% 23
     f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
-    bes4-> ees8.-> aes,16-> r8 ees'16 f16 aes16 f16 aes8-. |
+    bes4->\4 ees8.->\3 aes,16->\4 r8 ees'16\3 f16\3 aes16\2 f16\3 aes8-.\2 |
     \break
     
     %% 25
-    aes8.-> aes16 g8.-> g16 f16 f8-> ees16-> ~ ees16 c16 ees16 c16 |
+    aes8.->\2 aes16\2 g8.->\2 g16\2 f16\2 f8-> ees16-> ~ ees16 c16 ees16 c16 |
     des8.-> des16 c8.-> c16 bes16 bes8-> ees16-> ~ees16 d16 ees16 e16 |
     \break
     
@@ -86,7 +86,7 @@ my_notes = \relative c {
     { 
       %% 27
       f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
-      bes4-> ees8.-> aes,16-> r16 aes16-> r16 aes16-> aes4-> \bar "||"
+      bes4->\4 ees8.->\3 aes,16-> r16 aes16-> r16 aes16-> aes4-> \bar "||"
       \break
       
       %% 29
@@ -131,18 +131,19 @@ my_notes = \relative c {
     %% 42
     \bar "[|:"
     \mark \markup { \bold {[G]} }
-    aes8.-> aes16 g8.-> g16 f16 f8-> ees16-> ~ ees16 c16 ees16 c16 |
+    \set TabStaff.minimumFret = 1
+    aes8.->\2 aes16\2 g8.->\2 g16\2 f16 f8-> ees16-> ~ ees16 c16 ees16 c16 |
     des8.-> des16 c8.-> c16 bes16 bes8-> ees16-> ~ees16 d16 ees16 e16 |
     \break
     
     %% 44 
     f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
-    bes4-> ees8.-> aes,16-> r16 aes16-> aes16-> aes16-> aes4-.-> |
+    bes4->\4 ees8.->\3 aes,16-> r16 aes16-> aes16-> aes16-> aes4-.-> |
     \break
     
     %% 46
     r2 r16 aes16-> aes16-> aes16-> aes4-.-> |
-    \time 2/4 r4 ees'16-> f16 aes16 f16
+    \time 2/4 r4 ees'16->\3 f16\3 aes16\2 f16\3
     \bar ":|]"
   }
   \break
@@ -150,14 +151,14 @@ my_notes = \relative c {
   %% 48
   \time 4/4
   \mark \markup { \bold {[H]} }
-  aes8.-> aes16 g8.-> g16 f16 f8-> ees16-> ~ ees16 ees16 ees8-. |
-  des16-> aes'16 des16 c,16-> ~ c16 c16 c16 bes16-> ~bes16 bes16 bes16 bes16
+  aes8.->\2 aes16\2 g8.->\2 g16\2 f16\2 f8-> ees16-> ~ ees16 ees16 ees8-. |
+  des16-> aes'16\2 des16 c,16-> ~ c16 c16 c16 bes16-> ~bes16 bes16 bes16 bes16
     ees8-> ees16-> e16 | 
   \break
   
   %% 50
   f8.-> f16 c8.-> c16 des16-> des8-> aes16-> ~aes8 r8 |
-  bes8.-> bes16-. ees4-> r16 \ff aes,16-> aes16-> aes16-> aes4-.-^ |
+  bes8.->\4 bes16-.\4 ees4->\3 r16 \ff aes,16-> aes16-> aes16-> aes4-.-^ |
   %% \bar "|]" 
   
 }
@@ -244,7 +245,7 @@ my_music = <<
   \new TabStaff
   \with { stringTunings = #bass-tuning } 
   { 
-    %%\set TabStaff.minimumFret = #3
+    %%\set TabStaff.minimumFret = #3f
     %%\set TabStaff.restrainOpenStrings = ##t
     \my_notes
   }
