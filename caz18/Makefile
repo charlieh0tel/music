@@ -1,4 +1,4 @@
-all: unchain_my_heart i_want_you_back the_tears_of_a_clown
+all: unchain_my_heart i_want_you_back the_tears_of_a_clown feel_it_still
 .PHONY: all
 
 unchain_my_heart: \
@@ -15,6 +15,11 @@ the_tears_of_a_clown: \
   the_tears_of_a_clown.pdf the_tears_of_a_clown.midi \
   the_tears_of_a_clown.wav the_tears_of_a_clown.mp3
 .PHONY: the_tears_of_a_clown
+
+feel_it_still: \
+  feel_it_still.pdf feel_it_still.midi \
+  feel_it_still.wav feel_it_still.mp3
+.PHONY: feel_it_still
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3
