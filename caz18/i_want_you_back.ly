@@ -102,29 +102,29 @@ my_notes = \relative c {
       \time 4/4
       f'8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
       r1 |
-      r2 r4 r16 f'16 aes16 c,16->~ \bar "||"
+      r2 r4 r16 f'16\3 aes16\2 c,16->~\4 \bar "||"
     }
   }
   \break
   
   %% 36
-  c4 r16 ees16 f16 aes,16-> ~aes4 r16 f'16 aes16 c,16->~ |
-  c4 r16 ees16 f16 aes,16-> ~aes4 r4 \bar "||"
+  c4\4 r16 ees16\3 f16\3 aes,16-> ~aes4 r16 f'16\3 aes16\2 c,16->~\4 |
+  c4 r16 ees16\3 f16\3 aes,16-> ~aes4 r4 \bar "||"
   \break
   
   %% 38
   \mark \markup { \bold {[F]} }
-  f'16-> aes16 c16 c,16-> ~c16 ees16 aes16 des,16-> ~des16 f16 aes16 aes,16-> 
-    ~aes16 c16 ees8 |
-  f16-> aes16 c16 c,16-> ~c16 ees16 aes16 des,16-> ~des16 f16 aes16 aes,16-> 
-    ~aes16 c16 ees8 |
+  f'16->\3 aes16\2 c16 c,16->\4 ~c16 ees16\3 aes16\2 des,16-> ~des16 f16\3 aes16\2 aes,16->\3
+    ~aes16 c16\4 ees8\3 |
+  f16->\3 aes16\2 c16\1 c,16->\4 ~c16 ees16\3 aes16\2 des,16->\3 ~des16 f16\3 aes16\2 aes,16-> 
+    ~aes16 c16\4 ees8\3 |
   \break
   
   %% 40
-  f16-> aes16 c16 c,16-> ~c16 ees16 aes16 des,16-> ~des16 f16 aes16 aes,16-> 
-    ~aes16 c16 ees8 |
-  f16-> aes16 c16 c,16-> ~c16 ees16 aes16 des,16-> ~des16 f16 aes16 aes,16-> 
-    ~aes16 c16 ees8 \bar "||"
+  f16->\3 aes16\2 c16 c,16->\4 ~c16 ees16\3 aes16\2 des,16-> ~des16 f16\3 aes16\2 aes,16->\3 
+    ~aes16 c16\4 ees8\3 |
+  f16->\3 aes16\2 c16\1 c,16->\4 ~c16 ees16\3 aes16\2 des,16->\3 ~des16 f16\3 aes16\2 aes,16-> 
+    ~aes16 c16\4 ees8\3 \bar "||"
   \break
   
   \repeat volta 2 {
@@ -256,6 +256,7 @@ my_music = <<
   \layout {
     \context {
       \Score
+      \override StringNumber #'stencil = ##f 
     }
   }
 }
