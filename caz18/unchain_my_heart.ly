@@ -13,6 +13,8 @@
   right-margin = 0.5\in
 }
 
+mBreak = { \break }
+
 global = {
   \time 4/4
   \tempo "Soul/Latin" 4 = 155

@@ -1,4 +1,8 @@
-all: unchain_my_heart i_want_you_back the_tears_of_a_clown feel_it_still
+all: unchain_my_heart \
+  i_want_you_back \
+  the_tears_of_a_clown \
+  the_tears_of_a_clown_bassoon_riff \
+  feel_it_still
 .PHONY: all
 
 unchain_my_heart: \
@@ -15,6 +19,11 @@ the_tears_of_a_clown: \
   the_tears_of_a_clown.pdf the_tears_of_a_clown.midi \
   the_tears_of_a_clown.wav the_tears_of_a_clown.mp3
 .PHONY: the_tears_of_a_clown
+
+the_tears_of_a_clown_bassoon_riff: \
+  the_tears_of_a_clown_bassoon_riff.pdf the_tears_of_a_clown_bassoon_riff.midi \
+  the_tears_of_a_clown_bassoon_riff.wav the_tears_of_a_clown_bassoon_riff.mp3
+.PHONY: the_tears_of_a_clown_bassoon_riff
 
 feel_it_still: \
   feel_it_still.pdf feel_it_still.midi \
