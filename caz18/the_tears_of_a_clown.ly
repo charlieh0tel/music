@@ -1,8 +1,7 @@
 % LilyBin
 
-\include "english.ly"
-
 \version "2.18.0"
+\include "english.ly"
 
 \header {
   piece = \markup { \fontsize #4 \bold "The Tears of a Clown" }
@@ -165,23 +164,40 @@ my_chords = \chordmode {
   
 }
 
-% Repeats one bar of music for the length of a reference piece.
-% From: "Neil Puttock" <n.puttock@gmail.com>
-% Usage: \makeUnfold \refPiece \oneBarOfMusic
-makeUnfold =
-#(define-music-function (parser location name mus) (ly:music? ly:music?)
-  (let ((r (make-repeated-music "unfold")))
-    (set! (ly:music-property r 'element) mus)
-    (set! (ly:music-property r 'repeat-count)
-          (ly:moment-main-numerator (ly:music-length name)))
-    r))
-
 % Create metronome ticks. This example assumes 4/4 .
 ticktock = \drummode {
-  % Note that \makeUnfold \unfoldRepeats \harmonics basically is a way
-  % repeat something for the duration of \harmonics. If you know the
-  % number of bars you might as well write \repeat unfold ...
-  \makeUnfold \unfoldRepeats \my_chords {
+  %% 1-8
+  \repeat unfold 8 {
+    hiwoodblock 4 lowoodblock lowoodblock lowoodblock
+  }
+  \repeat volta 2 {
+    %% 9-36
+    \repeat unfold 28 {
+      hiwoodblock 4 lowoodblock lowoodblock lowoodblock
+    }
+  } \alternative {
+    {
+      %% 37-40
+      \repeat unfold 4 {
+	hiwoodblock 4 lowoodblock lowoodblock lowoodblock
+      }
+    }
+    {
+      %% 41-44
+      \repeat unfold 4 {
+	hiwoodblock 4 lowoodblock lowoodblock lowoodblock
+      }
+    }
+  }
+  
+  %% 45-50
+  \repeat unfold 6 {
+    hiwoodblock 4 lowoodblock lowoodblock lowoodblock
+  }
+
+  %% 51
+  \repeat volta 2 {
+    hiwoodblock 4 lowoodblock lowoodblock lowoodblock
     hiwoodblock 4 lowoodblock lowoodblock lowoodblock
   }
 }
@@ -202,7 +218,7 @@ my_music = <<
     \global
     \my_notes
   }
-  \tag #'midiOnly
+  \tag #'scoreOnly
   \new TabStaff
     \with { stringTunings = #bass-tuning } 
   { 
