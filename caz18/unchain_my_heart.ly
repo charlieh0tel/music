@@ -77,13 +77,13 @@ my_notes = \relative c {
   %% 26
   \mBreak
   cs4.-> gs8-> ~gs4 gs8 gs8 | cs,4.-> e8-> ~e4 e4 |
-  ds4.-> as'8-> ~as4 ds8-> ds,8-.-^| r1 \bar "||" |
+  ds4.-> as'8->\2 ~as4 ds8-> ds,8-.-^| r1 \bar "||" |
   
   %% 30
   \mBreak \cBreak
   \mark \markup { \bold { [D] } }
-  gs4-.-> \mf b8 cs8-.-> r8 b8  gs8 fs8 | gs4-.-> r4 r4. f8 | 
-  fs4-.-> b8 cs8-.-> r8 b8  gs8 fs8 |
+  gs4-.-> \mf b8 cs8-.-> r8 b8  gs8 fs8 | gs4-.-> r4 r4. g8 | 
+  gs4-.-> b8 cs8-.-> r8 b8  gs8 fs8 |
   
   %% 33
   \mBreak
@@ -261,7 +261,8 @@ my_music = <<
   \removeWithTag #'midiOnly \my_music
   \layout {
     \context {
-      \Score
+      \Score \override StringNumber #'stencil = ##f 
+
     }
   }
 }
