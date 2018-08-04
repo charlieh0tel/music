@@ -1,6 +1,7 @@
 % LilyBin
 
 \version "2.18.0"
+\include "english.ly"
 
 \header {
   piece = \markup { \fontsize #4 \bold "Unchain My Heart" }
@@ -26,8 +27,8 @@ my_notes = \relative c {
 
   \partial 8 g8 \mp |
 
-  gis4-.-> b8 cis8-.-> r8 b8  gis8 fis8 | gis4-.-> r4 r4. \mf \cresc g8 |
-  gis4-.-> b8 cis8-.-> r8 b8  gis8 fis8 \f | gis4-.-^ r4 r2 \bar "||"
+  gs4-.-> b8 cs8-.-> r8 b8  gs8 fs8 | gs4-.-> r4 r4. \mf \cresc g8 |
+  gs4-.-> b8 cs8-.-> r8 b8  gs8 fs8 \f | gs4-.-^ r4 r2 \bar "||"
   \break
 
   \repeat volta 2 {
@@ -35,106 +36,106 @@ my_notes = \relative c {
     %% 5
     \mark \markup { \bold {[A]} \italic {(Vocals)} }
     \bar "[|:"
-    gis4-.-> \mf b8 cis8-.-> r8 b8  gis8 fis8 | gis4-.-> r4 r4. g8 |
-    gis4-.-> b8 cis8-.-> r8 b8  gis8 fis8 | gis4-.-> r4 r4. gis8 |
+    gs4-.-> \mf b8 cs8-.-> r8 b8  gs8 fs8 | gs4-.-> r4 r4. g8 |
+    gs4-.-> b8 cs8-.-> r8 b8  gs8 fs8 | gs4-.-> r4 r4. gs8 |
     %%\break
     
     %% 9
-    e4-.-> b'8 cis8-.-> r8 b8  gis8 fis8 | e4-.-> r4 r4. g8 | 
-    gis4-.-> \mf b8 cis8-.-> r8 b8  gis8 fis8 | gis4-.-> r4 r2 \bar "||" |
+    e4-.-> b'8 cs8-.-> r8 b8  gs8 fs8 | e4-.-> r4 r4. g8 | 
+    gs4-.-> \mf b8 cs8-.-> r8 b8  gs8 fs8 | gs4-.-> r4 r2 \bar "||" |
     \break
 
     %% 13
     \mark \markup { \bold {[B]} }
-    e4-> b'4 cis2 | gis4.-> b8 ~b8 b8 gis4-. | 
-    e4-> b'4 cis2 | gis4.-> b8 ~b8 b8 gis4-. |
-    e4-.-> \cresc b'8 cis8-> r8 b8  gis8 e8 |
+    e4-> b'4 cs2 | gs4.-> b8 ~b8 b8 gs4-. | 
+    e4-> b'4 cs2 | gs4.-> b8 ~b8 b8 gs4-. |
+    e4-.-> \cresc b'8 cs8-> r8 b8  gs8 e8 |
     %%\break
     
     %% 18
-    dis4-> ais'8 b8-> ~b8 ais8 g8 dis8 | 
-    gis4-.-> \f \< b8 cis8-.-> r8 b8  gis8 fis8 \! |
+    ds4-> as'8 b8-> ~b8 as8 g8 ds8 | 
+    gs4-.-> \f \< b8 cs8-.-> r8 b8  gs8 fs8 \! |
     
   } \alternative {
-    { gis4-.-^ r4 r2 \bar ":|]" }
-    { gis4-.-^ r4 r2 \bar "||" }
+    { gs4-.-^ r4 r2 \bar ":|]" }
+    { gs4-.-^ r4 r2 \bar "||" }
   }
   \break
   
   %% 22
   \mark \markup { \bold {[C]} \musicglyph #"scripts.segno" }
-  cis4.-> gis8-> ~gis4 gis8 gis8 | cis,4.-> gis'8-> ~gis4 cis4 |
-  gis4.-> gis8-> ~gis4 dis'8-> dis8 |
-  gis,4.-> dis'8 ~dis8 dis8 gis,8-> gis8 |
+  cs4.-> gs8-> ~gs4 gs8 gs8 | cs,4.-> gs'8-> ~gs4 cs4 |
+  gs4.-> gs8-> ~gs4 ds'8-> ds8 |
+  gs,4.-> ds'8 ~ds8 ds8 gs,8-> gs8 |
   %%\break
   
   %% 26
-  cis4.-> gis8-> ~gis4 gis8 gis8 | cis,4.-> e8-> ~e4 e4 |
-  dis4.-> ais'8-> ~ais4 dis8-> dis,8-.-^| r1 \bar "||" |
+  cs4.-> gs8-> ~gs4 gs8 gs8 | cs,4.-> e8-> ~e4 e4 |
+  ds4.-> as'8-> ~as4 ds8-> ds,8-.-^| r1 \bar "||" |
   \break
   
   %% 30
   \mark \markup { \bold {[D]} }
-  gis4-.-> \mf b8 cis8-.-> r8 b8  gis8 fis8 | gis4-.-> r4 r4. f8 | 
-  fis4-.-> b8 cis8-.-> r8 b8  gis8 fis8 |
+  gs4-.-> \mf b8 cs8-.-> r8 b8  gs8 fs8 | gs4-.-> r4 r4. f8 | 
+  fs4-.-> b8 cs8-.-> r8 b8  gs8 fs8 |
   %%\break
  
   %% 33
-  gis4-.-> r4 r4. gis8 |
-  e4-.-> b'8 cis8-.-> r8 b8 gis8 fis8 |
+  gs4-.-> r4 r4. gs8 |
+  e4-.-> b'8 cs8-.-> r8 b8 gs8 fs8 |
   e4-.-> r4 r4. g8 | 
-  gis4-.-> b8 cis8-.-> r8 b8 gis8 fis8 |
+  gs4-.-> b8 cs8-.-> r8 b8 gs8 fs8 |
   %%\break
   
   %% 37
-  gis4-.-> r4 r2 \bar "||" |
+  gs4-.-> r4 r2 \bar "||" |
   \break %% NEW
   \mark \markup { \bold {[E]} }
-  cis2.-> cis4 | gis2-> r8 b8->  gis8 b8 | cis2.-> cis4 |
+  cs2.-> cs4 | gs2-> r8 b8->  gs8 b8 | cs2.-> cs4 |
   %%\break
   
   %% 41
-  gis2-> r2 | 
-  e4-.-> \cresc b'8 cis8-> r8 b8  gis8 e8 |
-  dis4-> ais'8 b8-> ~b8 ais8 g8       
+  gs2-> r2 | 
+  e4-.-> \cresc b'8 cs8-> r8 b8  gs8 e8 |
+  ds4-> as'8 b8-> ~b8 as8 g8       
       \mark \markup { 
           \italic { "To Coda" } 
           \musicglyph #"scripts.coda" }  
-      dis8 \bar "||" |
+      ds8 \bar "||" |
    \break
    
    %% 44
-   gis4-.-> \f \< b8 cis8-.-> r8 b8  gis8 fis8 \! |
-   gis4-.-^ r4 r2 \bar "||" |
+   gs4-.-> \f \< b8 cs8-.-> r8 b8  gs8 fs8 \! |
+   gs4-.-^ r4 r2 \bar "||" |
    \break %% NEW
    \mark \markup { \bold {[F]} \italic {(Sax Solo)} }
-   gis4-.-> \mf b8 cis8-.-> r8 cis8->  b8 gis8 |
-   cis,4-.-> gis'8 cis8-.-> r8 cis8->  b8 fis8 |
+   gs4-.-> \mf b8 cs8-.-> r8 cs8->  b8 gs8 |
+   cs,4-.-> gs'8 cs8-.-> r8 cs8->  b8 fs8 |
    %%\break
    
    %% 48
-   gis4-.-> b8 cis8-.-> r8 cis8->  b8 gis8 |
-   cis,4-.-> gis'8 cis8-.-> r8 cis8->  b8 gis8 |
-   cis4-.-> r8 e,8-> r4 gis8-> gis8 |
-   cis,4-.-> r8 e8 r4 gis8-> g8 | 
-   gis4-.-> b8 cis8-.-> r8 cis8->  b8 g8 | 
+   gs4-.-> b8 cs8-.-> r8 cs8->  b8 gs8 |
+   cs,4-.-> gs'8 cs8-.-> r8 cs8->  b8 gs8 |
+   cs4-.-> r8 e,8-> r4 gs8-> gs8 |
+   cs,4-.-> r8 e8 r4 gs8-> g8 | 
+   gs4-.-> b8 cs8-.-> r8 cs8->  b8 g8 | 
    %%\break
    
    %% 53
-   gis4-.-> r8 b8-> r8 b8->  gis8 fis8 \bar "||" |
+   gs4-.-> r8 b8-> r8 b8->  gs8 fs8 \bar "||" |
    \break %% NEW
    \mark \markup { \bold {[G]} } 
      e4.-> e8 ~e4 e8 e8 |
-   gis4.-> b8-> ~b4 gis8 fis8 |
-   e4.-> gis8-> ~gis8 gis8 e4 |
+   gs4.-> b8-> ~b4 gs8 fs8 |
+   e4.-> gs8-> ~gs8 gs8 e4 |
    %%\break
    
    %% 57
-   gis4.-> b8-> ~b8 b8 gis4-. |
-   e4.-> \cresc gis8-> ~gis4 e8-> e8 |
-   dis4.-> dis'8 ~dis8 cis8-> ais8 dis,8 |
-   gis4-.-> \< b8 cis8-.-> r8 b8  gis8 fis8 \! |
-   gis4-.-^ r4 r2 _\markup { \bold { \italic { "D.S. al Coda" } } }
+   gs4.-> b8-> ~b8 b8 gs4-. |
+   e4.-> \cresc gs8-> ~gs4 e8-> e8 |
+   ds4.-> ds'8 ~ds8 cs8-> as8 ds,8 |
+   gs4-.-> \< b8 cs8-.-> r8 b8  gs8 fs8 \! |
+   gs4-.-^ r4 r2 _\markup { \bold { \italic { "D.S. al Coda" } } }
    \bar "||"   % doesn't work
    \break
    
@@ -142,15 +143,15 @@ my_notes = \relative c {
      %% 62
      \mark \markup { \bold { \italic { "Coda" } \musicglyph #"scripts.coda" } } 
      \bar "[|:"
-     gis4-> b8 cis8-> ~cis8 b8 gis8 fis8 |
-     gis2.-> r8 g8 |
+     gs4-> b8 cs8-> ~cs8 b8 gs8 fs8 |
+     gs2.-> r8 g8 |
      \break
    } \alternative {
      %% 64
-     { gis4-> \mf b8 cis8-> ~cis8  b8  gis8 fis8 | 
-       gis2.-> r8 g8 \bar ":|]" | }
-     { gis4-.-> \f \< b8 cis8-.-> r8 b8  gis8 fis8 \! |
-       gis4-.-^ r4 r2  \bar "|." }
+     { gs4-> \mf b8 cs8-> ~cs8  b8  gs8 fs8 | 
+       gs2.-> r8 g8 \bar ":|]" | }
+     { gs4-.-> \f \< b8 cs8-.-> r8 b8  gs8 fs8 \! |
+       gs4-.-^ r4 r2  \bar "|." }
    }
 
 }
@@ -164,43 +165,43 @@ my_chords = \chordmode {
 
   \repeat volta 2 {
     %% 5
-    gis1:m6 | s | s | s
+    gs1:m6 | s | s | s
     %% 9
-    e1:9 | s | gis:m6 | s
+    e1:9 | s | gs:m6 | s
     %% 13
-    cis1:m6/e | gis:m6 | cis:m6/e | gis:m6 | e:9 |
+    cs1:m6/e | gs:m6 | cs:m6/e | gs:m6 | e:9 |
     %% 18
-    dis1:9 | r |
+    ds1:9 | r |
   } \alternative {
     { s1 | }
     { s1 | }
   }
   %% 22
-  cis1:m6 | s | gis:m6 | s |
+  cs1:m6 | s | gs:m6 | s |
   %% 26
-  cis1:m6 | e:9 | dis:7 | s |
+  cs1:m6 | e:9 | ds:7 | s |
   %% 30
-  gis1:m6 | s | s
+  gs1:m6 | s | s
   %% 33 
-  s1 | e:9 | s1 | gis:m6 |
+  s1 | e:9 | s1 | gs:m6 |
   %% 37
-  s1 | cis:m6 | gis:m6 | cis:m6 |
+  s1 | cs:m6 | gs:m6 | cs:m6 |
   %% 41
-  gis:m6 | e:9 | dis:9 |
+  gs:m6 | e:9 | ds:9 |
   %% 44
-  r1 | s | gis1:m6 | cis:7 |
-  gis1:m6 | cis:7 | cis:m7 | s1 | gis:m6  |
+  r1 | s | gs1:m6 | cs:7 |
+  gs1:m6 | cs:7 | cs:m7 | s1 | gs:m6  |
   %% 53
-  s1 | cis1:m6/e | gis:m6 | cis:m6/e |
+  s1 | cs1:m6/e | gs:m6 | cs:m6/e |
   %% 57
-  gis1:m6 | e:9 | dis:9 | r | s |
+  gs1:m6 | e:9 | ds:9 | r | s |
   %% 62
   \repeat volta 2 {
-     gis2:m cis4.:m7 gis8:m | s1 |
+     gs2:m cs4.:m7 gs8:m | s1 |
   } \alternative {
     %% 64
-    { s2 cis4.:m7 gis8:m | s1 | }
-    { s2 cis4.:m7 gis8:m | s1 | }
+    { s2 cs4.:m7 gs8:m | s1 | }
+    { s2 cs4.:m7 gs8:m | s1 | }
   }
 }
 

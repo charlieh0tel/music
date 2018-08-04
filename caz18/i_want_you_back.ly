@@ -1,6 +1,7 @@
 % LilyBin
 
 \version "2.18.0"
+\include "english.ly"
 
 \header {
   piece = \markup { \fontsize #4 \bold "I Want You Back" }
@@ -21,33 +22,33 @@ global = {
 
 my_notes = \relative c {
   \clef "bass_8"
-  \key aes \major
+  \key af \major
 
   \partial 4 r4 \bar "||" |
 
-  aes,4-.-> \mf r4 r8. bes16 c16-> ees16 f16 des16-> |
-  r2 r16 bes16 ces16 des16-> ~des16 d16 ees16 e16 |
-  f4-> c4-> des8.-> aes16-> ~aes8 r8 |
-  bes4->\4 ees8.->\3 aes,16-> r2 \bar "||"
+  af,4-.-> \mf r4 r8. bf16 c16-> ef16 f16 df16-> |
+  r2 r16 bf16 cf16 df16-> ~df16 d16 ef16 e16 |
+  f4-> c4-> df8.-> af16-> ~af8 r8 |
+  bf4->\4 ef8.->\3 af,16-> r2 \bar "||"
   
   %% 5
   \mBreak
   \mark \markup { \bold { [A] } }
-  aes4-.-> \mf \cresc r4 r8. bes16 c16-> ees16 f16 des16-> |
-  r2 r16 bes16 ces16 des16-> ~des16 d16 ees16 e16 \f |
-  f4-> c4-> des8.-> aes16-> ~aes8 r8 |
-  bes4->\4 \< ees8.->\3 aes,16-> \! r2 \bar "||"
+  af4-.-> \mf \cresc r4 r8. bf16 c16-> ef16 f16 df16-> |
+  r2 r16 bf16 cf16 df16-> ~df16 d16 ef16 e16 \f |
+  f4-> c4-> df8.-> af16-> ~af8 r8 |
+  bf4->\4 \< ef8.->\3 af,16-> \! r2 \bar "||"
 
   %% 9
   \mBreak
   \mark \markup { \bold { [B] } \italic { (Vocals) } }
-  aes'8.->\2 \f aes16\2 g8.->\2 g16\2 f16\2 f8-> ees16-> ~ ees16 c16 ees16 c16 |
-  des8.-> des16 c8.-> c16 bes16 bes8-> ees16-> ~ees16 d16 ees16 e16 |
+  af'8.->\2 \f af16\2 g8.->\2 g16\2 f16\2 f8-> ef16-> ~ ef16 c16 ef16 c16 |
+  df8.-> df16 c8.-> c16 bf16 bf8-> ef16-> ~ef16 d16 ef16 e16 |
   
   %% 11
   \mBreak
-  f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
-  bes4->\4 ees8.->\3 aes,16-> r8 \> ees'16\3 f16\3 aes16\2 f16\3 aes8-.\2 
+  f8.-> f16 c4-> df16-> df8-> af16-> ~af8 r8 |
+  bf4->\4 ef8.->\3 af,16-> r8 \> ef'16\3 f16\3 af16\2 f16\3 af8-.\2 
   \bar "||"  % doesn't work
   
   \repeat volta 2 {
@@ -55,46 +56,46 @@ my_notes = \relative c {
     \mBreak
     \mark \markup { \bold { [C] } }
     \bar "[|:"
-    aes,4-.->  \mf r4 r8. bes16 c16-> ees16 f16 des16-> |
-    r2 r16 bes16 ces16 des16-> ~des16 d16 ees16 e16 |
-    f4-> c4-> des8.-> aes16-> ~aes8 r8 |
-    bes4->\4 ees8.->\3 aes,16->\4 r2
+    af,4-.->  \mf r4 r8. bf16 c16-> ef16 f16 df16-> |
+    r2 r16 bf16 cf16 df16-> ~df16 d16 ef16 e16 |
+    f4-> c4-> df8.-> af16-> ~af8 r8 |
+    bf4->\4 ef8.->\3 af,16->\4 r2
     
     %% 17
     \mBreak
-    aes4-.->  \mf r4 r8. bes16 c16-> ees16 f16 des16-> |
-    r2 r16 bes16 ces16 des16-> ~des16 d16 ees16 e16 |
-    f4-> c4-> des8.-> aes16-> ~aes8 r8 |
-    bes4->\4 \< ees8.->\3 aes,16->\4 r8 ees'16\3 f16\3 aes16\2 f16\3 aes8-.\2 \! \bar "||"
+    af4-.->  \mf r4 r8. bf16 c16-> ef16 f16 df16-> |
+    r2 r16 bf16 cf16 df16-> ~df16 d16 ef16 e16 |
+    f4-> c4-> df8.-> af16-> ~af8 r8 |
+    bf4->\4 \< ef8.->\3 af,16->\4 r8 ef'16\3 f16\3 af16\2 f16\3 af8-.\2 \! \bar "||"
     
     %% 21
     \mBreak
     \mark \markup { \bold { [D] } }
-    aes8.->\2 \f aes16\2 g8.->\2 g16\2 f16\2 f8-> ees16-> ~ ees16 c16 ees16 c16 |
-    des8.-> des16 c8.-> c16 bes16 bes8-> ees16-> ~ees16 d16 ees16 e16 |
+    af8.->\2 \f af16\2 g8.->\2 g16\2 f16\2 f8-> ef16-> ~ ef16 c16 ef16 c16 |
+    df8.-> df16 c8.-> c16 bf16 bf8-> ef16-> ~ef16 d16 ef16 e16 |
     
     %% 23
     \mBreak
-    f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
-    bes4->\4 ees8.->\3 aes,16->\4 r8 ees'16\3 f16\3 aes16\2 f16\3 aes8-.\2 |
+    f8.-> f16 c4-> df16-> df8-> af16-> ~af8 r8 |
+    bf4->\4 ef8.->\3 af,16->\4 r8 ef'16\3 f16\3 af16\2 f16\3 af8-.\2 |
     
     %% 25
     \mBreak
-    aes8.->\2 aes16\2 g8.->\2 g16\2 f16\2 f8-> ees16-> ~ ees16 c16 ees16 c16 |
-    des8.-> des16 c8.-> c16 bes16 bes8-> ees16-> ~ees16 d16 ees16 e16 |
+    af8.->\2 af16\2 g8.->\2 g16\2 f16\2 f8-> ef16-> ~ ef16 c16 ef16 c16 |
+    df8.-> df16 c8.-> c16 bf16 bf8-> ef16-> ~ef16 d16 ef16 e16 |
     
   } \alternative {
     { 
       %% 27
       \mBreak
-      f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
-      bes4->\4 ees8.->\3 aes,16-> r16 aes16-> r16 aes16-> aes4-> \bar "||"
+      f8.-> f16 c4-> df16-> df8-> af16-> ~af8 r8 |
+      bf4->\4 ef8.->\3 af,16-> r16 af16-> r16 af16-> af4-> \bar "||"
       
       %% 29
       \mBreak
-      r2 r16 aes16-> aes16-> aes16-> aes4-.-> |
-      r2 r16 aes16-> aes16-> aes16-> aes4-.-> |
-      r2 r16 aes16-> aes16-> aes16-> aes4-.-> |
+      r2 r16 af16-> af16-> af16-> af4-.-> |
+      r2 r16 af16-> af16-> af16-> af4-.-> |
+      r2 r16 af16-> af16-> af16-> af4-.-> |
       \time 2/4 r2
       \bar ":|]" 
     }
@@ -102,31 +103,31 @@ my_notes = \relative c {
       %% 33
       \mBreak
       \time 4/4
-      f'8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
+      f'8.-> f16 c4-> df16-> df8-> af16-> ~af8 r8 |
       r1 |
-      r2 r4 r16 f'16\3 aes16\2 c,16->~\4 \bar "||"
+      r2 r4 r16 f'16\3 af16\2 c,16->~\4 \bar "||"
     }
   }
 
   %% 36
   \mBreak
-  c4\4 r16 ees16\3 f16\3 aes,16-> ~aes4 r16 f'16\3 aes16\2 c,16->~\4 |
-  c4 r16 ees16\3 f16\3 aes,16-> ~aes4 r4 \bar "||"
+  c4\4 r16 ef16\3 f16\3 af,16-> ~af4 r16 f'16\3 af16\2 c,16->~\4 |
+  c4 r16 ef16\3 f16\3 af,16-> ~af4 r4 \bar "||"
   
   %% 38
   \mBreak
   \mark \markup { \bold { [F] } }
-  f'16->\3 aes16\2 c16 c,16->\4 ~c16 ees16\3 aes16\2 des,16-> ~des16 f16\3 aes16\2 aes,16->\4
-    ~aes16 c16\4 ees8\3 |
-  f16->\3 aes16\2 c16\1 c,16->\4 ~c16 ees16\3 aes16\2 des,16->\3 ~des16 f16\3 aes16\2 aes,16-> 
-    ~aes16 c16\4 ees8\3 |
+  f'16->\3 af16\2 c16 c,16->\4 ~c16 ef16\3 af16\2 df,16-> ~df16 f16\3 af16\2 af,16->\4
+    ~af16 c16\4 ef8\3 |
+  f16->\3 af16\2 c16\1 c,16->\4 ~c16 ef16\3 af16\2 df,16->\3 ~df16 f16\3 af16\2 af,16-> 
+    ~af16 c16\4 ef8\3 |
   
   %% 40
   \mBreak
-  f16->\3 aes16\2 c16 c,16->\4 ~c16 ees16\3 aes16\2 des,16-> ~des16 f16\3 aes16\2 aes,16->\4 
-    ~aes16 c16\4 ees8\3 |
-  f16->\3 aes16\2 c16\1 c,16->\4 ~c16 ees16\3 aes16\2 des,16->\3 ~des16 f16\3 aes16\2 aes,16-> 
-    ~aes16 c16\4 ees8\3 \bar "||"
+  f16->\3 af16\2 c16 c,16->\4 ~c16 ef16\3 af16\2 df,16-> ~df16 f16\3 af16\2 af,16->\4 
+    ~af16 c16\4 ef8\3 |
+  f16->\3 af16\2 c16\1 c,16->\4 ~c16 ef16\3 af16\2 df,16->\3 ~df16 f16\3 af16\2 af,16-> 
+    ~af16 c16\4 ef8\3 \bar "||"
   
   \repeat volta 2 {
     %% 42
@@ -134,18 +135,18 @@ my_notes = \relative c {
     \bar "[|:"
     \mark \markup { \bold { [G] } }
     \set TabStaff.minimumFret = 1
-    aes8.->\2 aes16\2 g8.->\2 g16\2 f16 f8-> ees16-> ~ ees16 c16 ees16 c16 |
-    des8.-> des16 c8.-> c16 bes16 bes8-> ees16-> ~ees16 d16 ees16 e16 |
+    af8.->\2 af16\2 g8.->\2 g16\2 f16 f8-> ef16-> ~ ef16 c16 ef16 c16 |
+    df8.-> df16 c8.-> c16 bf16 bf8-> ef16-> ~ef16 d16 ef16 e16 |
     
     %% 44
     \mBreak
-    f8.-> f16 c4-> des16-> des8-> aes16-> ~aes8 r8 |
-    bes4->\4 ees8.->\3 aes,16-> r16 aes16-> aes16-> aes16-> aes4-.-> |
+    f8.-> f16 c4-> df16-> df8-> af16-> ~af8 r8 |
+    bf4->\4 ef8.->\3 af,16-> r16 af16-> af16-> af16-> af4-.-> |
     
     %% 46
     \mBreak
-    r2 r16 aes16-> aes16-> aes16-> aes4-.-> |
-    \time 2/4 r4 ees'16->\3 f16\3 aes16\2 f16\3
+    r2 r16 af16-> af16-> af16-> af4-.-> |
+    \time 2/4 r4 ef'16->\3 f16\3 af16\2 f16\3
     \bar ":|]"
   }
   
@@ -153,14 +154,14 @@ my_notes = \relative c {
   \mBreak
   \time 4/4
   \mark \markup { \bold { [H] } }
-  aes8.->\2 aes16\2 g8.->\2 g16\2 f16\2 f8-> ees16-> ~ ees16 ees16 ees8-. |
-  des16-> aes'16\2 des16 c,16-> ~ c16 c16 c16 bes16-> ~bes16 bes16 bes16 bes16
-    ees8-> ees16-> e16 | 
+  af8.->\2 af16\2 g8.->\2 g16\2 f16\2 f8-> ef16-> ~ ef16 ef16 ef8-. |
+  df16-> af'16\2 df16 c,16-> ~ c16 c16 c16 bf16-> ~bf16 bf16 bf16 bf16
+    ef8-> ef16-> e16 | 
   
   %% 50
   \mBreak
-  f8.-> f16 c8.-> c16 des16-> des8-> aes16-> ~aes8 r8 |
-  bes8.->\4 bes16-.\4 ees4->\3 r16 \ff aes,16-> aes16-> aes16-> aes4-.-^ |
+  f8.-> f16 c8.-> c16 df16-> df8-> af16-> ~af8 r8 |
+  bf8.->\4 bf16-.\4 ef4->\3 r16 \ff af,16-> af16-> af16-> af4-.-^ |
   %% \bar "|]" 
   
 }
@@ -170,65 +171,65 @@ my_chords = \chordmode {
 
   \partial 4 s4 |
 
-  aes16*15 des16 | s1 |
-  f4:m c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+  af16*15 df16 | s1 |
+  f4:m c4:m df8. af16*3 s8 | bf4:m7 ef8.:7 af16 s2 |
   
   %% 5
-  aes16*15 des16 | s1 |
-  f4:m7 c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+  af16*15 df16 | s1 |
+  f4:m7 c4:m df8. af16*3 s8 | bf4:m7 ef8.:7 af16 s2 |
   
   %% 9
-  aes4 ees4/g f8.:m7 ees16*5 | des4 des4/c bes8.:m7 ees16*5 |
+  af4 ef4/g f8.:m7 ef16*5 | df4 df4/c bf8.:m7 ef16*5 |
   
   %% 11
-  f4:m7 c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+  f4:m7 c4:m df8. af16*3 s8 | bf4:m7 ef8.:7 af16 s2 |
 
   \repeat volta 2 {
     %% 13
-    aes16*15 des16 | s1 |
-    f4:m c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+    af16*15 df16 | s1 |
+    f4:m c4:m df8. af16*3 s8 | bf4:m7 ef8.:7 af16 s2 |
   
     %% 17
-    aes16*15 des16 | s1 |
-    f4:m7 c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+    af16*15 df16 | s1 |
+    f4:m7 c4:m df8. af16*3 s8 | bf4:m7 ef8.:7 af16 s2 |
   
     %% 21
-    aes4 ees4/g f8.:m7 ees16*5 | des4 des4/c bes8.:m7 ees16*5 |
+    af4 ef4/g f8.:m7 ef16*5 | df4 df4/c bf8.:m7 ef16*5 |
     
     %% 23
-    f4:m7 c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+    f4:m7 c4:m df8. af16*3 s8 | bf4:m7 ef8.:7 af16 s2 |
   
     %% 25
-    aes4 ees4/g f8.:m7 ees16*5 | des4 des4/c bes8.:m7 ees16*5 |
+    af4 ef4/g f8.:m7 ef16*5 | df4 df4/c bf8.:m7 ef16*5 |
   } \alternative {
     {
       %% 27
-      f4:m7 c4:m des8. aes16*3 s8 | bes4:m7 ees8.:7 aes16 s2 |
+      f4:m7 c4:m df8. af16*3 s8 | bf4:m7 ef8.:7 af16 s2 |
       s1 | s1 | s1 |
       \time 2/4 s2 |
     }
     {
       %% 33
       \time 4/4
-      f4:m7 c4:m des8. aes16*3 s8 | s1 | s1 |
+      f4:m7 c4:m df8. af16*3 s8 | s1 | s1 |
     }
   }
   
   %% 36
-  f4:m7 c:m7 des:6 aes | f:m7 c:m7 des:6 aes |
+  f4:m7 c:m7 df:6 af | f:m7 c:m7 df:6 af |
   
   %% 38
-  f4:m7 c:m7 des:6 aes | f:m7 c:m7 des:6 aes |
+  f4:m7 c:m7 df:6 af | f:m7 c:m7 df:6 af |
   
   %% 40
-  f4:m7 c:m7 des:6 aes | f:m7 c:m7 des:6 aes |
+  f4:m7 c:m7 df:6 af | f:m7 c:m7 df:6 af |
   
   %% 42
   \repeat volta 2 {
-    aes4 ees4/g f8.:m7 ees16*5 | des4 des4/c bes8.:m7 ees16*5 |
+    af4 ef4/g f8.:m7 ef16*5 | df4 df4/c bf8.:m7 ef16*5 |
     
     %% 44
-    f4:m7 c:m des:6 aes | bes:m7 ees8.:7 aes16 s2 | 
+    f4:m7 c:m df:6 af | bf:m7 ef8.:7 af16 s2 | 
     
     %% 46
     s1 |
@@ -237,8 +238,8 @@ my_chords = \chordmode {
   
   %% 48
   \time 4/4
-  aes4 ees4/g f8.:m7 ees16*5 | des4 des4/c bes8.:m7 ees16*5 |
-  f4:m7 c:m des:6 aes | bes:m7 ees8.:7 aes16 s2 |
+  af4 ef4/g f8.:m7 ef16*5 | df4 df4/c bf8.:m7 ef16*5 |
+  f4:m7 c:m df:6 af | bf:m7 ef8.:7 af16 s2 |
 }
 
 ticktock = \drummode {
