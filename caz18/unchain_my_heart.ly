@@ -13,7 +13,10 @@
   right-margin = 0.5\in
 }
 
-mBreak = { \break }
+mBreak = {
+  %% \break
+}
+cBreak = { \break }
 
 global = {
   \time 4/4
@@ -31,30 +34,31 @@ my_notes = \relative c {
 
   gs4-.-> b8 cs8-.-> r8 b8  gs8 fs8 | gs4-.-> r4 r4. \mf \cresc g8 |
   gs4-.-> b8 cs8-.-> r8 b8  gs8 fs8 \f | gs4-.-^ r4 r2 \bar "||"
-  \break
 
   \repeat volta 2 {
 
     %% 5
-    \mark \markup { \bold {[A]} \italic {(Vocals)} }
+    \mBreak
+    \mark \markup { \bold { [A] } \italic { (Vocals) } }
     \bar "[|:"
     gs4-.-> \mf b8 cs8-.-> r8 b8  gs8 fs8 | gs4-.-> r4 r4. g8 |
     gs4-.-> b8 cs8-.-> r8 b8  gs8 fs8 | gs4-.-> r4 r4. gs8 |
-    %%\break
+    
     
     %% 9
+    \mBreak
     e4-.-> b'8 cs8-.-> r8 b8  gs8 fs8 | e4-.-> r4 r4. g8 | 
     gs4-.-> \mf b8 cs8-.-> r8 b8  gs8 fs8 | gs4-.-> r4 r2 \bar "||" |
-    \break
 
     %% 13
-    \mark \markup { \bold {[B]} }
+    \mBreak
+    \mark \markup { \bold { [B] } }
     e4-> b'4 cs2 | gs4.-> b8 ~b8 b8 gs4-. | 
     e4-> b'4 cs2 | gs4.-> b8 ~b8 b8 gs4-. |
     e4-.-> \cresc b'8 cs8-> r8 b8  gs8 e8 |
-    %%\break
     
     %% 18
+    \mBreak
     ds4-> as'8 b8-> ~b8 as8 g8 ds8 | 
     gs4-.-> \f \< b8 cs8-.-> r8 b8  gs8 fs8 \! |
     
@@ -62,41 +66,42 @@ my_notes = \relative c {
     { gs4-.-^ r4 r2 \bar ":|]" }
     { gs4-.-^ r4 r2 \bar "||" }
   }
-  \break
   
   %% 22
-  \mark \markup { \bold {[C]} \musicglyph #"scripts.segno" }
+  \mBreak \cBreak \pageBreak
+  \mark \markup { \bold { [C] } \musicglyph #"scripts.segno" }
   cs4.-> gs8-> ~gs4 gs8 gs8 | cs,4.-> gs'8-> ~gs4 cs4 |
   gs4.-> gs8-> ~gs4 ds'8-> ds8 |
   gs,4.-> ds'8 ~ds8 ds8 gs,8-> gs8 |
-  %%\break
   
   %% 26
+  \mBreak
   cs4.-> gs8-> ~gs4 gs8 gs8 | cs,4.-> e8-> ~e4 e4 |
   ds4.-> as'8-> ~as4 ds8-> ds,8-.-^| r1 \bar "||" |
-  \break
   
   %% 30
-  \mark \markup { \bold {[D]} }
+  \mBreak \cBreak
+  \mark \markup { \bold { [D] } }
   gs4-.-> \mf b8 cs8-.-> r8 b8  gs8 fs8 | gs4-.-> r4 r4. f8 | 
   fs4-.-> b8 cs8-.-> r8 b8  gs8 fs8 |
-  %%\break
- 
+  
   %% 33
+  \mBreak
   gs4-.-> r4 r4. gs8 |
   e4-.-> b'8 cs8-.-> r8 b8 gs8 fs8 |
   e4-.-> r4 r4. g8 | 
   gs4-.-> b8 cs8-.-> r8 b8 gs8 fs8 |
-  %%\break
   
   %% 37
+  \mBreak
   gs4-.-> r4 r2 \bar "||" |
-  \break %% NEW
+  
+  \cBreak
   \mark \markup { \bold {[E]} }
   cs2.-> cs4 | gs2-> r8 b8->  gs8 b8 | cs2.-> cs4 |
-  %%\break
   
   %% 41
+  \mBreak
   gs2-> r2 | 
   e4-.-> \cresc b'8 cs8-> r8 b8  gs8 e8 |
   ds4-> as'8 b8-> ~b8 as8 g8       
@@ -104,58 +109,61 @@ my_notes = \relative c {
           \italic { "To Coda" } 
           \musicglyph #"scripts.coda" }  
       ds8 \bar "||" |
-   \break
    
    %% 44
+   \mBreak \cBreak
    gs4-.-> \f \< b8 cs8-.-> r8 b8  gs8 fs8 \! |
    gs4-.-^ r4 r2 \bar "||" |
-   \break %% NEW
+   \cBreak \pageBreak
    \mark \markup { \bold {[F]} \italic {(Sax Solo)} }
    gs4-.-> \mf b8 cs8-.-> r8 cs8->  b8 gs8 |
    cs,4-.-> gs'8 cs8-.-> r8 cs8->  b8 fs8 |
-   %%\break
    
    %% 48
+   \mBreak
    gs4-.-> b8 cs8-.-> r8 cs8->  b8 gs8 |
    cs,4-.-> gs'8 cs8-.-> r8 cs8->  b8 gs8 |
    cs4-.-> r8 e,8-> r4 gs8-> gs8 |
    cs,4-.-> r8 e8 r4 gs8-> g8 | 
    gs4-.-> b8 cs8-.-> r8 cs8->  b8 g8 | 
-   %%\break
    
    %% 53
+   \mBreak
    gs4-.-> r8 b8-> r8 b8->  gs8 fs8 \bar "||" |
-   \break %% NEW
+   \cBreak
    \mark \markup { \bold {[G]} } 
      e4.-> e8 ~e4 e8 e8 |
    gs4.-> b8-> ~b4 gs8 fs8 |
    e4.-> gs8-> ~gs8 gs8 e4 |
-   %%\break
    
    %% 57
+   \mBreak
    gs4.-> b8-> ~b8 b8 gs4-. |
    e4.-> \cresc gs8-> ~gs4 e8-> e8 |
    ds4.-> ds'8 ~ds8 cs8-> as8 ds,8 |
    gs4-.-> \< b8 cs8-.-> r8 b8  gs8 fs8 \! |
    gs4-.-^ r4 r2 _\markup { \bold { \italic { "D.S. al Coda" } } }
    \bar "||"   % doesn't work
-   \break
    
    \repeat volta 2 {
      %% 62
+     \mBreak \cBreak
      \mark \markup { \bold { \italic { "Coda" } \musicglyph #"scripts.coda" } } 
      \bar "[|:"
      gs4-> b8 cs8-> ~cs8 b8 gs8 fs8 |
      gs2.-> r8 g8 |
-     \break
    } \alternative {
-     %% 64
-     { gs4-> \mf b8 cs8-> ~cs8  b8  gs8 fs8 | 
-       gs2.-> r8 g8 \bar ":|]" | }
-     { gs4-.-> \f \< b8 cs8-.-> r8 b8  gs8 fs8 \! |
-       gs4-.-^ r4 r2  \bar "|." }
+     { 
+       %% 64
+       \mBreak \cBreak
+       gs4-> \mf b8 cs8-> ~cs8  b8  gs8 fs8 | 
+       gs2.-> r8 g8 \bar ":|]" | 
+     }
+     { 
+       gs4-.-> \f \< b8 cs8-.-> r8 b8  gs8 fs8 \! |
+       gs4-.-^ r4 r2  \bar "|." 
+     }
    }
-
 }
 
 my_chords = \chordmode {
