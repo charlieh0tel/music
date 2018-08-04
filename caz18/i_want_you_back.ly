@@ -13,7 +13,11 @@
   right-margin = 0.5 \in
 }
 
-mBreak = { \break }
+mBreak = {
+  %% \break
+}
+
+cBreak = { \break }
 
 global = {
   \time 4/4
@@ -40,7 +44,7 @@ my_notes = \relative c {
   bf4->\4 \< ef8.->\3 af,16-> \! r2 \bar "||"
 
   %% 9
-  \mBreak
+  \mBreak \cBreak
   \mark \markup { \bold { [B] } \italic { (Vocals) } }
   af'8.->\2 \f af16\2 g8.->\2 g16\2 f16\2 f8-> ef16-> ~ ef16 c16 ef16 c16 |
   df8.-> df16 c8.-> c16 bf16 bf8-> ef16-> ~ef16 d16 ef16 e16 |
@@ -53,7 +57,7 @@ my_notes = \relative c {
   
   \repeat volta 2 {
     %% 13
-    \mBreak
+    \mBreak \cBreak
     \mark \markup { \bold { [C] } }
     \bar "[|:"
     af,4-.->  \mf r4 r8. bf16 c16-> ef16 f16 df16-> |
@@ -101,10 +105,11 @@ my_notes = \relative c {
     }
     {
       %% 33
-      \mBreak
+      \mBreak \cBreak
       \time 4/4
       f'8.-> f16 c4-> df16-> df8-> af16-> ~af8 r8 |
       r1 |
+      \cBreak
       r2 r4 r16 f'16\3 af16\2 c,16->~\4 \bar "||"
     }
   }
@@ -151,7 +156,7 @@ my_notes = \relative c {
   }
   
   %% 48
-  \mBreak
+  \mBreak \cBreak
   \time 4/4
   \mark \markup { \bold { [H] } }
   af8.->\2 af16\2 g8.->\2 g16\2 f16\2 f8-> ef16-> ~ ef16 ef16 ef8-. |
