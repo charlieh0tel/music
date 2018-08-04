@@ -13,6 +13,13 @@
   right-margin = 0.5\in
 }
 
+mBreak = { 
+  %%\break 
+}
+cBreak = {
+  \break
+}
+
 global = {
   \time 4/4
   \tempo 4 = 130
@@ -23,104 +30,107 @@ my_notes = \relative c, {
   
   \key f \major
 
-  %% r1 | r1 | r1 | r2 r4 r8 c8->~ \f |
+  r1 |
+  r1 |
+  r1 |
+  r2 r4 r8 c8->~ \f |
 
-  \set TabStaff.minimumFret = #14
-  \set TabStaff.restrainOpenStrings = ##t
-  c'8 g8 d'8 g,8 e'8 g,8 c8 g8 | 
-  c16 d16 e16 g16 c16 g16 e16 d16 c8 r8
-  \set TabStaff.minimumFret = #8
-  \set TabStaff.restrainOpenStrings = ##t 
-  c,8 g'8 |
-  \set TabStaff.minimumFret = #14
-  \set TabStaff.restrainOpenStrings = ##t
-  c8 g8 d'8 g,8 e'8 g,8 c8 g8 | 
-  c16 d16 e16 g16 c16 g16 e16 d16 c8 r8
-  \set TabStaff.minimumFret = #1
-  \set TabStaff.restrainOpenStrings = ##t	
-  r8 c,8->~ \f |
- 
-  \break
-  
-  c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
-  c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
-  \break
+  %% 5
+  \mBreak
+  c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+  bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+  c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+  bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+
   \repeat volta 2 {
     %% 9
+    \mBreak \cBreak
     \mark \default
-    c8 \mf d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
-    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
-    \break
-    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
-    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
-    \break
-    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
-    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 g8-. |
-    \break
-    %% 21
-    c4-> \f g'8 c8 f,4.-> f8 | bf,4-> f'8 f,8-> ~f8 c'8 c8 c8 | 
-    c4-> g'8 c8 f,4.-> f8 | bf,4-> f'8 f,8-> ~f8 c'8 c8 c8 | 
-    c4-> g'8 c8 f,4.-> f8 | bf,4-> f'8 f,8-> ~f8 c'8 c8 c8 | 
-    c4-> g'8 c8 f,4.-> f8 | bf,4-> f'8 f,8-> ~f8 c'8 c8 c8 | 
-    \break
+    c8 \mf d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+    bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+    bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
     
-    %% 29
-    \mark \default
-    g'8 g8 g8 g8 g8 g8 g8 g8 | gs8 gs8 gs8 gs8 gs8 gs8 gs8 gs8 |
-    a8 a8 a8 a8 a8 a8 a8 a8 | f,2 f'4. r8 |
-    \break
-    %% 33
-    %% r1 \mf | r1 | r1 | r2 r4 r8 c8->~ |
+    %% 13
+    \mBreak
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+    bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+    bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
 
-    \set TabStaff.minimumFret = #14
-    \set TabStaff.restrainOpenStrings = ##t
-    c'8 g8 d'8 g,8 e'8 g,8 c8 g8 | 
-    c16 d16 e16 g16 c16 g16 e16 d16 c8 r8
-    \set TabStaff.minimumFret = #8
-    \set TabStaff.restrainOpenStrings = ##t 
-    c,8 g'8 |
-    \set TabStaff.minimumFret = #14
-    \set TabStaff.restrainOpenStrings = ##t
-    c8 g8 d'8 g,8 e'8 g,8 c8 g8 | 
-    c16 d16 e16 g16 c16 g16 e16 d16 c8 r8
-    \set TabStaff.minimumFret = #1
-    \set TabStaff.restrainOpenStrings = ##t	
-    r8 c,8->~ \f |
-    
+    %% 17
+    \mBreak
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+    bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+    bf8 c8 d8 f8-> ~f8 d8 c8 g8-. |
+
+    %% 21
+    \mBreak
+    c4-> \f g'8 c8 f,4.-> f8 |
+    bf,4-> f'8 f,8-> ~f8 c'8 c8 c8 | 
+    c4-> g'8 c8 f,4.-> f8 |
+    bf,4-> f'8 f,8-> ~f8 c'8 c8 c8 | 
+
+    %% 25
+    \mBreak
+    c4-> g'8 c8 f,4.-> f8 |
+    bf,4-> f'8 f,8-> ~f8 c'8 c8 c8 | 
+    c4-> g'8 c8 f,4.-> f8 |
+    bf,4-> f'8 f,8-> ~f8 c'8 c8 c8 | 
+
+    %% 29
+    \mBreak \cBreak
+    \mark \default
+    g'8 g8 g8 g8 g8 g8 g8 g8 |
+    gs8 gs8 gs8 gs8 gs8 gs8 gs8 gs8 |
+    a8 a8 a8 a8 a8 a8 a8 a8 |
+    f,2 f'4. r8 |
+
+    %% 33
+    \mBreak
+
+    r1 \mf |
+    r1 |
+    r1 |
+    r2 r4 r8 c8->~ |    
   } \alternative {
     {     
       %% 37
-      c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
-      c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
-      \break
+      \mBreak
+      c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+      bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+      c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+      bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
     }
     {
+      %% 41
+      \mBreak \cBreak
       \mark \default
-      c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
-      c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+      c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+      bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
+      c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+      bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
     }
   }
   
   %% 45
+  \mBreak
   c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
   bf8 c8 d8 f8-> ~f8 d8 c8 c8->~ |
   c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
   bf8 c8 d8 f8-> ~f8 d8 c8 g8-. |    %% CHECK last note
   
   %% 49
-  %% r1 | r2 r4 r8 c8->~ |
+  \mBreak
 
-  \set TabStaff.minimumFret = #14
-  \set TabStaff.restrainOpenStrings = ##t
-  c'8 g8 d'8 g,8 e'8 g,8 c8 g8 | 
-  c16 d16 e16 g16 c16 g16 e16 d16 c8 r8
-  \set TabStaff.minimumFret = #1
-  \set TabStaff.restrainOpenStrings = ##t	
-  r8 c,8->~ \f |
+  r1 |
+  r2 r4 r8 c8->~ |
   
   \repeat volta 2 {
     \bar "[|:"
-    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ | bf8 c8 d8 f8-> ~f8 d8 c8 c8->~
+    c8 d8 e8 f8-> ~f8 g,8 a8 bf8->~ |
+    bf8 c8 d8 f8-> ~f8 d8 c8 c8->~
     \bar ":|]"
   }  
 }
@@ -154,7 +164,7 @@ my_chords = \chordmode {
     }
   }
   
-  %45
+  %% 45
   c2 f2 | bf2 f2 | c2 f2 | bf2 f2 |
   c1 | s1 |
   
