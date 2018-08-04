@@ -12,14 +12,17 @@
   right-margin = 0.5\in
 }
 
+global = {
+  \time 4/4
+  \tempo "Soul/Latin" 4 = 155
+}
+
 my_notes = \relative c {
   \clef "bass_8"
   \key b \major
-  \time 4/4
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
-  \tempo "Soul/Latin" 4 = 155
 
   \partial 8 g8 \mp |
 
@@ -201,23 +204,50 @@ my_chords = \chordmode {
   }
 }
 
+ticktock = \drummode {
+  \partial 8 r8
+  \repeat unfold 84 {
+    hiwoodblock 4 lowoodblock lowoodblock lowoodblock
+  }
+}
+
 my_music = <<
-  \new ChordNames \my_chords
+  \new ChordNames = Chords {
+    \set ChordNames.midiInstrument = "percussive organ"
+    \set ChordNames.midiMaximumVolume = #0.2
+    \set chordChanges = ##t
+    \global
+    \my_chords
+  }
   \new Staff {
     \set Staff.midiInstrument = #"electric bass (finger)"
+    \set staff.midiMinimumVolume = #0.5
+    \set Staff.midiMaximumVolume = #0.9
+    \global
     \my_notes
   }
+  \tag #'scoreOnly
   \new TabStaff
-  \with { stringTunings = #bass-tuning } 
+    \with { stringTunings = #bass-tuning } 
   { 
     \set TabStaff.minimumFret = #3
     \set TabStaff.restrainOpenStrings = ##t
+    \global
     \my_notes
   }
+  \tag #'midiOnly
+  \new DrumStaff = TickTock <<
+    \new DrumVoice = "ticktock" {
+      \set DrumStaff.instrumentName = "TickTock"
+      \set DrumStaff.midiMaximumVolume = #0.7
+      \global
+      \ticktock
+    }
+  >>
 >>
   
 \score {
-  \my_music
+  \removeWithTag #'midiOnly \my_music
   \layout {
     \context {
       \Score
@@ -226,8 +256,7 @@ my_music = <<
 }
 
 \score {
-  \unfoldRepeats
-  \my_music
+  \removeWithTag #'scoreOnly \unfoldRepeats \my_music
   \midi {}
 }
 

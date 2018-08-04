@@ -14,10 +14,13 @@
   right-margin = 0.5\in
 }
 
-my_notes = \relative c, {
-  \clef "bass_8"
+global = {
   \time 4/4
   \tempo 4 = 130
+}
+
+my_notes = \relative c, {
+  \clef "bass_8"
   
   \key f \major
 
@@ -162,23 +165,65 @@ my_chords = \chordmode {
   
 }
 
+% Repeats one bar of music for the length of a reference piece.
+% From: "Neil Puttock" <n.puttock@gmail.com>
+% Usage: \makeUnfold \refPiece \oneBarOfMusic
+makeUnfold =
+#(define-music-function (parser location name mus) (ly:music? ly:music?)
+  (let ((r (make-repeated-music "unfold")))
+    (set! (ly:music-property r 'element) mus)
+    (set! (ly:music-property r 'repeat-count)
+          (ly:moment-main-numerator (ly:music-length name)))
+    r))
+
+% Create metronome ticks. This example assumes 4/4 .
+ticktock = \drummode {
+  % Note that \makeUnfold \unfoldRepeats \harmonics basically is a way
+  % repeat something for the duration of \harmonics. If you know the
+  % number of bars you might as well write \repeat unfold ...
+  \makeUnfold \unfoldRepeats \my_chords {
+    hiwoodblock 4 lowoodblock lowoodblock lowoodblock
+  }
+}
+
+
 my_music = <<
-  \new ChordNames \my_chords
+  \new ChordNames = Chords {
+    \set ChordNames.midiInstrument = "percussive organ"
+    \set ChordNames.midiMaximumVolume = #0.2
+    \set chordChanges = ##t
+    \global
+    \my_chords
+  }
   \new Staff {
     \set Staff.midiInstrument = #"electric bass (finger)"
+    \set staff.midiMinimumVolume = #0.5
+    \set Staff.midiMaximumVolume = #0.9
+    \global
     \my_notes
   }
+  \tag #'midiOnly
   \new TabStaff
     \with { stringTunings = #bass-tuning } 
   { 
     \set TabStaff.minimumFret = #1
     \set TabStaff.restrainOpenStrings = ##t
+    \global
     \my_notes
   }
+  \tag #'midiOnly
+  \new DrumStaff = TickTock <<
+    \new DrumVoice = "ticktock" {
+      \set DrumStaff.instrumentName = "TickTock"
+      \set DrumStaff.midiMaximumVolume = #0.7
+      \global
+      \ticktock
+    }
+  >>
 >>
   
 \score {
-  \my_music
+  \removeWithTag #'midiOnly \my_music
   \layout {
     \set Score.markFormatter = #format-mark-box-alphabet
     \context {
@@ -188,8 +233,7 @@ my_music = <<
 }
 
 \score {
-  \unfoldRepeats
-  \my_music
+  \removeWithTag #'scoreOnly \unfoldRepeats \my_music
   \midi {}
 }
 
