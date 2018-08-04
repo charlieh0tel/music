@@ -29,10 +29,7 @@ clean:
 	lilypond $<
 
 %.wav: %.midi
-	timidity $< \
-          -A120 \
-          -x"bank 0\n0 Tone_000/000_Acoustic_Grand_Piano.pat amp=20\n33	Tone_000/033_Finger_Bass.pat amp=120" \
-          -Ow -o $@
+	timidity $< -A200 -Ow -o $@
 
 %.mp3: %.wav
 	ffmpeg -y -loglevel warning -i $< $@
