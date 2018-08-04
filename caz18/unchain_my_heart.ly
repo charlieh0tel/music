@@ -140,7 +140,7 @@ my_notes = \relative c {
    \mBreak
    gs4.-> b8-> ~b8 b8 gs4-. |
    e4.-> \cresc gs8-> ~gs4 e8-> e8 |
-   ds4.-> ds'8 ~ds8 cs8-> as8 ds,8 |
+   ds4.-> ds'8 ~ds8 cs8-> as8\2 ds,8 |
    gs4-.-> \< b8 cs8-.-> r8 b8  gs8 fs8 \! |
    gs4-.-^ r4 r2 _\markup { \bold { \italic { "D.S. al Coda" } } }
    \bar "||"   % doesn't work
