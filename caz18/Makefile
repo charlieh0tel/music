@@ -1,5 +1,6 @@
 all: unchain_my_heart \
   i_want_you_back \
+  i_want_you_back_bridge \
   the_tears_of_a_clown \
   the_tears_of_a_clown_bassoon_riff \
   feel_it_still
@@ -14,6 +15,11 @@ i_want_you_back: \
   i_want_you_back.pdf i_want_you_back.midi \
   i_want_you_back.wav i_want_you_back.mp3
 .PHONY: i_want_you_back
+
+i_want_you_back_bridge: \
+  i_want_you_back_bridge.pdf i_want_you_back_bridge.midi \
+  i_want_you_back_bridge.wav i_want_you_back_bridge.mp3
+.PHONY: i_want_you_back_bridge
 
 the_tears_of_a_clown: \
   the_tears_of_a_clown.pdf the_tears_of_a_clown.midi \
