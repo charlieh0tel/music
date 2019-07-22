@@ -75,8 +75,8 @@ my_notes = \relative c {
   \break
   \mark \markup { \bold { [E] } } 
   e,8-> g8-. r8. a16-. a8-> g8-. r8. b16 |
-  b8-> g8-. r4 a8-> g8-. r4 |
-  g16-> \< e16 e16 af16 r16 e16 a16 a16 a8-> a8 a8. a16 |
+  b8-> \cresc g8-. r4 a8-> g8-. r4 |
+  g16-> e16 e16 af16 r16 e16 a16 a16 a8-> a8 a8. a16 |
   a16 a16 a16 bf16 r16 bf16 b16 b16 b8-> b8 b4 | 
   b8-. a16 c16 r16 a16 cs16 cs16 cs8-> cs8 cs8 r8 |
   cs16 cs16 cs16 d16 r16 b16 ef8->~ \mf ef2~ |
@@ -208,6 +208,23 @@ my_chords = \chordmode {
   
 }
 
+ticktock = \drummode {
+  \repeat unfold 40 {
+    hiwoodblock 4 lowoodblock lowoodblock lowoodblock
+  }
+  \repeat volta 2 {
+    \repeat unfold 7 {
+      hiwoodblock 4 lowoodblock lowoodblock lowoodblock
+    }
+  } \alternative {
+    { hiwoodblock 4 lowoodblock lowoodblock lowoodblock }
+    { hiwoodblock 4 lowoodblock lowoodblock lowoodblock }
+  }
+  \repeat unfold 16 {
+    hiwoodblock 4 lowoodblock lowoodblock lowoodblock
+  }
+}
+
 my_music = <<
   \new ChordNames {
     \set ChordNames.midiInstrument = "percussive organ"
@@ -218,7 +235,7 @@ my_music = <<
   }
   \new Staff {
     \set Staff.midiInstrument = #"electric bass (finger)"
-    \set staff.midiMinimumVolume = #0.7
+    \set Staff.midiMinimumVolume = #0.7
     \set Staff.midiMaximumVolume = #0.95
     \global
     \my_notes
@@ -232,6 +249,15 @@ my_music = <<
     \global
     \my_notes
   }
+  \tag #'midiOnly
+  \new DrumStaff = TickTock <<
+    \new DrumVoice = "ticktock" {
+      \set DrumStaff.instrumentName = "TickTock"
+      \set DrumStaff.midiMaximumVolume = #0.7
+      \global
+      \ticktock
+    }
+  >>
 >>
   
 \score {

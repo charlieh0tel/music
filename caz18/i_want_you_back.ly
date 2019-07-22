@@ -311,7 +311,7 @@ my_music = <<
   }
   \new Staff {
     \set Staff.midiInstrument = #"electric bass (finger)"
-    \set staff.midiMinimumVolume = #0.7
+    \set Staff.midiMinimumVolume = #0.7
     \set Staff.midiMaximumVolume = #0.95
     \global
     \my_notes
