@@ -63,23 +63,23 @@ my_notes = \relative c {
   %% 21
   \break
   \mark \markup { \bold { [D] } } 
-  a'8 \mf e'8-. a,8 a16 e'16 <d, fs'>8 d8-. r8 d16 d16 |
-  <g, b'>8 g8 r4 <c e'>8 c-. <b ds'>8 bf8-. |
+  a'8\2 \mf e'8-. a,8\2 a16\2 e'16 <d, fs'>8 d8-. r8 d16 d16 |
+  <g, b'>8 g8 r4 <c e'>8 c-.\4 <b ds'>8 bf8-.\4 |
   
   %% 23
   \break
   a8 a8-. r8 a16 a16 <d fs'>8 d8-. r8 d16 d16 |
-  <g, b'>8 g8 r4 <c e'>8 c-. r4 \bar "||"
+  <g, b'>8 g8 r4 <c e'>8 c-.\4 r4 \bar "||"
   
   %% 25
   \break
   \mark \markup { \bold { [E] } } 
   e,8-> g8-. r8. a16-. a8-> g8-. r8. b16 |
-  b8-> \cresc g8-. r4 a8-> g8-. r4 |
+  b8-> \< g8-. r4 a8-> g8-. r4 |
   g16-> e16 e16 af16 r16 e16 a16 a16 a8-> a8 a8. a16 |
   a16 a16 a16 bf16 r16 bf16 b16 b16 b8-> b8 b4 | 
   b8-. a16 c16 r16 a16 cs16 cs16 cs8-> cs8 cs8 r8 |
-  cs16 cs16 cs16 d16 r16 b16 ef8->~ \mf ef2~ |
+  cs16 cs16 cs16 d16 r16 b16 \! ef8->~ \mf ef2~ |
   
   %% 31
   ef2. <e g'>16 \f <e g'>8.-> \bar "||"
@@ -105,7 +105,7 @@ my_notes = \relative c {
     e,,4-- r8. e16 e4-- r16 d''8.-> |
     
     %% 43
-    e,,4-- r8. e16 e8 e'8-- r16 e'8.-> |
+    e,,4-- r8. e16 e8 e'8--\3 r16 e'8.-> |
     e,,4-- r8. e16 e4-- r16 d''8.-> |
     e,,4. r16 e''16 g16 e,16 fs'16 \deadNote d,16 e'16 d,16 d'16 e16 |
     
@@ -119,26 +119,26 @@ my_notes = \relative c {
   %% 49
   \break
   \mark \markup { \bold { [H] } } 
-  a'8 \mf e'8-. a,8 a16 e'16 <d, fs'>8 d8-. r8 d16 d16 |
-  <g, b'>8 g8 r4 <c e'>8 c8-. <b ds'>8  bf8-. |
+  a'8\2 \mf e'8-. a,8\2 a16\2 e'16 <d, fs'>8 d8-. r8 d16 d16 |
+  <g, b'>8 g8 r4 <c e'>8 c8-.\4 <b ds'>8  bf8-.\4 |
   a8 a8-. r8 a16 a16 <d fs'>8 d8-. r8 d16 d16 |
   
   %% 52
-  <g, b'>8 g8-. r4 <c e'>8 c8~ <c fs'>8 c8 |
+  <g, b'>8 g8-. r4 <c e'>8 c8~\4 <c fs'>8 c8\4 |
   \break
-  a'8 \f e'8-. a,8 a16 e'16 <d, fs'>8 d8-. r8 d16 d16 |
-  <g, b'>8 g8 r4 <c e'>8 c8-. <b d'>8 bf8-. |
+  a'8\2 \f e'8-. a,8\2 a16\2 e'16 <d, fs'>8 d8-. r8 d16 d16 |
+  <g, b'>8 g8 r4 <c e'>8 c8-.\4 <b d'>8 bf8-.\4 |
   a8 a8-. r8 a16 a16 <d fs'>8 d8-. r8 d16 d16 |
   
   %% 56
-  <g, b'>8 g8 r4 <c e'>8 c8~ <c fs'>8 c8 |
+  <g, b'>8 g8 r4 <c e'>8 c8~\4 <c fs'>8 c8\4 |
   \break
   a8 a8-. r8 a16 a16 <d fs'>8 d8-. r8 d16 d16 |
-  <g, b'>8 g8 r4 <c e'>8 c8-. <b d'>8 bf8-. |
+  <g, b'>8 g8 r4 <c e'>8 c8-.\4 <b d'>8 bf8-.\4 |
   a8 a8-. r8 a16 a16 <d fs'>8 d8-. r8 d16 d16 |
   
   %% 60
-  <g, b'>8 g8 r4 <c e'>8 c8~ <c fs'>8 c8 \bar "||"
+  <g, b'>8 g8 r4 <c e'>8 c8~\4 <c fs'>8 c8\4 \bar "||"
   
   %% 61
   \break
