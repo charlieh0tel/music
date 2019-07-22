@@ -182,25 +182,16 @@ my_chords = \chordmode {
     { c4 s8 f4:9 s4 s8 | s1 | s1 | }
   }
   
-  
-
-  
 }
 
 ticktock = \drummode {
-  \repeat unfold 40 {
-    hiwoodblock 4 lowoodblock lowoodblock lowoodblock
+  \time 6/4
+  \repeat unfold 4 {
+    hiwoodblock 4 lowoodblock lowoodblock hiwoodblock lowoodblock lowoodblock
   }
-  \repeat volta 2 {
-    \repeat unfold 7 {
+  \time 4/4
+  \repeat unfold 80 {
       hiwoodblock 4 lowoodblock lowoodblock lowoodblock
-    }
-  } \alternative {
-    { hiwoodblock 4 lowoodblock lowoodblock lowoodblock }
-    { hiwoodblock 4 lowoodblock lowoodblock lowoodblock }
-  }
-  \repeat unfold 16 {
-    hiwoodblock 4 lowoodblock lowoodblock lowoodblock
   }
 }
 
