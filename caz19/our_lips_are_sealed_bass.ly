@@ -29,8 +29,10 @@ my_notes = \relative c {
   \key af \major
   \compressFullBarRests
   \override Glissando.style = #'zigzag
+  \override MultiMeasureRest.expand-limit = #2
   
-  r1 | r1 | R1*3 |
+  r1 | r1 \bar "||"
+  R1*3 |
   
   r2 r4 af8\4 \glissando af,8 \bar "||"
   af8 af af af'-.\2 r f ef f |
@@ -41,7 +43,7 @@ my_notes = \relative c {
   df8 df c c bf bf c c \bar "||"
   
   \break
-  \mark \markup { \bold { [A] } }
+  \mark \markup { \bold { [A] } \musicglyph #"scripts.segno" (No Repeat on D.S.) }
   \repeat volta 2 {
     \bar ".|:"
     %% 11
@@ -59,14 +61,14 @@ my_notes = \relative c {
     %% 19
     \break
     \mark \markup { \bold { [B] } }
-    e8 e8 e8 e8 e8 fs8 e4 | 
+    e8 \f e8 e8 e8 e8 fs8 e4 | 
     df8 df df df df ef df4 |
-    a8 a a a a b a a |
-    ef'8 ef ef ef ef ef ef ef \bar "||"
+    a8 \cresc a a a a b a a |
+    ef'8 ef ef ef ef ef ef ef \! \bar "||"
     
     %% 23
     \mark \markup { \bold { [C] } }
-    af,8 af af af af af af af |
+    af,8 \mf af af af af af af af |
     df8 df df df df df df df |
   } \alternative {
     %% 1
@@ -89,7 +91,10 @@ my_notes = \relative c {
   
   \mark \markup { \bold { [E] } }
   af,8 \mf af af af af af af af |
-  df8 df df df df df df df \bar "||"
+  df8 df df df df df df 
+  \mark \markup { To Coda \musicglyph #"scripts.coda" } 
+  df
+  \bar "||"
   
   %% 34
   \break
@@ -101,7 +106,7 @@ my_notes = \relative c {
   \mark \markup { \bold { [F] } }
   af4\3-> af'8 g8 af8 g8 ef8\2 ef8\2 | 
   \repeat unfold 3 {
-    af,8\3 af8\3 af' g8 af g8 ef\2 ef\2 |
+    af,8\3 af8\3 af' g8 af g8 ef\2 ef\2 \bar "||"
   }
   
   %% 40
@@ -110,23 +115,24 @@ my_notes = \relative c {
   \repeat unfold 7 {
     af,8\3 af8\3 af' g8 af g8 ef\2 ef\2 |
   }
-  af,4\3-- r4 r4 af8\3 \glissando \deadNote a,8\3 \bar "||"
+  af,4\3-- r4 r4
+  af8\3 \glissando 
+  \deadNote a,8\3_\markup { \bold { D.S. al Coda } }
+  \bar "||"
   
   %% Coda / 48
+  \break
+  \mark \markup	 { Coda \musicglyph #"scripts.coda" } 
   af8 af af af af af af af |
   df8 df df df df df df df |
   af8 af af af af af af af |
   df8 df df df df df df df |
-  af1-> \fermata \bar ".||"
-  
-  
-  
-  
+  af1-> \fermata \bar "|."
 }
 
 my_chords = \chordmode {
   \set majorSevenSymbol = \markup { maj7 }
-  s1 | s1 | s1 | s1 | s1 | s1 |
+  s1 | s1 | s1*3 | s1 |
   af | gf:9 | df | s1 |
   \repeat volta 2 {
     af1 | gf1:9 | df1 | s1 |
