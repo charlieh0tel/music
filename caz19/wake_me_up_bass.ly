@@ -22,6 +22,7 @@ cBreak = { \break }
 global = {
   %% \tempo "" 4 = 150
   \time 4/4
+  \override Glissando.style = #'zigzag
 }
 
 my_notes = \relative c {
@@ -29,8 +30,10 @@ my_notes = \relative c {
   \key c \major
 
   \partial 4. g,8 \mf a8\4 g8 \bar "||"
+  \set Score.currentBarNumber = #2
   c4-^ c4-^ r2 |
   r2 r8 g8 a8\4 g8 |
+  c4-^ c4-^ r2 |
   
   %% 5
   \break
@@ -73,6 +76,34 @@ my_notes = \relative c {
   g4 \glissando |
   g,8 r8 g,8 r8 r2 \bar "||"
   
+  %% 27
+  \break
+  \mark \markup { \bold { [C] } }
+  c8 g a c~ c g a c |
+  r8 g a c~ c g a c | 
+  d8 g, a d~ d g, a c~ |
+  c8 g a g~ g g a c |
+  r8 g a c~ c g a c |
+  r8 g a c~ c g a c |
+  r8 g a d~ d g, a c |
+  r8 e4 e8 f8 f8 fs8 g8 |
+  
+  %% 35
+  \break
+  c,8 g a c~ c g a c |
+  r8 g a c~ c g a c |
+  d8 g, a d~ d g, a d |
+  r8 g, a g~ g g a c |
+  
+  %% 39
+  r8 g a c~ c g a c |
+  r8 g a c~ c a g c |
+  e8 r r d~ d r r c~ \f |
+  c1~ | c2  <g' c>2 \glissando |
+  bf'8 \deadNote c, bf' \deadNote c, a' \deadNote c, g' \deadNote c, |
+  f \deadNote c e \deadNote c d8 c8 c8~ |
+  c4. b8 r48 |
+   
   
   
   
