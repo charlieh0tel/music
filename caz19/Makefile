@@ -1,4 +1,8 @@
-all: shining_star_bass do_you_love_me_bass our_lips_are_sealed_bass
+all: \
+  shining_star_bass \
+  do_you_love_me_bass \
+  our_lips_are_sealed_bass \
+  steady_as_she_goes_bass
 .PHONY: all
 
 shining_star_bass: \
@@ -15,6 +19,11 @@ our_lips_are_sealed_bass: \
   our_lips_are_sealed_bass.pdf our_lips_are_sealed_bass.midi \
   our_lips_are_sealed_bass.wav our_lips_are_sealed_bass.mp3
 .PHONY: our_lips_are_sealed_bass
+
+steady_as_she_goes_bass: \
+  steady_as_she_goes_bass.pdf steady_as_she_goes_bass.midi \
+  steady_as_she_goes_bass.wav steady_as_she_goes_bass.mp3
+.PHONY: steady_as_she_goes_bass
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3
