@@ -28,7 +28,7 @@ my_notes = \relative c {
   \key f \major
 
   \time 6/4 
-  f,1. | bf,1. | c1. | d1.\3 |
+  f,1. | bf,1. | c1. | d1.\3 \bar "||"
   
   %% 5
   \break
@@ -36,48 +36,62 @@ my_notes = \relative c {
   c4-. r4 r2 | R1 | r8 c8 c8 c8 c4-. r4 \bar "||"
   
   %% 8
+  \barNumberCheck #8
   \break
   \mark \markup { \bold { [DO YOU LOVE ME] } }
-  \repeat percent 3 { f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 | }
+  \repeat percent 3 { 
+    f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 | 
+  }
   \bar "||"
   
   %% 13
   bf4 bf8 d8~\3 d8\3 d8\3 f4 | bf,4 bf8 df8~ df8 df8 f4 \bar "||"
   
   %% 16
-  \break
-  \repeat percent 3 { c4. c8~ c8 c8 c4 | }
+  \repeat percent 3 { 
+    c4. c8~ c8 c8 c4 | 
+  }
   c4-. r4 r4 c4-. \bar "||"
   
   %% 20
+  \barNumberCheck #20
   \break
   \mark \markup { \bold { [WORK WORK] } }
-  \repeat percent 3 { f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 | }
-   f4-. r4 r2 | r8 c'8 c8 c8 c8 c8 c8 c8 \bar "||"
+  \repeat percent 3 { 
+    f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 | 
+  }
+  f4-. r4 r2 | r8 c'8 c8 c8 c8 c8 c8 c8 \bar "||"
   
   %% 28
   \break
   \mark \markup { \bold { [I CAN MASH POTATO] } }
   \repeat volta 2 { 
-    \bar ".|:"
-    \repeat percent 2 { f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 | }
+    \bar ":..:"
+    \repeat percent 2 {
+      f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 |
+    }
   }
   
   %% 32
   \break
   \mark \markup { \bold { [TELL ME] } }
-  \repeat percent 3 { c4. c8~ c8 c8 c4 | }
+  \repeat percent 3 {
+    c4. c8~ c8 c8 c4 | 
+  }
   c4-. c8 c8 c4-. r4 \bar "||"
   
   %% 36
   \break
   \mark \markup { \bold { [DO YOU LOVE ME] } }
-  \repeat percent 3 { f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 | }
+  \repeat percent 3 { 
+    f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 | 
+  }
   bf4 bf8 d8~\3 d8\3 d8\3 f4 | bf,4 bf8 df8~ df8 df8 f4 \bar "||"
   
   %% 44
-  \break
-  \repeat percent 3 { c4. c8~ c8 c8 c4 | }
+  \repeat percent 3 {
+    c4. c8~ c8 c8 c4 | 
+  }
   c4-. r4 r4 c4-. \bar "||"
   
   %% 48
@@ -85,36 +99,50 @@ my_notes = \relative c {
   \mark \markup { \bold { [WORK WORK] } }
   \repeat volta 2 {
     \bar ".|:"
-    \repeat percent 3 { f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 | }
-    \break f4-. r4 r2 | r8 c'8 c8 c8 c8 c8 c8 c8
+    \repeat percent 3 { 
+      f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 
+    }
+    f4-. r4 r2 | r8 c'8 c8 c8 c8 c8 c8 c8 |
   }
   
   %% 56
   \break
   \mark \markup { \bold { [I CAN MASH POTATO] } }
   \repeat volta 2 { 
-    \bar ".|:"
-    \repeat percent 2 { f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 | }
+    \bar ":..:"
+    \repeat percent 2 { 
+      f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 | 
+    }
   }
   
   %% 60
   \break
   \mark \markup { \bold { [TELL ME] } }
-  \repeat percent 3 { c4. c8~ c8 c8 c4 | }
+  \repeat percent 3 {
+    c4. c8~ c8 c8 c4 |
+  }
   c4-. c8 c8 c4-. r4 \bar "||"
   
   \break
   \mark \markup { \bold { [DO YOU LOVE ME] } }
   \repeat volta 3 {
     \bar ".|:"
-    \repeat percent 3 { f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 | }
+    \repeat percent 3 { 
+      f,4 f8 a8~\4 a8 a8\4 c4 | bf4 bf8 c8~ c8 c8 g4 | 
+    }
     \bar "||" 
     \break
     bf4 bf8 d8~\3 d8\3 d8\3 f4 | bf,4 bf8 df8~ df8 df8 f4
-    \repeat percent 3 { c4. c8~ c8 c8 c4 | }
+    \repeat percent 3 { 
+      c4. c8~ c8 c8 c4 |
+    }
   } \alternative {
-    { c4-. c8 c8 c4-. r4 | }
-    { \break c-. r8 f,8->~ f2~ | f1 \fermata | f4-. r4 r2 \bar "|." }
+    { 
+      c4-. c8 c8 c4-. r4 | 
+    }
+    { 
+      \break c-. r8 f,8->~ f2~ | f1 \fermata | f4-. r4 r2 \bar "|."
+    }
   }
 }
 
