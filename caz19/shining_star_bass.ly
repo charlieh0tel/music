@@ -107,13 +107,13 @@ my_notes = \relative c {
     %% 43
     e,,4-- r8. e16 e8 e'8--\3 r16 e'8.-> |
     e,,4-- r8. e16 e4-- r16 d''8.-> |
-    e,,4. r16 e''16 g16 e,16 fs'16 \deadNote d,16 e'16 d,16 d'16 e16 |
+    e,,4. r16 e''16 g16 e,16\4 fs'16 \deadNote d,16 e'16 d,16 d'16 e16 |
     
     %% 46
     e,,4-- r8. e16 e4-- r16 d''8.-> |
   } \alternative {
     { e,,4-- r8. e16 e4-- r16 d''8.-> | }
-    { g16 e,16 fs'16 \deadNote d,16 e'16 d,16 d'16 e16 e,,4.-> e16-> e16-> | } %% \bar "||"
+    { g16 e,16\4 fs'16 \deadNote d,16 e'16 d,16 d'16 e16 e,,4.-> e16-> e16-> | } %% \bar "||"
   }
   
   %% 49
@@ -268,6 +268,7 @@ my_music = <<
     }
   }
 }
+
 \score {
   \removeWithTag #'scoreOnly \unfoldRepeats \my_music
   \midi {}
