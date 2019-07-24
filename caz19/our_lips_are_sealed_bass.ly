@@ -35,36 +35,36 @@ my_notes = \relative c {
   R1*3 |
   
   r2 r4 af8\4 \glissando af,8 \bar "||"
-  af8 af af af'-.\2 r f ef f |
+  af8 af af af'-.\2 r f\3 ef\3 f\3 |
   \break
   %% 8
-  gf8 gf gf gf-. r ef df bf |
+  gf8 gf gf gf-. r ef\3 df bf\4	 |
   df8 df df df df df df df |
-  df8 df c c bf bf c c \bar "||"
+  df8 df c c bf\4 bf\4 c c \bar "||"
   
   \break
   \mark \markup { \bold { [A] } \musicglyph #"scripts.segno" (No Repeat on D.S.) }
   \repeat volta 2 {
     \bar ".|:"
     %% 11
-    af8 af af' af af f ef c |
-    gf8 gf gf' gf-. r ef df bf |
+    af8 af af'\2 af\2 af\2 f\3 ef\3 c\4 |
+    gf8 gf gf' gf-. r ef\3 df bf\4 |
     df8 df df df df df df df |
-    df8 df c c bf bf c c |
+    df8 df c c bf\4 bf\4 c c |
     
     %% 15
-    af8 af  af' af-. r f ef c |
-    gf gf gf' gf-. r8 ef df bf |
+    af8 af  af'\2 af-.\2 r f\3 ef\3 c\4 |
+    gf gf gf' gf-. r8 ef\3 df bf\4 |
     df8 df df df df df df df |
-    df8 df c c bf bf c c \bar "||"
+    df8 df c c bf\4 bf\4 c c \bar "||"
     
     %% 19
     \break
     \mark \markup { \bold { [B] } }
-    e8 \f e8 e8 e8 e8 fs8 e4 | 
-    df8 df df df df ef df4 |
+    e8\3 \f e8\3 e8\3 e8\3 e8\3 fs8\3 e4\3 | 
+    df8 df df df df ef\3 df4 |
     a8 \cresc a a a a b a a |
-    ef'8 ef ef ef ef ef ef ef \! \bar "||"
+    ef'8\3 ef\3 ef\3 ef\3 ef\3 ef\3 ef\3 ef\3 \! \bar "||"
     
     %% 23
     \mark \markup { \bold { [C] } }
@@ -84,10 +84,10 @@ my_notes = \relative c {
   
   %% 28
   \mark \markup { \bold { [D] } }
-  e'8 \f e e e e fs e4 |
-  df8 df df df df ef df4 |
-  a8 a a a a bf a4 |
-  ef'8 ef ef ef ef ef ef ef |
+  e'8\3 \f e\3 e\3 e\3 e\3 fs\3 e4\3 |
+  df8 df df df df ef\3 df4 |
+  a8 a a a a b a4 |
+  ef'8\3 ef\3 ef\3 ef\3 ef\3 ef\3 ef\3 ef\3 |
   
   \mark \markup { \bold { [E] } }
   af,8 \mf af af af af af af af |
@@ -99,7 +99,7 @@ my_notes = \relative c {
   %% 34
   \break
   af8 af af af af af af af |
-  \appoggiatura g'8\2 af8\2 af\2 af\2 af\2 af\2 af\2 af\2 af\2 \bar "||"
+  \appoggiatura g'8\3 af8\3 af\3 af\3 af\3 af\3 af\3 af\3 af\3 \bar "||"
   
   %% 36
   \break
