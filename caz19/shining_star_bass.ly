@@ -36,7 +36,7 @@ my_notes = \relative c {
   \break
   \mark \markup { \bold { [A] } }
   e,4 \ff ~e8. e16 e2 | 
-  e4-- \f r8 e16 [e16] e4-- r4 |
+  e4-- \f r8 e16 e16 e4-- r4 |
   e4-- r8. e16 e4-- r16 d''8.-> |
   e,,4-- r8. e16 e4-- r16 e''8.-> \bar "||"
   
@@ -44,7 +44,7 @@ my_notes = \relative c {
   \break
   \mark \markup { \bold { [B] } }
   e,,4-- r8. e16 e4-- r16 d''8.-> | 
-  e,,4-- r8. e16 e4-- r16 d''8.-> |
+  e,,4-- r8. e16 e8 e'8-- r16 d'8.-> |
   e,,4-- r8. e16 e4-- r16 e''8.-> | 
   e,,4. r16 e''16 g16 g16 fs16 \deadNote d,16 e'16 d,16 d'16 e16 |
   e,,4-- r8. e16 e4-- r16 d''8.-> |
@@ -75,14 +75,14 @@ my_notes = \relative c {
   \break
   \mark \markup { \bold { [E] } } 
   e,8-> g8-. r8. a16-. a8-> g8-. r8. b16 |
-  b8-> \< g8-. r4 a8-> g8-. r4 |
-  g16-> e16 e16 af16 r16 e16 a16 a16 a8-> a8 a8. a16 |
-  a16 a16 a16 bf16 r16 bf16 b16 b16 b8-> b8 b4 | 
-  b8-. a16 c16 r16 a16 cs16 cs16 cs8-> cs8 cs8 r8 |
-  cs16 cs16 cs16 d16 r16 b16 \! ef8->~ \mf ef2~ |
+  b8-> g8-. r4 a8-> g8-. r4 |
+  g16-> \< e16 e16 af16 r16 e16 a16\4 a16\4 a8->\4 a8\4 a8.\4 a16\4 |
+  a16\4 a16\4 a16\4 bf16\4 r16 bf16\4 b16\4 b16\4 b8->\4 b8\4 b4\4 | 
+  b8-.\4 a16\3 c16\4 r16 a16\3 cs16\4 cs16\4 cs8->\4 cs8\4 cs8\4 r8 |
+  cs16\4 cs16\4 cs16\4 d16\4 r16 b16\4 \! \mf ef8->~\3 ef2~ |
   
   %% 31
-  ef2. <e g'>16 \f <e g'>8.-> \bar "||"
+  ef2. <e gs'>16 \f <e gs'>8.-> \bar "||"
   
   %% 32
   \break
@@ -90,11 +90,11 @@ my_notes = \relative c {
   e,4-- r8. e16 e4-- r4 |
   e4-- r8. e16 e8 e8-- r16 d''8.-> |
   e,,4-- r8. e16 e16 g''16 fs16 e16 fs16 e8-> e16 |
-  e,,4. r16 e''16 g16 g16 g16 \deadNote d,16 e'16 d,16 d'16 e16 |
+  e,,4. r16 e''16 g16 g16 fs16 \deadNote d,16 e'16 d,16 d'16 e16 |
   e,,4-- r8. e16 e8 e8-- r16 d''8.-> |
   e,,4-- r8. e16 e8 e8-- r16 g''8.-> |
   e,,4-- r8. e16 e8 e8-- r16 d''8.-> |
-  e,,4. r16 e''16 g16 g16 g16 \deadNote d,16 e'16 d,16 d'16 e16 | %% \bar "||"
+  e,,4. r16 e''16 g16 g16 fs16 \deadNote d,16 e'16 d,16 d'16 e16 | %% \bar "||"
   
   %% 40
   \break
@@ -133,7 +133,7 @@ my_notes = \relative c {
   %% 56
   <g, b'>8 g8 r4 <c e'>8 c8~\4 <c fs'>8 c8\4 |
   \break
-  a8 a8-. r8 a16 a16 <d fs'>8 d8-. r8 d16 d16 |
+  a'8\2 e'8-. a,8\2 a16\2 e'16 <d, fs'>8 d8-. r8 d16 d16 |a'8 e8-. r8 a16 e16 <d fs'>8 d8-. r8 d16 d16 |
   <g, b'>8 g8 r4 <c e'>8 c8-.\4 <b d'>8 bf8-.\4 |
   a8 a8-. r8 a16 a16 <d fs'>8 d8-. r8 d16 d16 |
   
