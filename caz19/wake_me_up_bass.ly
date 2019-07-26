@@ -65,7 +65,7 @@ my_notes = \relative c {
     \break
     \mark \markup { \bold { [B] } }
     d8 \cresc r8 r8 d8~ d8 a'8 g8 a8 |
-    \tuplet 3/2 { as8 a8 g8 } \tuplet 3/2 { gs8 g8 e8~ } e8 e,4.-> |
+    \tuplet 3/2 { as8 a8 g8 } \tuplet 3/2 { fs8 f8 e8~ } e8 e,4.-> |
     f'8 r8 r8 f8~ f2 | g8 r r8 \! a8~ a8 \> a,4. \! |
   
     %% 22
@@ -88,20 +88,20 @@ my_notes = \relative c {
     d8 g, a d~ d g, a c~ |
     c8 g a g~ g g a c |
     r8 g a c~ c g a c |
-    r8 g a c~ c g a c |
-    r8 g a d~ d g, a c |
+    r8 g a c~ c g a d |
+    r8 g, a d~ d g, a c |
     r8 e4 e8 f8 f8 fs8 g8 |
   
     %% 35
     \break
     c,8 g a c~ c g a c |
     r8 g a c~ c g a c |
-    d8 g, a d~ d g, a d |
-    r8 g, a g~ g g a c |
+    d8 g, a d~ d g, a c |
+    r8 g a g~ g g a c |
   
     %% 39
     r8 g a c~ c g a c |
-    r8 g a c~ c a g c |
+    r8 g a c~ c g a c |
     e8 r r d~ d r r c~ \f \bar "||"
     \break
     c1~ | c2  <g' c>2 \glissando |
@@ -130,6 +130,8 @@ my_notes = \relative c {
   \tuplet 3/2 { e,4-> g4-> c4-> } \tuplet 3/2 { e4-> c4-> a4-> }
   
   %% 56
+  \break
+  \mark \markup { Jitterbug }
   c4. c'8-> (c,4.) c8 |
   c8 a8 g8 c8~ c8 c8 c8 e8 |
   d4. d'8-> (d,4.) d8 |
@@ -147,12 +149,12 @@ my_notes = \relative c {
   \tuplet 3/2 { d,4-. f4-. a4-. }  d2 \startTrillSpan  |
   r8 \stopTrillSpan e,4 e,8~ e2 |
   f'4 f4 f2 |
-  g1-> \ff \bar "||"
+  g,1-> \ff \bar "||"
   
   %% 68
   \break
   \mark \markup { \bold { [G] } }   
-  c,8 \f r8 c8 r8 c8 g8 a8 c8~ |
+  c8 \f r8 c8 r8 c8 g8 a8 c8~ |
   c8 g8 a8 c8~ c8 g8 a8 d8 |
   r8 g,8 a8 d8 r8 g,8 a8 c8 |
   r8 g8 a8 g8~ g8 g8 a8 c8 |
@@ -161,7 +163,7 @@ my_notes = \relative c {
   \mark \markup { Jitterbug }
   r8 g8 a8 c8~ c8 g8 a8 c8 |
   r8 g8 a8 c8~ c8 g8 a8 d8 |
-  r8 g,8 a8 d8~ d8 b8 a8 c8 |
+  r8 g,8 a8 d8~ d8 g,8 a8 c8 |
   r8 e4-> f8->~ f8 fs4-> g8 \bar "||"
   
   %% 76
@@ -200,7 +202,7 @@ my_notes = \relative c {
   c8 g8 a8 g8~ g8 g8 a8 c8 |
   r8 g8 a8 c8~ c8 g8 a8 c8 |
   r8 g8 a8 c8~ c8 g8 a8 c8 |
-  d8 g,8 a8 d8~ d4 <g d'>4 \glissando | c'4b4 bf4 a4 \bar "||"
+  d8 g,8 a8 d8~ d4 <g d'>4 \glissando | c'4 b4 bf4 a4 \bar "||"
   
   \break
   \mark \markup { \bold { [K] } }
@@ -271,7 +273,8 @@ my_chords = \chordmode {
 }
 
 ticktock = \drummode {
-  \repeat unfold 4 {
+  \partial 4. { r4. }
+  \repeat unfold 100 {
     hiwoodblock 4 lowoodblock lowoodblock hiwoodblock lowoodblock lowoodblock
   }
 }
