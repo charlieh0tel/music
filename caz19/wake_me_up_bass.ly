@@ -244,7 +244,7 @@ my_music = <<
     \with { stringTunings = #bass-tuning } 
   { 
     %%\set TabStaff.minimumFret = #3f
-    %%\set TabStaff.restrainOpenStrings = ##t
+    \set TabStaff.restrainOpenStrings = ##t
     \global
     \my_notes
   }
