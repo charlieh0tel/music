@@ -20,7 +20,10 @@ mBreak = {
 cBreak = { \break }
 
 global = {
+  \tempo "" 4 = 117
   \time 4/4
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
 }
 
 my_notes = \relative c {
@@ -52,35 +55,29 @@ my_notes = \relative c {
    a4 r8 a8 fs'8 e8 d8 cs8 |
 
   \break
-  \mark \markup{Chorus}
-   
+  \mark \markup{Refrain} 
   \repeat percent 2 { 
     b4 b8 cs8 fs,8 fs8 fs8 b8 |
     a4 a8 b8 e,8 fs8 gs8 a8 |
   }
+
   \break
- 
   \mark \markup{Second Verse}
-  b4 r8 bf8 fs4 r8 b8 | 
-  a4 r8 gs8 e8 fs8 gs8 a8 |
-  b4 r8 bf8 fs4 r8 b8 |
-  a4 r8 a8 fs'8 e8 d8 cs8 |
-  b4 r8 bf8 fs4 r8 b8 |
-  a4 r8 gs8 e8 fs8 gs8 a8 |
-  b4 r8 bf8 fs4 r8 b8 | 
-  a4 r8 a8 fs'8 e8 d8 cs8 |
-
+  \repeat unfold 2 {
+    b4 r8 bf8 fs4 r8 b8 | 
+    a4 r8 gs8 e8 fs8 gs8 a8 |
+    b4 r8 bf8 fs4 r8 b8 |
+    a4 r8 a8 fs'8 e8 d8 cs8 |
+  }
+  
   \break
   \mark \markup{Chorus}
-   
   \repeat percent 2 { 
     b4 b8 cs8 fs,8 fs8 fs8 b8 |
     a4 a8 b8 e,8 fs8 gs8 a8 |
   }
-  \break
 
   \break
-  \mark \markup{Bridge}
   g'4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 |
   a4\2 a4\2 a8\2 e8\3 a4\2 |
   b4\2 b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 | 
@@ -88,20 +85,79 @@ my_notes = \relative c {
   g4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 | a4\2 a4\2 a8\2 e8\3 a4\2 |
   a4\2 a4\2 a8\2 e8\3 a4\2 |
   e4\3 e4\3 e8\3 e8\3 e8\3 \glissando b'8\3 |
-  e8\2 b4\3 (e8\2~ e8\2) b8\3 a4\3 \glissando |
+  e8\2 b4\3 (e8\2~ e8\2) b8\3 a4\3 |
   
-  r1
+  
+  \break  
+  \mark \markup{Third Verse}
+  \repeat unfold 2 {
+    b,4 r8 bf8 fs4 r8 b8 | 
+    a4 r8 gs8 e8 fs8 gs8 a8 |
+    b4 r8 bf8 fs4 r8 b8 |
+    a4 r8 a8 fs'8 e8 d8 cs8 |
+  }
+  \repeat percent 2 {
+  b4 r8 bf8 fs4 r8 b8 | 
+  a4 r8 gs8 e8 fs8 gs8 a8 |
+  }
+
+  r1 | 
   
   \break
+  \mark \markup{Chorus}
+  \repeat unfold 2 {
+    b4 b8 cs8 fs,8 fs8 fs8 b8 |
+    a4 a8 b8 e,8 fs8 gs8 a8 |
+  }
+  
+  \break
+  g'4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 |
+  a4\2 a4\2 a8\2 e8\3 a4\2 |
+  b4\2 b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 | 
+  b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 g8\2 fs8\2 |
+  g4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 | a4\2 a4\2 a8\2 e8\3 a4\2 |
+  a4\2 a4\2 a8\2 e8\3 a4\2 |
+  e4\3 e4\3 e8\3 e8\3 e8\3 \glissando b'8\3 |
+  e8\2 b4\3 (e8\2~ e8\2) b8\3 a4\3 |
+  
+  \break  
+  \mark \markup{Fourth Verse}
+  \repeat unfold 2 {
+    b,4 r8 bf8 fs4 r8 b8 | 
+    a4 r8 gs8 e8 fs8 gs8 a8 |
+    b4 r8 bf8 fs4 r8 b8 |
+    a4 r8 a8 fs'8 e8 d8 cs8 |
+  }
+  \repeat percent 2 {
+    b4 r8 bf8 fs4 r8 b8 | 
+    a4 r8 gs8 e8 fs8 gs8 a8 |
+  }
+  r1 | r1 | 
+  
+  b'8\2 \p \< b8\2 b8\2 b8\2 b8\2 b8\2 b8\2 b8\2 |
+  b8\2 b8\2 b8\2 b8\2 b8\2 b8\2 b8\2 fs8\3 \f \! |
+
+  \break
+  \mark \markup{Chorus}
+  \repeat unfold 2 {
+    b4 b8 cs8 fs,8 fs8 fs8 b8 |
+    a4 a8 b8 e,8 fs8 gs8 a8 |
+  }
+
+\break
   \mark \markup{Outro}
   \repeat percent 4 {
-    b,4 b8 b8 fs8 fs8 fs8 fs8 |
+    b4 b8 b8 fs8 fs8 fs8 fs8 |
     a8 a8 a8 a8 e8 e8 e8 e8 |
   }
   \break
-  b'1 | ~b1 | ~b1 | ~b1 | ~b1 | ~b1 |
+  b'1~ | b~ | b~ | b~ | b~ | b |
   r1 | r1 \bar "|."
 }
+
+my_chords = <<
+  \set majorSevenSymbol = \markup { maj7 }
+>>
 
 my_music = <<
   \new Staff {
@@ -117,11 +173,41 @@ my_music = <<
   }
 >>
   
+my_music = <<
+  \new ChordNames {
+    \set ChordNames.midiInstrument = "percussive organ"
+    \set ChordNames.midiMaximumVolume = #0.2
+    \set chordChanges = ##t
+    \global
+    \my_chords
+  }
+  \new Staff {
+    \set Staff.midiInstrument = #"electric bass (finger)"
+    \set Staff.midiMinimumVolume = #0.7
+    \set Staff.midiMaximumVolume = #0.95
+    \global
+    \my_notes
+  }
+  \tag #'scoreOnly
+  \new TabStaff
+    \with { stringTunings = #bass-tuning } 
+  { 
+    %%\set TabStaff.minimumFret = #3f
+    \set TabStaff.restrainOpenStrings = ##t
+    \global
+    \my_notes
+  }
+>>
+  
 \score {
-  \my_music
+  \removeWithTag #'midiOnly \my_music
   \layout {
     \context {
       \Score \override StringNumber #'stencil = ##f 
     }
   }
+}
+\score {
+  \removeWithTag #'scoreOnly \unfoldRepeats \my_music
+  \midi {}
 }
