@@ -24,36 +24,87 @@ global = {
 }
 
 my_notes = \relative c {
-  \clef "treble_8"
+  \clef "bass_8"
   \key b \major
   
-  b4 r8 as8 fs4 r8 b8 |
-  a4 r8 gs8 e4 fs4 |
-  b4 r8 as8 fs4 r8 b8 |
-  a4 r8 gs8 e4 fs4 |
+   r1 | r1 | r1 | r1 |
+   \break
+   \repeat percent 3 { 
+     b,4 r8 bf8 fs4 r8 b8 | 
+     a4 r8 gs8 e4 fs4 | 
+   }
+   \break
+   b4 r8 bf8 fs4 r8 b8 
+   a4 r8 gs8 e8 fs8 gs8 a8 |
+   \break
+   \repeat percent 2  { 
+     b4 r8 bf8 fs4 r8 b8 |
+     a4 r8 gs8 e4 fs4 | 
+   }
+   b4 r8 bf8 fs4 r8 b8 | 
+   a4 r8 a8 fs'8 e8 d8 cs8 |
+
+   \break
+   \mark \markup{First Verse}
+   b4 r8 bf8 fs4 r8 b |
+   a4 r8 gs8 e8 fs8 gs8 a8 |
+   b4 r8 bf8 fs4 r8 b8 |
+   a4 r8 a8 fs'8 e8 d8 cs8 |
+
+  \break
+  \mark \markup{Chorus}
+   
+  \repeat percent 2 { 
+    b4 b8 cs8 fs,8 fs8 fs8 b8 |
+    a4 a8 b8 e,8 fs8 gs8 a8 |
+  }
+  \break
+ 
+  \mark \markup{Second Verse}
+  b4 r8 bf8 fs4 r8 b8 | 
+  a4 r8 gs8 e8 fs8 gs8 a8 |
+  b4 r8 bf8 fs4 r8 b8 |
+  a4 r8 a8 fs'8 e8 d8 cs8 |
+  b4 r8 bf8 fs4 r8 b8 |
+  a4 r8 gs8 e8 fs8 gs8 a8 |
+  b4 r8 bf8 fs4 r8 b8 | 
+  a4 r8 a8 fs'8 e8 d8 cs8 |
+
+  \break
+  \mark \markup{Chorus}
+   
+  \repeat percent 2 { 
+    b4 b8 cs8 fs,8 fs8 fs8 b8 |
+    a4 a8 b8 e,8 fs8 gs8 a8 |
+  }
+  \break
+
+  \break
+  \mark \markup{Bridge}
+  g'4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 |
+  a4\2 a4\2 a8\2 e8\3 a4\2 |
+  b4\2 b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 | 
+  b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 g8\2 fs8\2 |
+  g4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 | a4\2 a4\2 a8\2 e8\3 a4\2 |
+  a4\2 a4\2 a8\2 e8\3 a4\2 |
+  e4\3 e4\3 e8\3 e8\3 e8\3 \glissando b'8\3 |
+  e8\2 b4\3 (e8\2~ e8\2) b8\3 a4\3 \glissando |
+  
+  r1
   
   \break
-  ds''2 ds2 | cs2 b2 | ds2 ds2 | cs2 b2 |
-  
-  \clef "bass_8"
+  \mark \markup{Outro}
+  \repeat percent 4 {
+    b,4 b8 b8 fs8 fs8 fs8 fs8 |
+    a8 a8 a8 a8 e8 e8 e8 e8 |
+  }
   \break
-  b,,4 r8 as8 fs4 r8 b8 |
-  a4 r8 gs8 e4 fs4 |
-  b4 r8 as8 fs4 r8 b8 |
-  a4 r8 gs8 e4 fs4 |
-  
-  \break
-  ds'2 ds2 | cs2 b2 | ds2 ds2 | cs2 b2 |
-  
-  
-  
-  
-  
+  b'1 | ~b1 | ~b1 | ~b1 | ~b1 | ~b1 |
+  r1 | r1 \bar "|."
 }
 
 my_music = <<
   \new Staff {
-    \global
     \my_notes
   }
   \new TabStaff
