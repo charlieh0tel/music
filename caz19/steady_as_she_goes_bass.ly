@@ -30,7 +30,7 @@ my_notes = \relative c {
   \clef "bass_8"
   \key b \major
   
-   r1 | r1 | r1 | r1 |
+   r1 _ \markup { \italic { Drums } } | r1 | r1 | r1 |
    \break
    \repeat percent 3 { 
      b,4 r8 bf8 fs4 r8 b8 | 
@@ -45,14 +45,14 @@ my_notes = \relative c {
      a4 r8 gs8 e4 fs4 | 
    }
    b4 r8 bf8 fs4 r8 b8 | 
-   a4 r8 a8 fs'8 e8 d8 cs8 |
+   a4 r8 a8 fs'8 _\markup { \italic { Find yourself ... }} e8 d8 cs8 |
 
    \break
    \mark \markup{First Verse}
    b4 r8 bf8 fs4 r8 b |
    a4 r8 gs8 e8 fs8 gs8 a8 |
    b4 r8 bf8 fs4 r8 b8 |
-   a4 r8 a8 fs'8 e8 d8 cs8 |
+   a4 r8 a8 fs'8 _\markup { \italic { Steady as ... }} e8 d8 cs8 |
 
   \break
   \mark \markup{Refrain} 
@@ -62,72 +62,87 @@ my_notes = \relative c {
   }
 
   \break
+  \mark \markup{Interlude}
+  b4 r8 bf8 fs4 r8 b8 | 
+  a4 r8 gs8 e8 fs8 gs8 a8 |
+  b4 r8 bf8 fs4 r8 b8 |
+  a4 r8 a8 fs'8 _\markup { \italic { Your friends ... }} e8 d8 cs8 |
+  
   \mark \markup{Second Verse}
-  \repeat unfold 2 {
-    b4 r8 bf8 fs4 r8 b8 | 
-    a4 r8 gs8 e8 fs8 gs8 a8 |
-    b4 r8 bf8 fs4 r8 b8 |
-    a4 r8 a8 fs'8 e8 d8 cs8 |
-  }
+  b4 r8 bf8 fs4 r8 b8 | 
+  a4 r8 gs8 e8 fs8 gs8 a8 |
+  b4 r8 bf8 fs4 r8 b8 |
+  a4 r8 a8 fs'8 e8 d8 cs8 |
   
   \break
-  \mark \markup{Chorus}
+  \mark \markup{Refrain}
   \repeat percent 2 { 
     b4 b8 cs8 fs,8 fs8 fs8 b8 |
     a4 a8 b8 e,8 fs8 gs8 a8 |
   }
 
   \break
-  g'4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 |
+  \mark \markup{Chorus}
+  g'4\2 _\markup { \italic { (a)gain ... }}  g4\2 g8\2 d8\3 g8\2 gs8\2 |
   a4\2 a4\2 a8\2 e8\3 a4\2 |
   b4\2 b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 | 
   b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 g8\2 fs8\2 |
-  g4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 | a4\2 a4\2 a8\2 e8\3 a4\2 |
+  g4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 | 
   a4\2 a4\2 a8\2 e8\3 a4\2 |
   e4\3 e4\3 e8\3 e8\3 e8\3 \glissando b'8\3 |
-  e8\2 b4\3 (e8\2~ e8\2) b8\3 a4\3 |
+  e8\2 b4\3 (e8\2~ _\markup { \italic { So steady as ... }} e8\2) b8\3 a4\3 |
   
   
   \break  
+  \mark \markup{Interlude}
+  b,4 r8 bf8 fs4 r8 b8 | 
+  a4 r8 gs8 e8 fs8 gs8 a8 |
+  b4 r8 bf8 fs4 r8 b8 |
+  a4 r8 a8 fs'8  _\markup { \italic { When you ... }} e8 d8 cs8 |
+  
   \mark \markup{Third Verse}
-  \repeat unfold 2 {
-    b,4 r8 bf8 fs4 r8 b8 | 
-    a4 r8 gs8 e8 fs8 gs8 a8 |
-    b4 r8 bf8 fs4 r8 b8 |
-    a4 r8 a8 fs'8 e8 d8 cs8 |
-  }
-  \repeat percent 2 {
+  b4 r8 bf8 fs4 r8 b8 | 
+  a4 r8 gs8 e8 fs8 gs8 a8 |
+  b4 r8 bf8 fs4 r8 b8 |
+  a4 r8 a8 fs'8 e8 d8 cs8 |
+\repeat percent 2 {
   b4 r8 bf8 fs4 r8 b8 | 
   a4 r8 gs8 e8 fs8 gs8 a8 |
   }
 
-  r1 | 
+  r1 | r1  _\markup { \italic { So steady as ... }} |
   
   \break
-  \mark \markup{Chorus}
-  \repeat unfold 2 {
+  \mark \markup{Refrain}
+  \repeat percent 2 {
     b4 b8 cs8 fs,8 fs8 fs8 b8 |
     a4 a8 b8 e,8 fs8 gs8 a8 |
   }
   
   \break
-  g'4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 |
+  \mark \markup{Chorus}
+  g'4\2 _\markup { \italic { (a)gain ... }} g4\2 g8\2  d8\3 g8\2 gs8\2 |
   a4\2 a4\2 a8\2 e8\3 a4\2 |
   b4\2 b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 | 
   b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 g8\2 fs8\2 |
-  g4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 | a4\2 a4\2 a8\2 e8\3 a4\2 |
+  g4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 |
   a4\2 a4\2 a8\2 e8\3 a4\2 |
   e4\3 e4\3 e8\3 e8\3 e8\3 \glissando b'8\3 |
-  e8\2 b4\3 (e8\2~ e8\2) b8\3 a4\3 |
+  e8\2 b4\3 (e8\2~ _\markup { \italic { So steady as ... }} e8\2) b8\3 a4\3 |
   
   \break  
+  \mark \markup{Interlude}
+  b,4 r8 bf8 fs4 r8 b8 | 
+  a4 r8 gs8 e8 fs8 gs8 a8 |
+  b4 r8 bf8 fs4 r8 b8 |
+  a4 r8 a8 fs'8 _\markup { \italic { Settle for ...}} e8 d8 cs8 |
+  
   \mark \markup{Fourth Verse}
-  \repeat unfold 2 {
-    b,4 r8 bf8 fs4 r8 b8 | 
-    a4 r8 gs8 e8 fs8 gs8 a8 |
-    b4 r8 bf8 fs4 r8 b8 |
-    a4 r8 a8 fs'8 e8 d8 cs8 |
-  }
+  b4 r8 bf8 fs4 r8 b8 | 
+  a4 r8 gs8 e8 fs8 gs8 a8 |
+  b4 r8 bf8 fs4 r8 b8 |
+  a4 r8 a8 fs'8 e8 d8 cs8 |
+  \break
   \repeat percent 2 {
     b4 r8 bf8 fs4 r8 b8 | 
     a4 r8 gs8 e8 fs8 gs8 a8 |
@@ -138,11 +153,13 @@ my_notes = \relative c {
   b8\2 b8\2 b8\2 b8\2 b8\2 b8\2 b8\2 fs8\3 \f \! |
 
   \break
-  \mark \markup{Chorus}
-  \repeat unfold 2 {
-    b4 b8 cs8 fs,8 fs8 fs8 b8 |
-    a4 a8 b8 e,8 fs8 gs8 a8 |
-  }
+  \mark \markup{Refrain}
+  \repeat volta 2 {
+    \repeat unfold 2 {
+      b4 b8 cs8 fs,8 fs8 fs8 b8 |
+      a4 a8 b8 e,8 fs8 gs8 a8 |
+    }
+    }
 
 \break
   \mark \markup{Outro}
@@ -155,24 +172,18 @@ my_notes = \relative c {
   r1 | r1 \bar "|."
 }
 
-my_chords = <<
-  \set majorSevenSymbol = \markup { maj7 }
->>
+my_chords = \chordmode {
+%   \set majorSevenSymbol = \markup { maj7 }
+%   \powerChords
+%   s1 | s1 | s1 | s1 |
+%   b2:1.5 fs:1.5 | a2:1.5 e4:1.5 fs4:1.5 |
+%   s1 | s1 | s1 | s1 |
+%   b2:1.5 fs:1.5 | a2:1.5 e4:1.5 fs4:1.5 |
+%   b2:1.5 fs:1.5 | a2:1.5 e4:1.5 fs4:1.5 |
+%   s1 | s1 |
+%   b2:1.5 fs:1.5 | a2:1.5 e4:1.5 fs4:1.5 |
+}
 
-my_music = <<
-  \new Staff {
-    \my_notes
-  }
-  \new TabStaff
-    \with { stringTunings = #bass-tuning } 
-  { 
-    %%\set TabStaff.minimumFret = #3f
-    %%\set TabStaff.restrainOpenStrings = ##t
-    \global
-    \my_notes
-  }
->>
-  
 my_music = <<
   \new ChordNames {
     \set ChordNames.midiInstrument = "percussive organ"
