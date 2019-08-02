@@ -54,7 +54,7 @@ my_notes = \relative c {
    b4 r8 bf8 fs4 r8 b |
    a4 r8 gs8 e8 fs8 gs8 a8 |
    b4 r8 bf8 fs4 r8 b8 |
-   a4 r8 a8 fs'8 e8 d8 cs8 |
+   a4 r8 a8 fs'8 e8 d8 cs8 \bar "||"
 
   \break
   \mark \markup{Refrain} 
@@ -62,19 +62,20 @@ my_notes = \relative c {
     b4 b8 cs8 fs,8 fs8 fs8 b8 |
     a4 a8 b8 e,8 fs8 gs8 a8 |
   }
+  \bar "||"
 
   \break
   \mark \markup{Interlude}
   b4 r8 bf8 fs4 r8 b8 | 
   a4 r8 gs8 e8 fs8 gs8 a8 |
   b4 r8 bf8 fs4 r8 b8 |
-  a4 r8 a8 fs'8 e8 d8 cs8 |
+  a4 r8 a8 fs'8 e8 d8 cs8 \bar "||"
   
   \mark \markup{Verse}
   b4 r8 bf8 fs4 r8 b8 | 
   a4 r8 gs8 e8 fs8 gs8 a8 |
   b4 r8 bf8 fs4 r8 b8 |
-  a4 r8 a8 fs'8 e8 d8 cs8 |
+  a4 r8 a8 fs'8 e8 d8 cs8 \bar "||"
   
   \break
   \mark \markup { \musicglyph #"scripts.segno" Refrain }
@@ -82,6 +83,7 @@ my_notes = \relative c {
     b4 b8 cs8 fs,8 fs8 fs8 b8 |
     a4 a8 b8 e,8 fs8 gs8 a8 |
   }
+  \bar "||"
 
   \break
   \mark \markup{Chorus}
@@ -92,7 +94,7 @@ my_notes = \relative c {
   g4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 | 
   a4\2 a4\2 a8\2 e8\3 a4\2 |
   e4\3 e4\3 e8\3 e8\3 e8\3 \glissando b'8\3 |
-  e8\2 b4\3 (e8\2~ e8\2) b8\3 a4\3 |
+  e8\2 b4\3 (e8\2~ e8\2) b8\3 a4\3 \bar "||"
   
   
   \break  
@@ -100,16 +102,16 @@ my_notes = \relative c {
   b,4 r8 bf8 fs4 r8 b8 | 
   a4 r8 gs8 e8 fs8 gs8 a8 |
   b4 r8 bf8 fs4 r8 b8 |
-  a4 r8 a8 fs'8  e8 d8 cs8 ^\markup { \bold { To Coda \musicglyph #"scripts.coda" }} |
+  a4 r8 a8 fs'8  e8 d8 cs8 ^\markup { \bold { To Coda \musicglyph #"scripts.coda" }} \bar "||"
   
   \mark \markup{Verse}
   b4 r8 bf8 fs4 r8 b8 | 
   a4 r8 gs8 e8 fs8 gs8 a8 |
   b4 r8 bf8 fs4 r8 b8 |
   a4 r8 a8 fs'8 e8 d8 cs8 |
-\repeat percent 2 {
-  b4 r8 bf8 fs4 r8 b8 | 
-  a4 r8 gs8 e8 fs8 gs8 a8 |
+  \repeat percent 2 {
+    b4 r8 bf8 fs4 r8 b8 | 
+    a4 r8 gs8 e8 fs8 gs8 a8 |
   }
 
   r1 |  r1 ^\markup { \bold { D.S. al Coda }}  % _\markup { \italic { So steady as ... }} 
@@ -129,13 +131,13 @@ my_notes = \relative c {
   r1 | r1 | 
   
   b'8\2 \p \< b8\2 b8\2 b8\2 b8\2 b8\2 b8\2 b8\2 |
-  b8\2 b8\2 b8\2 b8\2 b8\2 b8\2 b8\2 fs8\3 \f \! |
+  b8\2 b8\2 b8\2 b8\2 b8\2 b8\2 b8\2 fs8\3 \mf \! | % \bar "||"
 
   \break
   \mark \markup{Refrain}
   \repeat volta 2 {
     \repeat unfold 2 {
-      b4 b8 cs8 fs,8 fs8 fs8 b8 |
+      b,4 b8 cs8 fs,8 fs8 fs8 b8 |
       a4 a8 b8 e,8 fs8 gs8 a8 |
     }
     }
@@ -143,7 +145,7 @@ my_notes = \relative c {
 \break
   \mark \markup{Outro}
   \repeat percent 4 {
-    b,4 b8 b8 fs8 fs8 fs8 fs8 |
+    b4 b8 b8 fs8 fs8 fs8 fs8 |
     a8 a8 a8 a8 e8 e8 e8 e8 |
   }
   \break
