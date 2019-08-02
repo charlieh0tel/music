@@ -54,7 +54,7 @@ my_notes = \relative c {
    b4 r8 bf8 fs4 r8 b |
    a4 r8 gs8 e8 fs8 gs8 a8 |
    b4 r8 bf8 fs4 r8 b8 |
-   a4 r8 a8 fs'8 _\markup { \italic { Steady as ... }} e8 d8 cs8 |
+   a4 r8 a8 fs'8 e8 d8 cs8 |
 
   \break
   \mark \markup{Refrain} 
@@ -85,14 +85,14 @@ my_notes = \relative c {
 
   \break
   \mark \markup{Chorus}
-  g'4\2 _\markup { \italic { (a)gain ... }}  g4\2 g8\2 d8\3 g8\2 gs8\2 |
+  g'4\2 g4\2 g8\2 d8\3 g8\2 gs8\2 |
   a4\2 a4\2 a8\2 e8\3 a4\2 |
   b4\2 b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 | 
   b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 g8\2 fs8\2 |
   g4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 | 
   a4\2 a4\2 a8\2 e8\3 a4\2 |
   e4\3 e4\3 e8\3 e8\3 e8\3 \glissando b'8\3 |
-  e8\2 b4\3 (e8\2~ _\markup { \italic { So steady as ... }} e8\2) b8\3 a4\3 |
+  e8\2 b4\3 (e8\2~ e8\2) b8\3 a4\3 |
   
   
   \break  
@@ -143,11 +143,11 @@ my_notes = \relative c {
 \break
   \mark \markup{Outro}
   \repeat percent 4 {
-    b4 b8 b8 fs8 fs8 fs8 fs8 |
+    b,4 b8 b8 fs8 fs8 fs8 fs8 |
     a8 a8 a8 a8 e8 e8 e8 e8 |
   }
   \break
-  b1~ | b~ | b~ | b~ | b~ | b |
+  b'1~ | b~ | b~ | b~ | b~ | b |
   r1 | r1 \bar "|."
 }
 
