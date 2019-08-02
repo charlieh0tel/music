@@ -77,7 +77,7 @@ my_notes = \relative c {
   a4 r8 a8 fs'8 e8 d8 cs8 |
   
   \break
-  \mark \markup{Refrain}
+  \mark \markup { \musicglyph #"scripts.segno" Refrain }
   \repeat percent 2 { 
     b4 b8 cs8 fs,8 fs8 fs8 b8 |
     a4 a8 b8 e,8 fs8 gs8 a8 |
