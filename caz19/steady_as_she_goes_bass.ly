@@ -47,10 +47,10 @@ my_notes = \relative c {
      a4 r8 gs8 e4 fs4 | 
    }
    b4 r8 bf8 fs4 r8 b8 | 
-   a4 r8 a8 fs'8 _\markup { \italic { Find yourself ... }} e8 d8 cs8 |
+   a4 r8 a8 fs'8 e8 d8 cs8 |
 
    \break
-   \mark \markup{First Verse}
+   \mark \markup{Verse}
    b4 r8 bf8 fs4 r8 b |
    a4 r8 gs8 e8 fs8 gs8 a8 |
    b4 r8 bf8 fs4 r8 b8 |
@@ -68,9 +68,9 @@ my_notes = \relative c {
   b4 r8 bf8 fs4 r8 b8 | 
   a4 r8 gs8 e8 fs8 gs8 a8 |
   b4 r8 bf8 fs4 r8 b8 |
-  a4 r8 a8 fs'8 _\markup { \italic { Your friends ... }} e8 d8 cs8 |
+  a4 r8 a8 fs'8 e8 d8 cs8 |
   
-  \mark \markup{Second Verse}
+  \mark \markup{Verse}
   b4 r8 bf8 fs4 r8 b8 | 
   a4 r8 gs8 e8 fs8 gs8 a8 |
   b4 r8 bf8 fs4 r8 b8 |
@@ -100,9 +100,9 @@ my_notes = \relative c {
   b,4 r8 bf8 fs4 r8 b8 | 
   a4 r8 gs8 e8 fs8 gs8 a8 |
   b4 r8 bf8 fs4 r8 b8 |
-  a4 r8 a8 fs'8  _\markup { \italic { When you ... }} e8 d8 cs8 |
+  a4 r8 a8 fs'8  e8 d8 cs8 ^\markup { \bold { To Coda \musicglyph #"scripts.coda" }} |
   
-  \mark \markup{Third Verse}
+  \mark \markup{Verse}
   b4 r8 bf8 fs4 r8 b8 | 
   a4 r8 gs8 e8 fs8 gs8 a8 |
   b4 r8 bf8 fs4 r8 b8 |
@@ -112,34 +112,11 @@ my_notes = \relative c {
   a4 r8 gs8 e8 fs8 gs8 a8 |
   }
 
-  r1 | r1  _\markup { \italic { So steady as ... }} |
+  r1 |  r1 ^\markup { \bold { D.S. al Coda }}  % _\markup { \italic { So steady as ... }} 
+  \bar "||"
+
   
-  \break
-  \mark \markup{Refrain}
-  \repeat percent 2 {
-    b4 b8 cs8 fs,8 fs8 fs8 b8 |
-    a4 a8 b8 e,8 fs8 gs8 a8 |
-  }
-  
-  \break
-  \mark \markup{Chorus}
-  g'4\2 _\markup { \italic { (a)gain ... }} g4\2 g8\2  d8\3 g8\2 gs8\2 |
-  a4\2 a4\2 a8\2 e8\3 a4\2 |
-  b4\2 b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 | 
-  b8\2 b8\2 b8\2 b8\2 b8\2 a8\2 g8\2 fs8\2 |
-  g4\2 g4\2 g8\2  d8\3 g8\2 gs8\2 |
-  a4\2 a4\2 a8\2 e8\3 a4\2 |
-  e4\3 e4\3 e8\3 e8\3 e8\3 \glissando b'8\3 |
-  e8\2 b4\3 (e8\2~ _\markup { \italic { So steady as ... }} e8\2) b8\3 a4\3 |
-  
-  \break  
-  \mark \markup{Interlude}
-  b,4 r8 bf8 fs4 r8 b8 | 
-  a4 r8 gs8 e8 fs8 gs8 a8 |
-  b4 r8 bf8 fs4 r8 b8 |
-  a4 r8 a8 fs'8 _\markup { \italic { Settle for ...}} e8 d8 cs8 |
-  
-  \mark \markup{Fourth Verse}
+  \mark \markup{\musicglyph #"scripts.coda" Verse}
   b4 r8 bf8 fs4 r8 b8 | 
   a4 r8 gs8 e8 fs8 gs8 a8 |
   b4 r8 bf8 fs4 r8 b8 |
@@ -170,7 +147,7 @@ my_notes = \relative c {
     a8 a8 a8 a8 e8 e8 e8 e8 |
   }
   \break
-  b'1~ | b~ | b~ | b~ | b~ | b |
+  b1~ | b~ | b~ | b~ | b~ | b |
   r1 | r1 \bar "|."
 }
 
