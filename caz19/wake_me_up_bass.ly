@@ -21,7 +21,7 @@ mBreak = {
 cBreak = { \break }
 
 global = {
-  %% \tempo "" 4 = 150
+  \tempo "" 4 = 150
   \time 4/4	
   \override Glissando.style = #'zigzag
   \compressFullBarRests
