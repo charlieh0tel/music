@@ -154,15 +154,44 @@ my_notes = \relative c {
 }
 
 my_chords = \chordmode {
-%   \set majorSevenSymbol = \markup { maj7 }
-%   \powerChords
-%   s1 | s1 | s1 | s1 |
-%   b2:1.5 fs:1.5 | a2:1.5 e4:1.5 fs4:1.5 |
-%   s1 | s1 | s1 | s1 |
-%   b2:1.5 fs:1.5 | a2:1.5 e4:1.5 fs4:1.5 |
-%   b2:1.5 fs:1.5 | a2:1.5 e4:1.5 fs4:1.5 |
-%   s1 | s1 |
-%   b2:1.5 fs:1.5 | a2:1.5 e4:1.5 fs4:1.5 |
+  \set majorSevenSymbol = \markup { maj7 }
+  s1 | s1 | s1 | s1 |
+  b2:min fs2:min | a2 e2 |
+  s1 | s1 |
+  s1 | s1 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  s1 | s1 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  s1 | s1 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  s1 | s1 |
+  g1 | a1 | b1 | s1 |
+  g1 | a1 | e1 | s1 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  s1 | s1 | s1 s1 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  s1 | s1 | s1 | s1 | s1| s1 |
+  b2:min fs2:min | a2 e2 |
+  b2:min fs2:min | a2 e2 |
+  \powerChords
+  b2:1.5 fs2:1.5 | a2:1.5 e2:1.5 |
+  s1 | s1 | s1 | s1 | s1 | s1 |
+  b1:1.5 | s1 | s1 | s1 | s1 | s1 | s1 | s1 |
+  
 }
 
 my_music = <<
@@ -171,7 +200,7 @@ my_music = <<
     \set ChordNames.midiMaximumVolume = #0.2
     \set chordChanges = ##t
     \global
-    \my_chords
+    %\my_chords
   }
   \new Staff {
     \set Staff.midiInstrument = #"electric bass (finger)"
