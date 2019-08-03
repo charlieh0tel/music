@@ -14,6 +14,8 @@
 \paper { 
   left-margin = 0.75\in
   right-margin = 0.75\in
+  top-margin = 1\in
+  bottom-margin = 1\in
 }
 
 global = {
@@ -30,12 +32,6 @@ my_notes = \relative c {
 
 my_chords = \chordmode {
   \set majorSevenSymbol = \markup { maj7 }
-}
-
-ticktock = \drummode {
-  %\repeat unfold 40 {
-  %  hiwoodblock 4 lowoodblock lowoodblock lowoodblock
-  %}
 }
 
 my_music = <<
