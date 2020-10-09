@@ -47,7 +47,7 @@ palmMute = #(define-music-function (parser location note) (ly:music?)
 TrackAVoiceAMusic = #(define-music-function (parser location inTab) (boolean?)
 #{
    \tempo 4=82
-   \clef #(if $inTab "tab" "bass_8")
+   \clef #`(if $inTab "tab" "bass_8")
    \key c \major
    \time 4/4
    \oneVoice
