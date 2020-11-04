@@ -30,15 +30,15 @@ my_notes = \relative c {
   \key a \major
   %% intro
   \mark \markup { Intro }
-  d,8 fs a a, ~a2 | ~a4 gs' fs e \bar ".|:"
+  d,8 fs a a,~ a2~ | a4 gs' fs e \bar ".|:"
   
   %% verse
   \mark \markup { Verse }
-  a,8 cs e a ~a e cs e | b ds fs\3 b\2 ~b a gs fs\3 | d fs a d ~d a fs a | a, cs e a ~a e cs a' |
-  a, cs e a ~a e d cs | b ds fs b ~b a gs fs | d fs a d ~d cs b a | a, cs e a ~a4 r4 |
-  a,8 cs e a ~a a cs, e | d fs a d ~d cs b a | d, d a' d ~d c b a | a, cs e a ~a fs e cs |
-  a cs e a ~a cs, e a | b, ds fs b ~b4 r4 \bar ":.|.:" \break
-  d,8 fs a a, ~a2 | a'4 gs fs e \bar ":|." \break
+  a,8 cs e a~ a e cs e | b ds fs\3 b\2~ b a gs fs\3 | d fs a d~ d a fs a | a, cs e a~ a e cs a' |
+  a, cs e a~ a e d cs | b ds fs b~ b a gs fs | d fs a d~ d cs b a | a, cs e a~ a4 r4 |
+  a,8 cs e a~ a a cs, e | d fs a d~ d cs b a | d, d a' d~ d c b a | a, cs e a~ a fs e cs |
+  a cs e a~ a cs, e a | b, ds fs b~ b4 r4 \bar ":.|.:" \break
+  d,8 fs a a,~ a2 | a'4 gs fs e \bar ":|." \break
   
   %% middle 8
   \pageBreak
