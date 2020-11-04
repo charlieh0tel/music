@@ -1,11 +1,16 @@
 all: \
-  radiohead_paranoid_android
+  radiohead_paranoid_android youwontseeme
 .PHONY: all
 
 radiohead_paranoid_android: \
   radiohead_paranoid_android.pdf radiohead_paranoid_android.midi \
   radiohead_paranoid_android.wav radiohead_paranoid_android.mp3
 .PHONY: radiohead_paranoid_android
+
+youwontseeme: \
+  youwontseeme.pdf youwontseeme.midi \
+  youwontseeme.wav youwontseeme.mp3
+.PHONY: youwontseeme
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3
