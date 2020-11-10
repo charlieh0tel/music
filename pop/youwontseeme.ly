@@ -34,7 +34,7 @@ my_notes = \relative c {
   
   %% verse
   \mark \markup { Verse }
-  a,8 cs e a~ a e cs e | b ds fs\3 b\2~ b a gs fs\3 | d fs a d~ d a fs a | a, cs e a~ a e cs a' |
+  a,8 cs e a~ a e cs e | b ds fs b~ b a gs fs | d fs a d~ d a fs a | a, cs e a~ a e cs a' |
   a, cs e a~ a e d cs | b ds fs b~ b a gs fs | d fs a d~ d cs b a | a, cs e a~ a4 r4 |
   a,8 cs e a~ a a cs, e | d fs a d~ d cs b a | d, d a' d~ d c b a | a, cs e a~ a fs e cs |
   a cs e a~ a cs, e a | b, ds fs b~ b4 r4 \bar ":.|.:" \break
@@ -54,7 +54,7 @@ my_chords = \chordmode {
   d2 a2 | a1 |
   
   %% verse
-  a1 | b:7 | d | a |
+  \set chordChanges = ##f a1 \set chordChanges = ##t | b:7 | d | a |
   a | b:7 | d | a | 
   a:7 | d | d:min | a |
   a | b:7 | d2 a2 | a1 |
