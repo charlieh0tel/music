@@ -134,8 +134,8 @@ my_notes = \relative c {
   c | f, | bf2 g2 | c2 f,2 \bar ":|." \break
   
   \pageBreak
-  \mark \markup { \bold { [17] Bb Dom } }
-  \key bf \major
+  \mark \markup { \bold { [17] F Dom } }
+  \key f \major
   
   f'4 g c, f | bf, f bf c | f c g' c, | f, g c f | \break
   bf bf f f, | bf c f c | f, c' g' c, | f c f d | \break
@@ -145,7 +145,14 @@ my_notes = \relative c {
   bf c f f, | bf f' bf c | f, g c, c | f, c' f d | \break
   g, a d g | c, c' g c, | f a, d d | g, g' c, c \bar ":|." \break
   
-
+  \pageBreak
+  \mark \markup { \bold { [20] F Dom+Chr } }
+  \key f \major
+  f g c, b | bf e f c | f, df' c e | f g c, f | \break
+  bf e, f a, | bf a bf c | f, b c e | f c f, af | \break
+  g d' g df | c d g, gf | f a d af | g b c e \bar ":|." \break
+  
+  
 }
 
 my_chords = \chordmode {
@@ -232,7 +239,11 @@ my_chords = \chordmode {
   f1:7 | bf:7 | f:7 | f:7 |
   bf:7 | bf:7 | f:7 | f:7 |
   g:m7 | c:7 | f2:7 d2:7 | g:m7 c:7 |
-    
+  
+  %% 20
+  f1:7 | bf:7 | f:7 | f:7 |
+  bf:7 | bf:7 | f:7 | f:7 |
+  g:m7 | c:7 | f2:7 d2:7 | g:m7 c:7 |
   
 }
 
