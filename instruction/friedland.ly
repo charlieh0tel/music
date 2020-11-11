@@ -21,7 +21,7 @@
 global = {
   % \tempo "" 4 = xx
   % \time 4/4
-  % \compressFullBarRests
+  % \compressFullBarRestsWho to follow
   % \override MultiMeasureRest.expand-limit = #2
 }
 
@@ -133,6 +133,19 @@ my_notes = \relative c {
   ef | ef | bf | bf | \break
   c | f, | bf2 g2 | c2 f,2 \bar ":|." \break
   
+  \pageBreak
+  \mark \markup { \bold { [17] Bb Dom } }
+  \key bf \major
+  
+  f'4 g c, f | bf, f bf c | f c g' c, | f, g c f | \break
+  bf bf f f, | bf c f c | f, c' g' c, | f c f d | \break
+  g a d, g, | c g' g, c | f a d, d' | g, g c, c' | \break
+  
+  f, c' c, f | bf c f, c | f f g c | f,, c' f f, | \break
+  bf c f f, | bf f' bf c | f, g c, c | f, c' f d | \break
+  g, a d g | c, c' g c, | f a, d d | g, g' c, c \bar ":|." \break
+  
+
 }
 
 my_chords = \chordmode {
@@ -211,6 +224,16 @@ my_chords = \chordmode {
   bf1:7 | ef:7 | bf:7 | bf:7 |
   ef:7 | ef:7 | bf:7 | bf:7 |
   c:m7 | f:7 | bf2:7 g:7 | c:m7 f:7 |
+  
+  %% 17
+  f1:7 | bf:7 | f:7 | f:7 |
+  bf:7 | bf:7 | f:7 | f:7 |
+  g:m7 | c:7 | f2:7 d2:7 | g:m7 c:7 |
+  f1:7 | bf:7 | f:7 | f:7 |
+  bf:7 | bf:7 | f:7 | f:7 |
+  g:m7 | c:7 | f2:7 d2:7 | g:m7 c:7 |
+    
+  
 }
 
 my_music = <<
