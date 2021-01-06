@@ -11,6 +11,8 @@
 \paper { 
   left-margin = 1.0 \in
   right-margin = 0.5 \in
+  top-margin = 0.5 \in
+  bottom-margin = 0.5 \in
 }
 
 mBreak = {

@@ -1,56 +1,75 @@
-\version "2.16.2"
+% LilyBin
+
+\version "2.18.0"
+\include "english.ly"
 
 % If swing needed
 %#(load "../scm/swing.scm")
-
-\paper { 
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-}
-
-these_notes = \relative c, {
-  \clef "bass_8"
-  \key f \major
-  \time 4/4
-  \tempo 4 = 150
-  %\tripletFeel 8 
-  %{
-
-  %% Notes
-
-  %}
-}
-
-these_chords = \chordmode {
-  \set majorSevenSymbol = \markup { maj7 }
-  
-  %% Chords.   Use s1 to supress chord for a measure.
-}
 
 \header {
   piece = \markup { \fontsize #4 \bold "Piece" }
   opus = \markup { \italic "Author" }
 }
+
+\paper { 
+  left-margin = 0.75\in
+  right-margin = 0.75\in
+  top-margin = 1\in
+  bottom-margin = 1\in
+}
+
+global = {
+  % \tempo "" 4 = xx
+  % \time 4/4
+  % \compressFullBarRests
+  % \override MultiMeasureRest.expand-limit = #2
+}
+
+my_notes = \relative c {
+  \clef "bass_8"
+  % \key b \major
+}
+
+my_chords = \chordmode {
+  \set majorSevenSymbol = \markup { maj7 }
+}
+
+my_music = <<
+  \new ChordNames {
+    \set ChordNames.midiInstrument = "percussive organ"
+    \set ChordNames.midiMaximumVolume = #0.2
+    \set chordChanges = ##t
+    \global
+    \my_chords
+  }
+  \new Staff {
+    \set Staff.midiInstrument = #"electric bass (finger)"
+    \set Staff.midiMinimumVolume = #0.7
+    \set Staff.midiMaximumVolume = #0.95
+    \global
+    \my_notes
+  }
+  \tag #'scoreOnly
+  \new TabStaff
+    \with { stringTunings = #bass-tuning } 
+  { 
+    %%\set TabStaff.minimumFret = #3f
+    \set TabStaff.restrainOpenStrings = ##t
+    \global
+    \my_notes
+  }
+>>
   
 \score {
-  <<
-    \new ChordNames \these_chords
-    \new Staff \these_notes
-    \new TabStaff
-    \with { stringTunings = #bass-tuning } 
-    { 
-      %%\set TabStaff.minimumFret = #1
-      %%\set TabStaff.restrainOpenStrings = ##t
-      \these_notes
-    }
-  >>
+  \removeWithTag #'midiOnly \my_music
   \layout {
     \context {
-      \Score
-      %%proportionalNotationDuration = #(ly:make-moment 1/8)
-      %%voltaSpannerDuration = 
-      %%  #(ly:make-moment 3/4)
+      \Score \override StringNumber #'stencil = ##f 
     }
   }
+}
+
+\score {
+  \removeWithTag #'scoreOnly \unfoldRepeats \my_music
   \midi {}
 }
