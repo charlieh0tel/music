@@ -1,10 +1,15 @@
-all: good_times
+all: good_times cissy_strut
 .PHONY: all
 
 good_times: \
   good_times.pdf good_times.midi \
   good_times.wav good_times.mp3
 .PHONY: good_times
+
+cissy_strut: \
+  cissy_strut.pdf cissy_strut.midi \
+  cissy_strut.wav cissy_strut.mp3
+.PHONY: cissy_strut
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3
