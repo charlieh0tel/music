@@ -1,4 +1,4 @@
-all: good_times cissy_strut
+all: good_times cissy_strut cs_bridge
 .PHONY: all
 
 good_times: \
@@ -10,6 +10,11 @@ cissy_strut: \
   cissy_strut.pdf cissy_strut.midi \
   cissy_strut.wav cissy_strut.mp3
 .PHONY: cissy_strut
+
+cs_bridge: \
+  cs_bridge.pdf cs_bridge.midi \
+  cs_bridge.wav cs_bridge.mp3
+.PHONY: cs_bridge
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3

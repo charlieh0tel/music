@@ -16,7 +16,7 @@
 }
 
 global = {
-  % \tempo "Funky" 4 = 88
+  \tempo "Funky" 4 = 88
   \time 4/4
   % \compressFullBarRests
   % \override MultiMeasureRest.expand-limit = #2
