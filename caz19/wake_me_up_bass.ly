@@ -2,6 +2,7 @@
 
 \version "2.18.0"
 \include "english.ly"
+\include "../lib/swingmarks.ly"
 
 \header {
   piece = \markup { \fontsize #4 \bold "Wake Me Up Before You Go-Go" }
@@ -20,8 +21,8 @@ mBreak = {
 cBreak = { \break }
 
 global = {
-  %% \tempo "" 4 = 150
-  \time 4/4
+  \tempo "" 4 = 150
+  \time 4/4	
   \override Glissando.style = #'zigzag
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
@@ -30,6 +31,8 @@ global = {
 my_notes = \relative c {
   \clef "bass_8"
   \key c \major
+  
+  \rhythmMark #"Lively" \rhyMarkIIEighths \rhyMarkTriplets
 
   \partial 4. g,8 \mf a8\4 g8 \bar "||"
   \set Score.currentBarNumber = #2
@@ -51,26 +54,26 @@ my_notes = \relative c {
     \break
     \mark \markup { \bold { [A] } }
     c8 \mf r8 c8 r8 c4. c8 |
-    r8 c8 a8 r8 c4 c8 a8 |
-    d8 r8 d8 r8 d4. c8 |
-    r8 g8 a8 e'8~ e8 g4 g,8 |
+    r8 c8 a8\4 r8 c4 c8 a8\4 |
+    d8\3 r8 d8\3 r8\3 d4.\3 c8 |
+    r8 g8 a8\4 e'8~ e8 g4\2 g,8 |
   
     %% 14
     c8 r8 c8 r8 c4. c8 |
-    r8 c8 a8 c8~ c4 r4 |
-    d8 r8 d8 r8 d4. c8 |
-    r8 g8 c8 e8~ e8 g4. \bar "||"
+    r8 c8 a8\4 c8~ c4 r4 |
+    d8\3 r8 d8\3 r8 d4.\3 c8 |
+    r8 g8 c8 e8~ e8 g4.\2 \bar "||"
   
     %% 18
     \break
     \mark \markup { \bold { [B] } }
-    d8 \cresc r8 r8 d8~ d8 a'8 g8 a8 |
-    \tuplet 3/2 { as8 a8 g8 } \tuplet 3/2 { fs8 f8 e8~ } e8 e,4.-> |
-    f'8 r8 r8 f8~ f2 | g8 r r8 \! a8~ a8 \> a,4. \! |
+    d8\3 \cresc r8 r8 d8~\3 d8 a'8\2 g8\2 a8\2 |
+    \tuplet 3/2 { as8\2 a8\2 g8\2 } \tuplet 3/2 { fs8\3 f8\3 e8~\3 } e8 e,4.-> |
+    f'8 r8 r8 f8~ f2 | g8\2 r r8 \! a8~\2 a8 \> a,4.\4 \! |
   
     %% 22
     \break
-    d8 \cresc r8 r8 d8~ d2 | e8 r8 r8 e,8~ e2 | f'8 r8 r8 f8~ f8 a8 f'8 a,8 \! |
+    d8\3 \cresc r8 r8 d8~\3 d2 | e8\3 r8 r8 e,8~ e2 | f'8\3 r8 r8 f8~\3 f8\3 a8\3 f'8 a,8\3 \! |
   
     %% 26
     \break
@@ -83,26 +86,26 @@ my_notes = \relative c {
     %% 27
     \break
     \mark \markup { \bold { [C] } }
-    c8 g a c~ c g a c |
-    r8 g a c~ c g a c | 
-    d8 g, a d~ d g, a c~ |
-    c8 g a g~ g g a c |
-    r8 g a c~ c g a c |
-    r8 g a c~ c g a d |
-    r8 g, a d~ d g, a c |
-    r8 e4 e8 f8 f8 fs8 g8 |
+    c8 g a\4 c~ c g a\4 c |
+    r8 g a\4 c~ c g a\4 c | 
+    d8\3 g, a\4 d~\3 d g, a\4 c~ |
+    c8 g a\4 g~ g g a\4 c |
+    r8 g a\4 c~ c g a\4 c |
+    r8 g a\4 c~ c g a\4 d\3 |
+    r8 g, a\4 d~\3 d g, a\4 c |
+    r8 e4\2 e8\2 f8\2 f8\2 fs8\2 g8\2 |
   
     %% 35
     \break
-    c,8 g a c~ c g a c |
-    r8 g a c~ c g a c |
-    d8 g, a d~ d g, a c |
-    r8 g a g~ g g a c |
+    c,8 g a\4 c~ c g a\4 c |
+    r8 g a\4 c~ c g a\4 c |
+    d8\3 g, a\4 d~\3 d g, a\4 c |
+    r8 g a\4 g~ g g a\4 c |
   
     %% 39
-    r8 g a c~ c g a c |
-    r8 g a c~ c g a c |
-    e8 r r d~ d r r c~ \f \bar "||"
+    r8 g a\4 c~ c g a\4 c |
+    r8 g a\4 c~ c g a\4 c |
+    e8\3 r r d~\3 d\3 r r c~ \f \bar "||"
     \break
     c1~ | c2  <g' c>2 \glissando |
     bf'8 \deadNote c, bf' \deadNote c, a' \deadNote c, g' \deadNote c, |
@@ -125,24 +128,25 @@ my_notes = \relative c {
   \break
   \mark \markup { \bold { [F] } Jitter Bug }
   c4 \f c4 c4. c8 |
-  c8 a8 g8 c8 r8 g8 a8 c8 |
-  d8 r8 r8 d'8->~ d4 g,8 g8 |
-  \tuplet 3/2 { e,4-> g4-> c4-> } \tuplet 3/2 { e4-> c4-> a4-> }
+  c8 a8\4 g8 c8 r8 g8 a8\4 c8 |
+  d8\3 r8 r8 d'8->~ d4 g,8\2 g8\2 |
+  \tuplet 3/2 { e,4-> g4-> c4-> } \tuplet 3/2 { e4-> c4-> a4->\4 }
   
   %% 56
   \break
   \mark \markup { Jitterbug }
   c4. c'8-> (c,4.) c8 |
-  c8 a8 g8 c8~ c8 c8 c8 e8 |
-  d4. d'8-> (d,4.) d8 |
-  e,8 e8 \tuplet 3/2 { g8 a8 c8 } 
-  c'8-> \glissando \deadNote c,8 r4 \bar "||"
+  c8 a8\4 g8 c8~ c8 c8 c8 e8 |
+  d4.\3 d'8-> (d,4.\3) d8\3 |
+  e,8 e8 \tuplet 3/2 { g8 a8\3 c8\3 } 
+  c'8->\2 \glissando \deadNote d,8 r4 \bar "||"
   
   \break
   \mark \markup { \bold { [F] } }
-  d4 \mp d d d | e4 e4 \tuplet 3/2 { e8-. b8-. g8-. } e4 |
+  d4\3 \mp d4\3 d4\3 d4\3 |
+  e4 e4 \tuplet 3/2 { e8-. b8-. g8-. } e4 |
   f'4 f4 f4 f8 f8 | 
-  e4 \glissando b'4 a2 |
+  e4 \glissando b'4\2 a2\2 |
   
   %% 64
   \break
@@ -154,75 +158,76 @@ my_notes = \relative c {
   %% 68
   \break
   \mark \markup { \bold { [G] } }   
-  c8 \f r8 c8 r8 c8 g8 a8 c8~ |
-  c8 g8 a8 c8~ c8 g8 a8 d8 |
-  r8 g,8 a8 d8 r8 g,8 a8 c8 |
-  r8 g8 a8 g8~ g8 g8 a8 c8 |
+  c8 \f r8 c8 r8 c8 g8 a8\4 c8~ |
+  c8 g8 a8\4 c8~ c8 g8 a8\4 d8\3 |
+  r8 g,8 a8\4 d8\3 r8 g,8 a8\4 c8 |
+  r8 g8 a8\4 g8~ g8 g8 a8\4 c8 |
   
   %% 72
   \mark \markup { Jitterbug }
-  r8 g8 a8 c8~ c8 g8 a8 c8 |
-  r8 g8 a8 c8~ c8 g8 a8 d8 |
-  r8 g,8 a8 d8~ d8 g,8 a8 c8 |
-  r8 e4-> f8->~ f8 fs4-> g8 \bar "||"
+  r8 g8 a8\4 c8~ c8 g8 a8\4 c8 |
+  r8 g8 a8\4 c8~ c8 g8 a8\4 d8\3 |
+  r8 g,8 a8\4 d8~\3 d8\3 g,8 a8\4 c8 |
+  r8 e4-> f8->~ f8 fs4-> g8\2 \bar "||"
   
   %% 76
   \break
   \mark \markup { \bold { [H] } }
-  c,8 g8 a8 c8~ c8 g8 a8 c8 |
-  r8 g8 a8 c8~ c8 g8 a8 c8 |
-  d8 g,8 a8 d8~ d8 g,8 a8 c8 |
-  r8 g8 a8 g8~ g8 g8 a8 c8 |
-  r8 g8 a8 c8~ c8 g8 a8 c8 |
-  r8 g8 a8 c8~ c8 g8 a8 c8 |
-  d8 g,8 a8 d8~ d8 d8 d8 d8 |
-  e8 e8 f8 f8 fs8 fs8 fs8 g8 \bar "||"
+  c,8 g8 a8\4 c8~ c8 g8 a8\4 c8 |
+  r8 g8 a8\4 c8~ c8 g8 a8\4 c8 |
+  d8\3 g,8 a8\4 d8~\3 d8\3 g,8 a8\4 c8 |
+  r8 g8 a8\4 g8~ g8 g8 a8\4 c8 |
+  r8 g8 a8\4 c8~ c8 g8 a8\4 c8 |
+  r8 g8 a8\4 c8~ c8 g8 a8\4 c8 |
+  d8\3 g,8 a8\4 d8~\3 d8\3 d8\3 d8\3 d8\3 |
+  e8 e8 f8 f8 fs8 fs8 fs8 g8\2 \bar "||"
   
   %% 84
   \break
   \mark \markup { \bold { [I] } }
-  c,8 g8 a8 c8~ c8 g8 c8 e,8->~ |
+  c,8 g8 a8\4 c8~ c8 g8 c8 e,8->~ |
   e4 f4 fs4 g8 g8 |
-  d'8 g,8 a8 d8~ d8 g,8 a8 c8~ |
-  c8 g8 a8 g8~ g8 g8 a8 c8 |
+  d'8\3 g,8 a8\4 d8~\3 d8\3 g,8 a8\4 c8~ |
+  c8 g8 a8\4 g8~ g8 g8 a8\4 c8 |
   
   %% 88
   \break
-  r8 g8 a8 c8~ c8 g8 a8 c8 |
-  r8 g8 a8 c8~ c8 g8 a8 c8 |
-  d8 g,8 a8 d8~ d8 g,8 a8 c8 |
-  r8 e4.-> f4 fs8 g8 \bar "||"
+  r8 g8 a8\4 c8~ c8 g8 a8\4 c8 |
+  r8 g8 a8\4 c8~ c8 g8 a8\4 c8 |
+  d8\3 g,8 a8\4 d8~\3 d8\3 g,8 a8\4 c8 |
+  r8 e4.-> f4 fs8 g8\2 \bar "||"
   
   %% 92
   \break
   \mark \markup { \bold { [J] } }
-  c,8 g8 a8 c8~ c8 g8 c8 e,8->~ |
+  c,8 g8 a8\4 c8~ c8 g8 c8 e,8->~ |
   e4 f4 fs4 g8 g8 |
-  d'8 g,8 a8 d8~ d8 g,8 a8 c8~ |
-  c8 g8 a8 g8~ g8 g8 a8 c8 |
-  r8 g8 a8 c8~ c8 g8 a8 c8 |
-  r8 g8 a8 c8~ c8 g8 a8 c8 |
-  d8 g,8 a8 d8~ d4 <g d'>4 \glissando | c'4 b4 bf4 a4 \bar "||"
+  d'8\3 g,8 a8\4 d8~\3 d8\3 g,8 a8\4 c8~ |
+  c8 g8 a8\4 g8~ g8 g8 a8\4 c8 |
+  r8 g8 a8\4 c8~ c8 g8 a8\4 c8 |
+  r8 g8 a8\4 c8~ c8 g8 a8\4 c8 |
+  d8\3 g,8 a8\4 d8~\3 d4\3 <g d'>4 \glissando |
+  c'4 b4 bf4 a4 \bar "||"
   
   \break
   \mark \markup { \bold { [K] } }
-  c,,8 g8 a8 c8~ c8 g8 a8 e8~ |
+  c,,8 g8 a8\4 c8~ c8 g8 a8\4 e8~ |
   e4 f4 fs4 g4 |
-  d'8 g,8 a8 d8~ d8 g,8 a8 c8~ |
-  c8 g8 a8 g8~ g8 g8 a8 g8 |
+  d'8\3 g,8 a8\4 d8~\3 d8\3 g,8 a\4 c8~ |
+  c8 g8 a8\4 g8~ g8 g8 a8\4 g8 |
   
   %% 104
-  c8 g8 a8 c8~ c8 g8 a8 g8 |
-  c8 a8 g8 c8~ c8 g8 a8 c8 |
-  d8 g,8 a8 d8~ d8 g8 a8 c8 |
-  r8 e,4.-> f8 f8 fs8 g8 \bar "||"
+  c8 g8 a8\4 c8~ c8 g8 a8\4 g8 |
+  c8 a8\4 g8 c8~ c8 g8 a8\4 c8 |
+  d8\3 g,8 a8\4 d8~\3 d8 g8\2 a8\2 c8 |
+  r8 e,4.-> f8 f8 fs8 g8\2 \bar "||"
   c,4-^ r4 r2 |
   
   %% 109
   \break
   \mark \markup { \bold { [L] } }
   R1*5 |
-  r2 r4. ef,8 \f \glissando | \tuplet 3/2 { e4-> g4-> c4->} \tuplet 3/2 { e4-> c4-> a4-> } |
+  r2 r4. ef,8 \f \glissando | \tuplet 3/2 { e4-> g4-> c4->} \tuplet 3/2 { e4-> c4-> a4->\4 } |
   c4-^  r4 r2 \bar "|."
   
 }
