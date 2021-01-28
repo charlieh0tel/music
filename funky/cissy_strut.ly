@@ -1,6 +1,6 @@
 % LilyBin
 
-\version "2.18.0"
+\version "2.20.0"
 \include "english.ly"
 
 \header {
@@ -27,8 +27,6 @@ my_notes = \relative c {
   \key ef \major
   
   %% A
-  \version "2.20.0"
-  
   \mark \markup { [A] } 
   c16\2 bf\2 g\3 ef~\3 ef8 c8~\4 c8. g16( a16\4) c8\3 a16\4 |
   c4~ c8. c16 g'16\2 \xNotesOn d16\3 \xNotesOff g,8~ g8 r8 \bar ":.|.:" \break
