@@ -1,4 +1,4 @@
-all: good_times cissy_strut cs_bridge licking_stick
+all: good_times cissy_strut cs_bridge licking_stick jungle_boogie
 .PHONY: all
 
 good_times: \
@@ -20,6 +20,11 @@ licking_stick: \
   licking_stick.pdf licking_stick.midi \
   licking_stick.wav licking_stick.mp3
 .PHONY: licking_stick
+
+jungle_boogie: \
+  jungle_boogie.pdf jungle_boogie.midi \
+  jungle_boogie.wav jungle_boogie.mp3
+.PHONY: jungle_boogie
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3
