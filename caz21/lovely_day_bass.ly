@@ -91,18 +91,21 @@ my_notes = \relative c {
   \repeat volta 2
     {
       e8-.\3 \f e8-.\3 r16 e16\3 r16 b16\4 e4-.\3 r16 b16-.\4 e16\3 ds16\3 |
-      cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. c16 gs16 |
+      cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. cs16 gs16 |
       a8-. a8-. r16 a'16\2 r16 a,16 a4-. r16 gs16-. a16 b16\4 |
-    }
-  \alternative {
-    { 
       c8-. c8-. r16 c16 r16 \deadNote c16-. c8-. c8-. b8-. b8-.
     }
-    { 
-      c8-. c8-. r16 c16 r16 \deadNote c16-. c8-. c8-. b8-. b8-. \bar "||"
-    }
-  }
+
+  \cbreak \sbreak
+  \mark \markup { \bold { [D] } \italic { (Vocals) }}
   
+  \repeat volta 2 
+    {
+      e8-.\3 e8-.\3 r16 e16\3 r16 b16\4 e4-.\3 \> r16 b16-.\4 e16\3 ds16\3 \mp \! |
+      cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. cs16 gs16 |
+      a8-. a8-. r16 a16 r16 \deadNote a16 a4 r8. gs16 |
+    }
+
 }
 
 my_chords = \chordmode {
@@ -139,16 +142,35 @@ my_chords = \chordmode {
   \repeat volta 2
     {
       e1 | cs:m7 | a:maj9 |      
-    }
-  \alternative {
-    {
       c2.:maj7 b4:m7 | 
-    }
-    {
-      c2.:maj7 b4:m7 |
     }
   }
   
+  %% 30 [D]
+  \repeat volta 2 
+    {
+      e1 | cs:m7 | a:maj9 | s2 c4:maj7 b:m7 |
+      e1 | cs:m7 | a:maj9 | c1:maj7 |
+      
+      %% 38 [E]
+      d1:sus9 | e:sus9 | a:m7 | b2:m7 e4:m7 b:m7 |
+      
+      %% 42
+      d1:sus9 | e:sus9 | a:m7 | b:m7 |
+      
+      %% 46 [F]
+      e1 | cs:m7 | a:maj9 |
+      
+      ## 49
+      c2.:maj7 b4:m7 | e1 | cs:m7 |
+      
+      %% 52
+      a1:maj9 | c2.:maj7 b4:m7 |
+    }
+
+    %% 55 [G]
+    
+    
   
 }
 
