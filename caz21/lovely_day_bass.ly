@@ -96,15 +96,80 @@ my_notes = \relative c {
       c8-. c8-. r16 c16 r16 \deadNote c16-. c8-. c8-. b8-. b8-.
     }
 
+  %% 30
   \cbreak \sbreak
-  \mark \markup { \bold { [D] } \italic { (Vocals) }}
+  \mark \markup { \bold { [D] } }
   
   \repeat volta 2 
     {
       e8-.\3 e8-.\3 r16 e16\3 r16 b16\4 e4-.\3 \> r16 b16-.\4 e16\3 ds16\3 \mp \! |
       cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. cs16 gs16 |
-      a8-. a8-. r16 a16 r16 \deadNote a16 a4 r8. gs16 |
+      a8-. a8-. r16 a'16\2 r16 a,16 a4 r8. gs16 |
+      
+      %% 33
+      \cbreak
+      a8-. a8-. r16 a16 r16 \deadNote a16-. c8-.\4 c8-.\4 b8-.\4 b8-.\4 |
+      e8-.\3 e8-.\3 r16 e16\3 r16 b16\4 e4-.\3 r16 b16-.\4 e16\3 ds16\3 |
+
+      %% 35
+      \cbreak
+      cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. cs16 gs16 |
+      a8-. a8-. r16 a'16\2 r16 a,16-. a4-. r8 a16 b16\4 |
+      c8-.\4 c8-.\4 r16 c16 r16 \deadNote c16 c8-. c8-. c8-. cs8-. \bar "||"
+      
+      %% 38
+      \cbreak \sbreak
+      \mark \markup { \bold { [E] } }
+      d4-. r8. d16 d4-. r16 cs16 d16 ds16\3 |
+      e4-. r8. e16 e8-. fs-. g8-. e8 |
+      a,4-. r8. a'16 a4-. r16 gs16 a16 as16 |
+      b4-. r8. fs16 b,8-. r16 fs'16 e8-. r16 b16 |
+      
+      %% 42
+      \cbreak
+      d4-. r8. d16 d4-. r16 cs16 d16 ds16 |
+      e4-. r8. e16 e8 fs8 g8 gs8 |
+      a4-. r8. a,16 a4-. r16 gs16 a16 as16 |
+      b4-. \< r8. b16 b8-. b8-. r16 b16 r16 b16 \! \bar "||"
+       
+      %46
+      \cbreak \sbreak
+      \mark \markup { \bold { [F] } }
+      e8-. \f e8-. r16 e16 r16 b16 e4-. r16 b16-. e16 ds16 |
+      cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16 cs16 gs16 |
+      a8-. a8-. r16 a'16 r16 a,16 a4-. r16 gs16-. a16 b16 |
+      
+      %% 49
+      \cbreak
+      c8-. c8-. r16 c16 r16 \deadNote c16-. c8-. c8-. b8-. b8-. |
+      e8-. e8-. r16 e16 r16 b16 e4-. r16 b16-. e16 ds16 |
+      cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. cs16 gs16 |
+      
+      %% 52
+      \cbreak
+      a8-. a8-. r16 a'16 r16 a,16 a4-. r16 gs16-. a16 b16 |
+      c8-. c8-. r16 c16 r16 \deadNote c16 c8-. c8-. b8-. b8-. |
     }
+
+  %% 55
+  \cbreak \sbreak
+  \mark \markup { \bold { [G] } \italic { Open Vamp } }
+  \repeat volta 2 
+    {
+      e8-. e8-. r16 e16 r16 b16 e4-. r16 b16-. e16 ds16 |
+      cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16 cs16 gs16 |
+      a8-. a8-. r16 a'16 r16 a,16 a4-. r16 gs16-. a16 b16 |      
+    }
+  \alternative {
+    { 
+      c8-. c8-. r16 c16 r16 \deadNote c16 c8-. c8-. b8-. b8-. |
+    }
+    { 
+      c8-. c8-. r16 c16 r16 \deadNote c16 \> c8-. c8-. b8-. b8-.  \! |
+    }
+  }
+  
+  e1->\fermata \bar "|." 
 
 }
 
@@ -144,7 +209,6 @@ my_chords = \chordmode {
       e1 | cs:m7 | a:maj9 |      
       c2.:maj7 b4:m7 | 
     }
-  }
   
   %% 30 [D]
   \repeat volta 2 
@@ -153,7 +217,7 @@ my_chords = \chordmode {
       e1 | cs:m7 | a:maj9 | c1:maj7 |
       
       %% 38 [E]
-      d1:sus9 | e:sus9 | a:m7 | b2:m7 e4:m7 b:m7 |
+      d1:sus9 | e:sus9 | a:m7 | b2:m7 ~b8.:m7 e16:m7 b4:m7 |
       
       %% 42
       d1:sus9 | e:sus9 | a:m7 | b:m7 |
@@ -161,16 +225,23 @@ my_chords = \chordmode {
       %% 46 [F]
       e1 | cs:m7 | a:maj9 |
       
-      ## 49
-      c2.:maj7 b4:m7 | e1 | cs:m7 |
+      %% 49
+      c2.:maj7 b4:m7 | e1 | cs1:m7 |
       
       %% 52
       a1:maj9 | c2.:maj7 b4:m7 |
     }
 
-    %% 55 [G]
-    
-    
+    %% 55 [G] Open Vamp
+    \repeat volta 2 
+      {
+        e1 | cs:m7 | a:maj9 |
+      }
+    \alternative {
+      { c2.:maj7 b4:m7 | }
+      { c2.:maj7 b4:m7 | }      
+    }
+    e1
   
 }
 
@@ -197,7 +268,7 @@ my_music = <<
   \new TabStaff
     \with { stringTunings = #bass-tuning } 
   { 
-    \set TabStaff.minimumFret = #1
+    \set TabStaff.minimumFret = #4
     \set TabStaff.restrainOpenStrings = ##t
     \global
     \my_notes
