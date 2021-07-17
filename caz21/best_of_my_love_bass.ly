@@ -11,11 +11,13 @@
 \paper { 
   left-margin = 1.0 \in
   right-margin = 0.5 \in
+  top-margin = 1.0 \in
+  bottom-margin = 1.0 \in
 }
 
 cbreak = { 
   %%\break
-}
+} 
 sbreak = { \break }
 
 
@@ -38,13 +40,13 @@ my_notes = \relative c {
   
   %% 3
   \cbreak \sbreak
-  \mark \markup { \bold { [A] } }
+  \mark \markup { \box A }
   f4-. \f r8 f8 e4-. r8 e8 | d4-. r8 d8 c8-. d-. e4 |
   f4-. r8 f8 e4-. r8 e8 | d8-. e-. f8. c16-. c8-. d8-. e4 \bar "||"
   
   %% 7
   \cbreak \sbreak
-  \mark \markup { \bold { [B] } (vocals) }
+  \mark \markup { \box B \italic {(vocals)} }
   f4-. \mf r8 f8 e4-. r8 e8 | d4-. r8 d8 c8-. d-. e4 | f4-. r8 f8 e4-. r4 | d8-. e-. f4 c8.-. g16-. g4 |
   
   % 11
@@ -61,7 +63,7 @@ my_notes = \relative c {
   
   % 23
   \cbreak \sbreak
-  \mark \markup { \bold { [C] } }
+  \mark \markup { \box C }
   f4-. r8 f'-. e4-. r8 e8-. | d4-. r8 d8 c-. d-. e4 | f4-. r8 f8 e4-. r8 e8 | d8-. e8-. f8. c16-. c4 d8 e |
   
   %% 27
@@ -70,7 +72,7 @@ my_notes = \relative c {
   
   %% 31
   \cbreak \sbreak
-  \mark \markup { \bold { [D] } }
+  \mark \markup { \box D }
   f4-. r e-. r | d-. r c8. g16-. g8 fs8 | f4-. r e-. r | d'8-. e-. f8. c16-. c8-. d-. e4 |
   
   %% 35
@@ -79,7 +81,7 @@ my_notes = \relative c {
   
   %% 39
   \cbreak \sbreak
-  \mark \markup { \bold { [E] } }
+  \mark \markup { \box E }
   r8 f8-. r16 f16 r16 d16 f4 f,4 | r8 e'8-. r16 e16 r16 d16 f4 e,4 | r8 d'8-. r16 d16 r16 d16 d2 | r8 c8-. r16 c'16 r16 c,16 c4 c4-. | 
   
   %% 43
@@ -95,7 +97,7 @@ my_notes = \relative c {
 
   %% 49
   \cbreak \sbreak
-  \mark \markup { \bold { [F] } }
+  \mark \markup { \box F }
   f4-. \mf r e-. r | d4-. r4 c8. g16-. g4 | f4-. r e-. r | d'8-. e-. f8. c16-. c8-. d8-. e4 |
   
   %% 53
@@ -104,7 +106,7 @@ my_notes = \relative c {
   
   %% 57
   \cbreak \sbreak
-  \mark \markup { \bold { [G] } }
+  \mark \markup { \box G }
   f'4-. r8 f8 e4-. r4 | d4-. r4 c-. d8-. e-. | f4-. r e-. r | d8-. e-. f8. c16-. c4 g4 |
   
   %% 61
@@ -113,8 +115,8 @@ my_notes = \relative c {
   
   %% 65
   \cbreak \sbreak
-  \mark \markup { \bold { [H] } }
-  r8 \f f8-. r16 f16 r16 d16 f2 | r8 e8-. r16 e16 r16 d16 e2 | r8 d8-. r16 d16 r16 d16 d4 d'4 | r8 c,8 (c16) c'16 r16 c,16-. c4 g4-. | 
+  \mark \markup { \box H }
+  r8 \f f8-. r16 f16 r16 d16 f2 | r8 e8-. r16 e16 r16 d16 e2 | r8 d8-. r16 d16 r16 d16 d4 d'4 | r8 c,8 ~c16 c'16 r16 c,16-. c4 g4-. | 
   
   %% 69
   \cbreak
@@ -132,7 +134,7 @@ my_notes = \relative c {
   
   %% 76
   \cbreak \sbreak
-  \mark \markup { \bold { [I] } }
+  \mark \markup { \box I }
   f4-. \mf r8 f8 e4-. r4 | d4-. r4 c-. g | f4-. r e-. r | d'8-. e-. f8. c16-. c4 d8 e |
   
   %% 80
@@ -141,7 +143,7 @@ my_notes = \relative c {
   
   %% 84
   \cbreak \sbreak
-  \mark \markup { \bold { [J] } }
+  \mark \markup { \box J }
   f4-. r e-. r | d-. r c-. d8-. e-. | f4-. r e-. r | d8-. e-. f4 c4-. d8-. e-. |
   
   %% 88
@@ -149,7 +151,7 @@ my_notes = \relative c {
   
   %% 92
   \cbreak \sbreak
-  \mark \markup { \bold { [K] } }
+  \mark \markup { \box K }
   \repeat volta 2 
     {
        f,4-. r e'-. r | d4-. r c-. d8-. e-. | f4-. r e-. r | d4-. r c8 c'8 c,8 c'8 |  f,4-. r e-. r |
@@ -167,8 +169,8 @@ my_notes = \relative c {
   
   %% 101
   \cbreak \sbreak
-  \mark \markup { \bold { [L] } }
-  r8 \f f8-. r16 f16 r16 d16 f2 | r8 e8-. r16 e16 r16 d16 e2 | r8 d8-. r16 d16 r16 d16 d4 d'4 | r8 c,8 (c16) c'16 r16 c,16-. c4 g4-. | 
+  \mark \markup { \box L }
+  r8 \f f8-. r16 f16 r16 d16 f2 | r8 e8-. r16 e16 r16 d16 e2 | r8 d8-. r16 d16 r16 d16 d4 d'4 | r8 c,8 ~c16 c'16 r16 c,16-. c4 g4-. | 
   
   %% 103
   \cbreak
