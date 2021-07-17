@@ -24,6 +24,7 @@ sbreak = { \break }
 global = {
   \time 4/4
   \tempo "Groovy R&B - Straight 8s" 4 = 100
+  
 }
 
 my_notes = \relative c {
@@ -31,99 +32,99 @@ my_notes = \relative c {
   \key e \major
   
   %% 1
-  e,8-.\3 \mp e8-.\3 r16 e16\3 r16 b16\4 e4-.\3 r16 b16-.\4 e16\3 ds16\3 |
+  e,8-. \mp e8-. r16 e16 r16 b16 e4-. r16 b16-. e16 ds16 |
   cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. cs16 gs16 |
   a8-. a8-. r16 a16 r16 \deadNote a16 a4 r8. gs16 |
   
   %% 4
   \cbreak
-  a8-. a8-. r16 a16 r16 \deadNote a16-. c8-.\4 c8-.\4 b8-.\4 b8-.\4 \bar "||" 
+  a8-. a8-. r16 a16 r16 \deadNote a16-. c8-. c8-. b8-. b8-. \bar "||" 
   \sbreak
-  \mark \markup { \italic { Horns In }}
-  e8-.\3 e8-.\3 r16 e16\3 r16 b16\4 e4-.\3 r16 b16-.\4 e16\3 ds16\3 |
+  \mark \markup { \italic {Horns In} }
+  e8-. e8-. r16 e16 r16 b16 e4-. r16 b16-. e16 ds16 |
   
   %% 6
   \cbreak
   cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. cs16 gs16 |
-  a8-. a8-. r16 a16 r16 \deadNote a16-. a4-. r8 a16 b16\4 |
-  c8-.\4 c8-.\4 r16 c16\4 r16 \deadNote c16-.\4 c8-.\4 \< c8-.\4 b8-.\4 b8-.\4 \! \bar "||"
+  a8-. a8-. r16 a16 r16 \deadNote a16-. a4-. r8 a16 b16 |
+  c8-. c8-. r16 c16 r16 \deadNote c16-. c8-. \< c8-. b8-. b8-. \! \bar "||"
   
   %% 9
   \cbreak \sbreak
-  \mark \markup { \bold { [A] } \italic { (Vocals) }}
-  e8-.\3 e8-.\3 r16 e16\3 r16 b16\4 e4-.\3 \> r16 b16-.\4 e16\3 ds16\3 \! |
+  \mark \markup { \box A \italic {(vocals)} }
+  e8-. e8-. r16 e16 r16 b16 e4-. \> r16 b16-. e16 ds16 \! |
   cs8-. \mp cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. cs16 gs16 |
   a8-. a8-. r16 a16 r16 \deadNote a16 a4 r8. gs16 |
   
   %% 12
   \cbreak
-  a8-. a8-. r16 a16 r16 \deadNote a16-. c8-.\4 c8-.\4 b8-.\4 b8-.\4 \bar "||" 
+  a8-. a8-. r16 a16 r16 \deadNote a16-. c8-. c8-. b8-. b8-. \bar "||" 
   \sbreak
-  e8-.\3 e8-.\3 r16 e16\3 r16 b16\4 e4-.\3 r16 b16-.\4 e16\3 ds16\3 |
+  e8-. e8-. r16 e16 r16 b16 e4-. r16 b16-. e16 ds16 |
   cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. cs16 gs16 |
   
   %% 15
   \cbreak
-  a8-. a8-. r16 a16 r16 \deadNote a16-. a4-. r8 a16 b16\4 |
+  a8-. a8-. r16 a16 r16 \deadNote a16-. a4-. r8 a16 b16 |
   c8-. \< c8-. r16 c16 r16 \deadNote c16-. c8-. c8-. c8-. c16 cs16 \! \bar "||"
   
   %% 17
   \cbreak \sbreak
-  \mark \markup { \bold { [B] } }
-  d4-. \mf r8. d16 d4-. r16 cs16 d16 ds16\3 |
-  e4-.\3 r8. e16\3 e8-.\3 e8-.\3 e16\3 gs,8.-> |
-  a4-. r8. a16 a4-. r16 gs16 a16 as16\4 |
+  \mark \markup { \box B }
+  d4-. \mf r8. d16 d4-. r16 cs16 d16 ds16 |
+  e4-. r8. e16 e8-. e8-. e16 gs,8.-> |
+  a4-. r8. a16 a4-. r16 gs16 a16 as16 |
   
   %% 20
   \cbreak
-  b4-.\4 r8. b16\4 b8-.\4 fs'16\3 b,16\4 e8-.\3 b16\4 (a16) |
-  d4-. r8. d16 d4-. r16 cs16 d16\3 ds16\3 |
-  e4-.\3 r8. e16\3 e8\3 fs8 g8 gs8\2 |
+  b4-. r8. b16 b8-. fs'16\3 b,16 e8-. b16 (a16) |
+  d4-. r8. d16 d4-. r16 cs16 d16 ds16 |
+  e4-. r8. e16 e8 fs8 g8 gs8 |
   
   %% 23
   \cbreak
-  a4-.\2 \< r8. a,16 a4-. r16 gs16 a16 as16\4 |
-  b4-.\4 r8. b16\4 b8-.\4 b8-.\4 r16 b16-.\4 r16 b16\4 \! |
+  a4-. \< r8. a,16 a4-. r16 gs16 a16 as16 |
+  b4-. r8. b16 b8-. b8-. r16 b16-. r16 b16 \! |
   
   %% 25
   \cbreak \sbreak
-  \mark \markup { \bold { [C] } }
+  \mark \markup { \box C }
   \repeat volta 2
     {
-      e8-.\3 \f e8-.\3 r16 e16\3 r16 b16\4 e4-.\3 r16 b16-.\4 e16\3 ds16\3 |
+      e8-. \f e8-. r16 e16 r16 b16 e4-. r16 b16-. e16 ds16 |
       cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. cs16 gs16 |
-      a8-. a8-. r16 a'16\2 r16 a,16 a4-. r16 gs16-. a16 b16\4 |
+      a8-. a8-. r16 a'16 r16 a,16 a4-. r16 gs16-. a16 b16 |
       c8-. c8-. r16 c16 r16 \deadNote c16-. c8-. c8-. b8-. b8-.
     }
 
   %% 30
   \cbreak \sbreak
-  \mark \markup { \bold { [D] } }
+  \mark \markup { \box D }
   
   \repeat volta 2 
     {
-      e8-.\3 e8-.\3 r16 e16\3 r16 b16\4 e4-.\3 \> r16 b16-.\4 e16\3 ds16\3 \mp \! |
+      e8-. e8-. r16 e16 r16 b16 e4-. \> r16 b16-. e16 ds16 \mp \! |
       cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. cs16 gs16 |
-      a8-. a8-. r16 a'16\2 r16 a,16 a4 r8. gs16 |
+      a8-. a8-. r16 a'16 r16 a,16 a4 r8. gs16 |
       
       %% 33
       \cbreak
-      a8-. a8-. r16 a16 r16 \deadNote a16-. c8-.\4 c8-.\4 b8-.\4 b8-.\4 |
-      e8-.\3 e8-.\3 r16 e16\3 r16 b16\4 e4-.\3 r16 b16-.\4 e16\3 ds16\3 |
+      a8-. a8-. r16 a16 r16 \deadNote a16-. c8-. c8-. b8-. b8-. |
+      e8-. e8-. r16 e16 r16 b16 e4-. r16 b16-. e16 ds16 |
 
       %% 35
       \cbreak
       cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16-. cs16 gs16 |
-      a8-. a8-. r16 a'16\2 r16 a,16-. a4-. r8 a16 b16\4 |
-      c8-.\4 c8-.\4 r16 c16 r16 \deadNote c16 c8-. c8-. c8-. cs8-. \bar "||"
+      a8-. a8-. r16 a'16 r16 a,16-. a4-. r8 a16 b16 |
+      c8-. c8-. r16 c16 r16 \deadNote c16 c8-. c8-. c8-. cs8-. \bar "||"
       
       %% 38
       \cbreak \sbreak
-      \mark \markup { \bold { [E] } }
-      d4-. r8. d16 d4-. r16 cs16 d16 ds16\3 |
+      \mark \markup { \box E }
+      d4-. r8. d16 d4-. r16 cs16 d16 ds16 |
       e4-. r8. e16 e8-. fs-. g8-. e8 |
       a,4-. r8. a'16 a4-. r16 gs16 a16 as16 |
-      b4-. r8. fs16 b,8-. r16 fs'16 e8-. r16 b16 |
+      b4-.\2 r8. fs16\3 b,8-. r16 fs'16\3 e8-. r16 b16 |
       
       %% 42
       \cbreak
@@ -134,7 +135,7 @@ my_notes = \relative c {
        
       %46
       \cbreak \sbreak
-      \mark \markup { \bold { [F] } }
+      \mark \markup { \box F }
       e8-. \f e8-. r16 e16 r16 b16 e4-. r16 b16-. e16 ds16 |
       cs8-. cs8-. r16 cs16 r16 gs16 cs4-. r16 gs16 cs16 gs16 |
       a8-. a8-. r16 a'16 r16 a,16 a4-. r16 gs16-. a16 b16 |
@@ -153,7 +154,7 @@ my_notes = \relative c {
 
   %% 55
   \cbreak \sbreak
-  \mark \markup { \bold { [G] } \italic { Open Vamp } }
+  \mark \markup { \box G \italic { Open Vamp } }
   \repeat volta 2 
     {
       e8-. e8-. r16 e16 r16 b16 e4-. r16 b16-. e16 ds16 |
@@ -165,7 +166,7 @@ my_notes = \relative c {
       c8-. c8-. r16 c16 r16 \deadNote c16 c8-. c8-. b8-. b8-. |
     }
     { 
-      c8-. c8-. r16 c16 r16 \deadNote c16 \> c8-. c8-. b8-. b8-.  \! |
+      c8-. c8-. r16 c16 r16 \deadNote c16 _\markup { \italic rit . . . . .} c8-. \>  c8-. b8-. b8-.  \! |
     }
   }
   
