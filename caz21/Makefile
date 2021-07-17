@@ -1,11 +1,16 @@
 all: \
-  best_of_my_love_bass
+  best_of_my_love_bass lovely_day_bass
 .PHONY: all
 
 best_of_my_love_bass: \
   best_of_my_love_bass.pdf best_of_my_love_bass.midi \
   best_of_my_love_bass.wav best_of_my_love_bass.mp3
 .PHONY: best_of_my_love_bass
+
+lovely_day_bass: \
+  lovely_day_bass.pdf lovely_day_bass.midi \
+  lovely_day_bass.wav lovely_day_bass.mp3
+.PHONY: lovely_day_bass
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3
