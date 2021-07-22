@@ -12,6 +12,11 @@ lovely_day_bass: \
   lovely_day_bass.wav lovely_day_bass.mp3
 .PHONY: lovely_day_bass
 
+shut_up_and_dance_guitar: \
+  shut_up_and_dance_guitar.pdf shut_up_and_dance_guitar.midi \
+  shut_up_and_dance_guitar.wav shut_up_and_dance_guitar.mp3
+.PHONY: shut_up_and_dance_guitar
+
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3
 .PHONY: clean
