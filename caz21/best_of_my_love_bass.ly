@@ -47,7 +47,7 @@ my_notes = \relative c {
   %% 7
   \cbreak \sbreak
   \mark \markup { \box B \italic {(vocals)} }
-  f4-. \mf r8 f8 e4-. r8 e8 | d4-. r8 d8 c8-. d-. e4 | f4-. r8 f8 e4-. r4 | d8-. e-. f4 c8.-. g16-. g4 |
+  f4-. \mf r8 f8 e4-. r8 e8 | d4-. r8 d8 c8-. d-. e4 | f4-. r8 f8 e4-. r4 | d8-. e-. f4 c8. g16-. g4 |
   
   % 11
   \cbreak
