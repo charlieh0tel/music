@@ -19,12 +19,13 @@
 up = _\markup \translate #'(-.2 . 0) \rotate #90 "➛"
 down = _\markup \translate #'(-.2 . 0) \rotate #-90 "➛"
 
+
 global = {
   \time 4/4
   \tempo "Pop rock" 4 = 128
 }
 
-my_notes = \relative c {
+my_notes = \transpose cs cs \relative c {
   \clef "treble_8"
   \key cs \major
   
@@ -46,15 +47,48 @@ my_notes = \relative c {
    
    %%
    \break
-   \mark \markup { Verse }
+   \mark \markup { Verse (with variations) }
    \repeat volta 7 {
      cs8\3-.-> \deadNote cs16\3 cs16\3-> r8 cs8\3-.-> r8 cs8\3-.-> cs16\3-> cs16\3 \mark \markup { x7 } r8  |
    }
+   r8 <cs,\6 gs'\5> <cs\6 gs'\5> <c\6 gs'\5> <c\6 gs'\5> <as\6 f'\5> <as\6 f'\5> <gs\6 ds'\5> |
    \break
-   r8 <cs,\6 gs'\5> <cs\6 gs'\5> <cs\6 gs'\5> <cs\6 gs'\5> <cs\6 gs'\5> <cs\6 gs'\5> <cs\6 gs'\5> |
-   r8 <gs'\4 cs\3 f\2> <gs\4 cs\3 f\2> <gs\4 cs\3 fs\2> <gs\4 cs\3 fs\2>4-.  \deadNote <gs\4 cs\3 f\2> |
-   r8 <gs\4 cs\3 f\2> <gs\4 cs\3 f\2> <gs\4 cs\3 fs\2> <gs\4 cs\3 fs\2>4-. \deadNote <gs\4 cs\3 f\2>8 <gs, ds' gs c ds gs>8-> ~ |
-   <gs ds' gs c ds gs>4 <gs ds' gs c ds gs>4 <gs ds' gs c ds gs>8 <gs ds' gs c ds gs>8 <gs ds' gs c ds gs>4-.
+   r8 <gs'\4 cs\3 f\2> <gs\4 cs\3 f\2> <as\4 cs\3 fs\2> <as\4 cs\3 fs\2>4-.  \deadNote <gs\4 cs\3 fs\2> |
+   \deadNote <gs\4 cs\3 fs\2>8 <gs\4 cs\3 f\2> <gs\4 cs\3 f\2> <gs\4 c\3 ds\2> <gs\4 c\3 ds\2>4-.  \deadNote <gs\4 c\3 ds\2> |
+   \deadNote <gs\4 cs\3 fs\2>8 <gs\4 cs\3 f\2> <gs\4 cs\3 f\2> <as\4 cs\3 fs\2> <as\4 cs\3 fs\2>4-. \deadNote <as\4 cs\3 fs\2>8 <gs, ds' gs c ds gs>8-> ~ |
+   <gs ds' gs c ds gs>4 <gs ds' gs c ds gs> <gs ds' gs c ds gs>8 <gs ds' gs c ds gs>8 <gs ds' gs c ds gs>4-.
+   
+   \break
+   \mark \markup { Chorus (two guitar parts) }
+   \repeat volta 4 {
+     r8 <gs'\4 cs\3 f\2> <gs\4 cs\3 f\2> <as\4 cs\3 fs\2> <as\4 cs\3 fs\2>8  r4. |
+     r8 <gs\4 cs\3 f\2> <cs,\5 gs'\4 cs\3 f\2> <gs'\4 c\3 ds\2>  <gs, ds' gs c ds>8 \mark \markup { x4 D.S.repeat } r4. |
+   }
+}
+
+my_chords = \transpose cs cs \chordmode {
+  \set majorSevenSymbol = \markup { maj7 }
+  
+  \repeat volta 7 {
+    s1 | s1 |
+  }
+  
+  \repeat percent 2 {
+    s1 | s1 |
+  }
+  
+  \repeat volta 7 {
+     s1 |
+  }
+  
+  s8 cs4:5 bs:5 as:5 gs8:5 |   
+  s8 cs4:5 fs:5 s4. |
+  s8 cs4:5 gs:5 s4. |
+  s8 cs4:5 fs4.:5 s8 gs8:5 |
+  gs1:5 |
+  
+  s8 cs4:5 fs:5 s4. |
+  s8 cs4:5 gs:5 s4. |
 }
 
 ticktock = \drummode {
@@ -62,6 +96,14 @@ ticktock = \drummode {
 
 
 my_music = <<
+  \new ChordNames {
+    \set ChordNames.midiInstrument = "percussive organ"
+    \set ChordNames.midiMaximumVolume = #0.2
+    \set chordChanges = ##t
+    \global
+    \my_chords
+  }
+
   \new Staff {
     \set Staff.midiInstrument = #"electric guitar"
     \set Staff.midiMinimumVolume = #0.7
