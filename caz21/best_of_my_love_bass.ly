@@ -32,10 +32,10 @@ my_notes = \relative c {
   
   %% 1
   \override Stem.direction = #DOWN
-  g16-> \f \< g16-> g,8-. g8-. g'16-> g16-> 
+  g16\2-> \f \< g16\2-> g,8-. g8-. g'16\2-> g16\2-> 
   \revert Stem.direction g,8-. g8-. \override Stem.direction = #DOWN
-  g'16-> g16-> r8 \! |
-  r4 r8 \ff g16-> g16-> g16-> g16-> r8 r4 \bar "||"
+  g'16\2-> g16\2-> r8 \! |
+  r4 r8 \ff g16\2-> g16\2-> g16\2-> g16\2-> r8 r4 \bar "||"
   \revert Stem.direction
   
   %% 3
@@ -82,16 +82,16 @@ my_notes = \relative c {
   %% 39
   \cbreak \sbreak
   \mark \markup { \box E }
-  r8 f8-. r16 f16 r16 d16 f4 f,4 | r8 e'8-. r16 e16 r16 d16 f4 e,4 | r8 d'8-. r16 d16 r16 d16 d2 | r8 c8-. r16 c'16 r16 c,16 c4 c4-. | 
+  r8 f8-. r16 f16 r16 d16 f4 f,4 | r8 e'8-. r16 e16 r16 d16 e4 e,4 | r8 d'8-. r16 d16 r16 d16 d2 | r8 c8-. r16 c'16 r16 c,16 c4 c4-. | 
   
   %% 43
   \cbreak
   r8 \f f8-. r16 f16 r16 d16 f2 | r8 e8-. r16 e16 r16 d16 e2 | r8 gs8-. r16 gs16 r16 gs16 gs2 |
-  r8 a8-. r16 a16 r16 a,16 a2 | d2-> d2-> |
+  r8 a8-. r16 a16 r16 a,16 a2 | d2\3-> d2\3-> |
   \override Stem.direction = #DOWN
-  g16-> \f \< g16-> g,8-. g8-. g'16-> g16-> 
+  g16\2-> \f \< g16\2-> g,8-. g8-. g'16\2-> g16\2-> 
   \revert Stem.direction g,8-. g8-. \override Stem.direction = #DOWN
-  g'16-> g16-> r8 \! |
+  g'16\2-> g16\2-> r8 \! |
   \revert Stem.direction
   \bar "||"
 
@@ -111,7 +111,7 @@ my_notes = \relative c {
   
   %% 61
   \cbreak
-  f'4-. r8 f8 e4-. r4 | d4-. r4 c-. d8-. e-. | f4-. r e-. r | d8-. e-. f8. c16-. c4 d8 e \bar "||"
+  f4-. r4 e'4-. r4 | d4-. r4 c-. d8-. e-. | f4-. r e-. r | d8-. e-. f8. c16-. c4-. d8 e \bar "||"
   
   %% 65
   \cbreak \sbreak
@@ -120,16 +120,16 @@ my_notes = \relative c {
   
   %% 69
   \cbreak
-  r8 f-. r16 f16 r8 f2 | r8 e'8-. r16 e16 r16 d16 e2 | r8 gs8-. r16 fs16 r16 gs16 gs2 | r8 a8-. r16 a16 r16 a16 a2 |
+  r8 f-. r16 f16 r8 f2 | r8 e'8-. r16 e16 r16 d16 e2 | r8 gs8-. r16 gs16 r16 gs16 gs2 | r8 a8-. r16 a16 r16 a16 a2 |
   
   %% 73
   \cbreak
-  d,2-> d2-> |
+  d,2\3-> d2\3-> |
   \override Stem.direction = #DOWN
-  g16-> \f \< g16-> g,8-. g8-. g'16-> g16-> 
+  g16\2-> \f \< g16\2-> g,8-. g8-. g'16\2-> g16\2-> 
   \revert Stem.direction g,8-. g8-. \override Stem.direction = #DOWN
-  g'16-> g16-> r8 \! |
-  r4 r8 \ff g16-> g16-> g16-> g16-> r8 r4 \bar "||"
+  g'16\2-> g16\2-> r8 \! |
+  r4 r8 \ff g16\2-> g16\2-> g16\2-> g16\2-> r8 r4 \bar "||"
   \revert Stem.direction
   
   %% 76
@@ -139,7 +139,7 @@ my_notes = \relative c {
   
   %% 80
   \cbreak
-  f4-. r e-. r | d-. r c-. d8-. e-. | f4-. r e-. r | d8-. e-. f8. c16-. c4 d8 e  \bar "||"
+  f4-. r e-. r | d-. r c-. d8-. e-. | f4-. r e-. r | d8-. e-. f8. c16-. c4 d8-. e-.  \bar "||"
   
   %% 84
   \cbreak \sbreak
@@ -174,16 +174,16 @@ my_notes = \relative c {
   
   %% 103
   \cbreak
-  r8 f-. r16 f16 r8 f2 | r8 e'8-. r16 e16 r16 d16 e2 | r8 gs8-. r16 fs16 r16 gs16 gs2 | r8 a8-. r16 a16 r16 a16 a2 |
+  r8 f-. r16 f16 r8 f2 | r8 e'8-. r16 e16 r16 d16 e2 | r8 gs8-. r16 gs16 r16 gs16 gs2 | r8 a8-. r16 a16 r16 a16 a2 |
   
   %% 109
   \cbreak
-  d,2-> d2-> |
+  d,2\3-> d2\3-> |
   \override Stem.direction = #DOWN
-  g16-> \f \< g16-> g,8-. g8-. g'16-> g16-> 
+  g16\2-> \f \< g16\2-> g,8-. g8-. g'16\2-> g16\2-> 
   \revert Stem.direction g,8-. g8-. \override Stem.direction = #DOWN
-  g'16-> g16-> r8 \! |
-  r4 r8 \ff g16-> g16-> g16-> g16-> r8 r4 \bar "|."
+  g'16\2-> g16\2-> r8 \! |
+  r4 r8 \ff g16\2-> g16\2-> g16\2-> g16\2-> r8 r4 \bar "|."
   \revert Stem.direction
   
   
