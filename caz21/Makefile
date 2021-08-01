@@ -1,5 +1,5 @@
 all: \
-  best_of_my_love_bass lovely_day_bass
+  best_of_my_love_bass lovely_day_bass shut_up_and_dance_guitar
 .PHONY: all
 
 best_of_my_love_bass: \
