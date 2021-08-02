@@ -27,6 +27,7 @@ my_notes = \relative c {
   \key bf \major
   
   %% Riff
+  \repeat volta 4 {
   \mark \markup { [Riff] }
   g,8 g16 bf16 r16 bf16 f8~ f16 g8. bf8. c16~ | 
   c8 cs8 ~cs16 d8. f8 f8 fs4 |
@@ -34,18 +35,23 @@ my_notes = \relative c {
   bf8 bf16 g16 r16 g16 a8~ a16 bf8. g8. gf16~ |
   gf8 f8~ f16 d8. df4 c8 f,8 
   \bar ":.|.:" \break
+  }
   
   %% Verse
+  \repeat volta 4 {
   \mark \markup { [Verse] }
   g8 [r16 g16] r8 g8 r8 f'16 (\tieDown e16~) \tieUp e8 f,8 |
   g8 [r16 g16] r8 g8 r8 g16 r16 g16 r8.
   \bar ":.|.:" \break
+  }
   
   %% Vamp
+  \repeat volta 4 {
   \mark \markup { [Vamp] }
   bf'16 (a16) g16 f16 a16 (bf16) g8 r8 g,16 r16 g16 r8. |
   g8 [r16 g16] r8 g8 r8 g16 r16 g16 r16 
-  \bar ":.|.:" \break  
+  \bar ":.|.:" \break
+  }
 }
 
 my_music = <<
