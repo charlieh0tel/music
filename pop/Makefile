@@ -1,5 +1,5 @@
 all: \
-  radiohead_paranoid_android youwontseeme
+  youwontseeme
 .PHONY: all
 
 radiohead_paranoid_android: \
