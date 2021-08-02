@@ -15,6 +15,8 @@
   bottom-margin = 1.0 \in
 }
 
+#(set-global-staff-size 15)
+
 cbreak = { 
   %%\break
 } 
