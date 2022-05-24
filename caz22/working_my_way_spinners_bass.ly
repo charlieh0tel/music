@@ -234,7 +234,7 @@ ticktock = \drummode {
 my_music = <<
   \new ChordNames {
     \set ChordNames.midiInstrument = "percussive organ"
-    \set ChordNames.midiMaximumVolume = #0.2
+    \set ChordNames.midiMaximumVolume = #0.4
     \set chordChanges = ##t
     \global
     \my_chords
