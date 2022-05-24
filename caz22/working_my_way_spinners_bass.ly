@@ -92,11 +92,11 @@ my_notes = \relative c {
   %% 53
   \sbreak
   \mark \markup { \box G }
-  f'8 c d f r c d f | g b, e g r d e g | g d e g r d e g | g d e g r d e g |  
+  f'8 c d f r c d f | f c d f r c d f | g d e g r d e g | g d e g r d e g |  
 
   %% 57 
   \cbreak
-  f8 c d f r c d f | g b, e g r d e g | g d e g r d e g | g d e g r d e g \bar "||"  
+  f8 c d f r c d f | f c d f r c d f | g d e g r d e g | g d e g r d e g \bar "||"  
 
   %% 61
   \sbreak
@@ -110,7 +110,8 @@ my_notes = \relative c {
   %% 69
   \sbreak
   \mark \markup { \box I \italic { Forgive me } }
-  gs4 a8 a8~ a4 g | f8 f r e8 e4 e8 e8 | gs4 a8 a8~ a4 g | f8 f r e8 e4 e8 e8 | gs4 a8 a8~ a4 g  |
+  \repeat percent 3 { gs4 a8 a8~ a4 g | f8 f r e8 e4 e8 e8 | }
+  gs4 a8 a8~ a4 g  |
   
   %% 76
   \cbreak
@@ -200,7 +201,8 @@ my_chords = \chordmode {
   g4.:6 g8 s2 | g4.:6 g8 s2 | f4.:6 f8 s2 | af2:dim e2:7 |
   
   %% 69
-  e4:7 a:min s2 | f4. c8/e s2 | e4:7 a:min s2 | f4. c8/e s2 | e4:7 a:min s2 |
+  \repeat percent 3 { e4:7 a:min s2 | f4. c8/e s2 } 
+  e4:7 a:min s2 |
   
   %% 76
   fs1:dim | s1 | g1 | s1 |
