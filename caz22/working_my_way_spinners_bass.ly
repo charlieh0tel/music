@@ -33,13 +33,13 @@ my_notes = \relative c {
   \key c \major
   
   %% 1
-  r1 | r1 | r1 | r1 \bar "||"
+  r1-"Drum figure" | r1 | r1 | r1 \bar "||"
   
   %% 5
   \sbreak
-  f,8 c d f r c d f | f c d f r c d f | g8 d e g r d e g | g d e g r d e f |
+  f,8 c d f r c d f | f c d f r c d f | g8 d e g r d e g | g d e g r d e g |
   \cbreak
-  f8 c d f r c d f | f c d f r c d f | g8 d e g r d e g | g d e g r d e f |
+  f8 c d f r c d f | f c d f r c d f | g8 d e g r d e g | g d e g r d e g |
   
   %% 13 
   \sbreak
@@ -73,13 +73,13 @@ my_notes = \relative c {
     
     %% 37
     \cbreak
-    g g b c r g b c | g g b c r g b c | g g b c r2 | bf8 a4 g8 r2 |
+    g g b c r g b c | g g b c r g b c | g g b c r2 | bf'8 a4 g8 r2 |
   }
   
   %% 41
   \sbreak
   \mark \markup { \box E \italic {I'll be working} }
-  f'8 c d f r c d f | g b, e g r d e g | c,4 f e c | a8 a a a g g g e' |
+  f8 c d f r c d f | g b, e g r d e g | c,4 f e c | a8 a a a g g g e' |
 
   %% 45
   \cbreak
@@ -101,11 +101,11 @@ my_notes = \relative c {
   %% 61
   \sbreak
   \mark \markup { \box H \italic { Really sorry } }
-  f8 c d f r c d f | g b, e g r d e g | g d e g r d e g | g d e g r d e g |  
+  g8 d e g r d e g | g8 d e g r d e g | f c d f r c d f | f c d f r c d f |  
 
   %% 65
   \cbreak
-  f8 c d f r c d f | g b, e g r d e g | g d e g g g g g | af af af af e e e e \bar "||"
+  g8 d e g r d e g | g8 d e g r d e g | f c d f f f f f | af af af af e e e e \bar "||"
 
   %% 69
   \sbreak
@@ -114,7 +114,7 @@ my_notes = \relative c {
   
   %% 76
   \cbreak
-  fs,4. a8~ a4. c8~ | c4. ef8~ ef4. g8 | g8 d e g r d e g | g d e g r d e f \bar "||"
+  fs,4. a8~ a4. c8~ | c4. ef8~ ef4. g8 | g8 d e g r d e g | g d e g r d e g \bar "||"
   
   %% 80
   \sbreak
