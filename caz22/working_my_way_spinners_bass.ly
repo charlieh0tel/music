@@ -10,12 +10,12 @@
 
 \paper { 
   left-margin = 1.0 \in
-  right-margin = 0.5 \in
+  right-margin = 1.0 \in
   top-margin = 1.0 \in
   bottom-margin = 1.0 \in
 }
 
-#(set-global-staff-size 15)
+#(set-global-staff-size 17)
 
 cbreak = { 
   \break
@@ -33,7 +33,7 @@ my_notes = \relative c {
   \key c \major
   
   %% 1
-  r1-"Drum figure" | r1 | r1 | r1 \bar "||"
+  r1-"Drum figure" \bar "||"
   
   %% 5
   \sbreak
@@ -151,8 +151,8 @@ my_chords = \chordmode {
   \set majorSevenSymbol = \markup { maj7 }
 
   %% 1
-  s1 | s1 | s1 | s1 |
-
+  s1 |
+  
   %% 5
   f1 | s1 | c4/g g s2 | s1 |
   f1 | s1 | c4/g g s2 | s1 |
