@@ -11,11 +11,11 @@
 \paper { 
   left-margin = 1.0 \in
   right-margin = 0.5 \in
-  top-margin = 0.5 \in
-  bottom-margin = 0.5 \in
+  top-margin = 0.4 \in
+  bottom-margin = 0.75 \in
 }
 
-#(set-global-staff-size 14.8)
+#(set-global-staff-size 14)
 
 DSfine = {
   \once \override Score.RehearsalMark #'break-visibility = #'#(#t #t #f)
