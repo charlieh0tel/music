@@ -1,11 +1,17 @@
 all: \
-  working_my_way_spinners_bass
+  working_my_way_spinners_bass \
+  just_what_i_needed_bass
 .PHONY: all
 
 working_my_way_spinners_bass: \
   working_my_way_spinners_bass.pdf working_my_way_spinners_bass.midi \
   working_my_way_spinners_bass.wav working_my_way_spinners_bass.mp3
 .PHONY: working_my_way_spinners_bass
+
+just_what_i_needed_bass: \
+  just_what_i_needed_bass.pdf just_what_i_needed_bass.midi \
+  just_what_i_needed_bass.wav just_what_i_needed_bass.mp3
+.PHONY: just_what_i_needed_bass
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3
