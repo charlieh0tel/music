@@ -11,8 +11,8 @@
 \paper { 
   left-margin = 1.0 \in
   right-margin = 0.5 \in
-  top-margin = 0.4 \in
-  bottom-margin = 0.75 \in
+  top-margin = 0.5 \in
+  bottom-margin = 1.0 \in
 }
 
 #(set-global-staff-size 14)
@@ -77,7 +77,7 @@ my_notes = \relative c {
   \clef "bass_8"
   \key e \major
 
-  r2 r4 e, | r2 r4 e | r2 r4 e | r2 r4 e |
+  r2 r4 e,\3 | r2 r4 e\3 | r2 r4 e\3 | r2 r4 e\3 |
   r2 r4 e,8 e | r2 r4 e8 e |  r2 r4 e8 e | r2 r4 e8 e |
 	
   \sbreak
@@ -88,9 +88,9 @@ my_notes = \relative c {
     \cbreak
     e'8\3 e\3 e\3 e\3 e\3 e\3 e\3 e\3 | b\4 b\4 b\4 b\4 b\4 b\4 b\4 b\4 | cs cs cs cs cs cs cs cs | gs gs gs gs gs gs gs gs |
     \cbreak
-    e'8\3 e\3 e\3 e\3 e\3 e\3 e\3 e\3 | b\4 b\4^"(B/D# 2nd X only)"  b\4 b\4 b\4 b\4 b\4 b\4 | gs gs gs gs gs gs gs gs | a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 |
+    e'8\3 e\3 e\3 e\3 e\3 e\3 e\3 e\3 | b\4 b\4  b\4 b\4 b\4 b\4 b\4 b\4 | cs cs cs cs cs cs cs cs | gs gs gs gs gs gs gs gs |
     \cbreak
-    e'8\3 e\3 e\3 e\3 e\3 e\3 e\3 e\3 | b\4 b\4 b\4 b\4 b\4 b\4 b\4 b\4 | cs cs cs cs cs cs cs cs | gs gs gs gs gs gs gs gs |
+    e'8\3 e\3 e\3 e\3 e\3 e\3 e\3 e\3 | b\4 b\4^"(B/D# 2nd X only)" b\4 b\4 b\4 b\4 b\4 b\4 | gs gs gs gs gs gs gs gs | a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 |
   }
   \alternative {	
     {	
@@ -118,33 +118,35 @@ my_notes = \relative c {
   e'8\3 e\3 e\3 b\4 b\4 b\4 b\4 b\4 | cs cs cs a\4 a\4 a\4 a\4 a\4 |
   e'\3 e\3 e\3 b\4 b\4 b\4 b\4 b\4 | cs cs cs gs gs gs gs gs |
   \cbreak
-  e'8\3 e\3 e\3 b\4 b\4 b\4 b\4 b\4 | cs cs cs a a a a a-"D.S al 2cd ending al coda" \bar "||"
+  e'8\3 e\3 e\3 b\4 b\4 b\4 b\4 b\4 | cs cs cs a\4 a\4 a\4 a\4 a\4-"D.S al 2cd ending al coda" \bar "||"
   
   \sbreak
   \Coda
-  b8 cs e b ~b4 r8 a | a4 r8 cs cs b b4 | b8 cs e b ~b4 r8 a | a4 r8 cs8 ~cs2 |
+  b8\4 cs\4 e\3 b\4 ~b4 r8 a\4 | a4\4 r8 cs\4 cs\4 b\4 b4\4 | 
+  b8\4 cs\4 e\3 b\4 ~b4 r8 a\4 | a4\4 r8 cs8\4 ~cs2 |
   \cbreak
-  b8 cs e b ~b4 r8 a | a4 r8 cs cs b b4 | b8 cs e b ~b4 r8 a | \time 2/4 a4 r8 a | 
+  b8\4 cs\4 e\3 b\4 ~b4 r8 a\4 | a4\4 r8 cs\4 cs\4 b\4 b4\4 | 
+  b8\4 cs\4 e\3 b\4 ~b4 r8 a\4 | \time 2/4 a4\4 r8 a\4 | 
 
   \cbreak
   \time 4/4
-  cs8 cs cs cs cs cs gs'\2 gs\2 | cs cs gs\2 gs\2 gs\2 gs\2 cs, cs |
-  e e e b b b b b | cs cs cs gs gs gs gs gs |
+  cs8\4 cs\4 cs\4 cs\4 cs\4 cs\4 gs'\3 gs\3 | cs\2 cs\2 gs\3 gs\3 gs\3 gs\3 cs,\4 cs\4 |
+  e\3 e\3 e\3 b\4 b\4 b\4 b\4 b\4 | cs\3 cs\3 cs\3 gs gs gs gs gs |
   
   \cbreak
-  e' e e b b b b b | cs cs cs a a a a a | 
-  e' e e b b b b b | cs cs cs gs gs gs gs gs |
+  e'\3 e\3 e\3 b\4 b\4 b\4 b\4 b\4 | cs cs cs a\4 a\4 a\4 a\4 a\4 | 
+  e'\3 e\3 e\3 b\4 b\4 b\4 b\4 b\4 | cs\3 cs\3 cs\3 gs gs gs gs gs |
   
   \cbreak
-  e' e e b b b b b | cs cs cs a a a a a | 
-  e' e e b b b b b | cs cs cs gs gs gs gs gs |
+  e'\3 e\3 e\3 b\4 b\4 b\4 b\4 b\4 | cs cs cs a\4 a\4 a\4 a\4 a\4 | 
+  e'\3 e\3 e\3 b\4 b\4 b\4 b\4 b\4 | cs\3 cs\3 cs\3 gs gs gs gs gs |
 
   \cbreak
-  e' e e b b b b b | cs cs cs a a a a a | 
-  e' e e b b b b b | cs cs cs gs gs gs gs gs |
+  e'\3 e\3 e\3 b\4 b\4 b\4 b\4 b\4 | cs cs cs a\4 a\4 a\4 a\4 a\4 | 
+  e'\3 e\3 e\3 b\4 b\4 b\4 b\4 b\4 | cs\3 cs\3 cs\3 gs gs gs gs gs |
 
   \cbreak
-  a a a b b b b cs~ | cs1 \bar "|."
+  a\4 a\4 a\4 b\4 b\4 b\4 b\4 cs\4~ | cs1 \bar "|."
 }
 
 my_chords = \chordmode {
