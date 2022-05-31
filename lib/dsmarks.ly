@@ -42,4 +42,4 @@ Segno = {
   \once \override Score.RehearsalMark #'break-visibility = #'#(#f #t #t)
   \mark \markup { \small \musicglyph #"scripts.segno" }
 }
-
+	
