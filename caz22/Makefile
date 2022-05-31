@@ -1,6 +1,7 @@
 all: \
   working_my_way_spinners_bass \
-  just_what_i_needed_bass
+  just_what_i_needed_bass \
+  dancing_queen_bass
 .PHONY: all
 
 working_my_way_spinners_bass: \
@@ -12,6 +13,11 @@ just_what_i_needed_bass: \
   just_what_i_needed_bass.pdf just_what_i_needed_bass.midi \
   just_what_i_needed_bass.wav just_what_i_needed_bass.mp3
 .PHONY: just_what_i_needed_bass
+
+dancing_queen_bass: \
+  dancing_queen_bass.pdf dancing_queen_bass.midi \
+  dancing_queen_bass.wav dancing_queen_bass.mp3
+.PHONY: dancing_queen_bass
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3
