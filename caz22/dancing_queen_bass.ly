@@ -10,13 +10,13 @@
 }
 
 \paper { 
-  left-margin = 1.0 \in	
-  right-margin = 0.5 \in
+  left-margin = 1.5 \in	
+  right-margin = 1.25 \in
   top-margin = 1.0 \in
   bottom-margin = 1.0 \in
 }
 
-%%#(set-global-staff-size 15)
+#(set-global-staff-size 15.5)
 		
 cbreak = { 
   \break
@@ -152,7 +152,50 @@ my_notes = \relative c, {
   a8. a16 a8 r8 r8 e'16 \> fs a8-. a,8 |
   a8. a16-. a8 r8 r8 e'16 fs a8-. fs,16 gs \! \bar "||"
   
+  %% 58
+  \sbreak
+  \mark \markup { \box F }
+  a8. a16-. a8-. a8 r16 a16 a8-. e'16 fs a8 | 
+  a,8. a16-. a8-. a8 r16 e16 e8 fs8-. a16 fs |
+  a8. a16-. a8-. a8 r16 a16 a8-. e'16 fs a8 | 
   
+  %% 61
+  \cbreak
+  fs8 r16 e fs8-. fs r16 a16 fs cs \afterGrace fs4 \glissando { \hideNotes e, \unHideNotes } |
+  e8 r16 e16 r8 gs8 r8 e'8 g16 (gs) b8-. |
+  e,,8 r16 e16 r8 gs8 r8 e'8 g16 (gs) b8-. |
+  
+  %% 64
+  \cbreak
+  e,,8-. r16 fs16 r8 fs8-. r8 e'16 f fs8 fs, |
+  e'8-. r16 e16 fs8-. fs ~ fs fs-. r16 cs8. |
+  
+  %% 66
+  \cbreak
+  b8 r16 b16-. r8 b8 r16 d16 \grace cs (d8-.) \grace cs (d8) b |
+  e,8 r16 e16 d'16 e, r16 d'16 r16 e,16 d'8 r16 d8-> \DScoda b16 \bar "||"
+  
+  %% 68
+  \sbreak
+  \Coda
+  a8 r16 a16 a8-. a8 r16 e16 e8-. fs-. e16 fs % \bar "||"
+  
+  %% 69
+  \sbreak
+  \mark \markup { \box G Open for vamp }
+  \repeat volta 2 {
+    a8 r16 a16 a8-. a8 r16 a16 a-. a e'16 (fs) a8 | 
+    a,8 r16 a16 a8-. a8 r16 e16 e-. e a-. e a8 |
+  } \alternative {
+      %% 71
+     {
+       a8 \mark \markup { For Vamp} r16 a16 a8-. a8 r16 a16 a8-. e'16 (fs) a8 |
+       a,8 r16 a16 a8-. a8 r16 e16 e-. e-. fs-. e-. fs-. e-. |
+     }
+     {
+       e8.->  \mark \markup { Last X } a16-^-. r8 a8-> ~ a2 \fermata \bar "|."
+     }
+  }
   
   
 }
@@ -173,17 +216,17 @@ my_chords = \chordmode {
   e1 | cs:7 | fs:min
   
   %% 13
-  b/ds | d | b:min7 | a |
+  b1/ds | d | b:min7 | a |
   
   %% 17
-  d/a | a2~ a16 d16/a ~ d4/a ~ d8/a | a1 |
+  d1/a | a2~ a16 d16/a ~ d4/a ~ d8/a | a1 |
   
   %% 20
   a1 | d/a | a |
 
 
   %% 23
-  fs:min | e | e |
+  fs1:min | e | e |
   
   %% 26
   e8. fs16:min ~ fs2.:min |
@@ -194,7 +237,7 @@ my_chords = \chordmode {
   d1/a | a | fs:min |
   
   %% 32
-  e | e | e8. fs16:min ~ fs2.:min |
+  e1 | e | e8. fs16:min ~ fs2.:min |
   
   %% 35
   e8. fs16:min ~ fs2.:min | b1:min7 | e |
@@ -212,14 +255,35 @@ my_chords = \chordmode {
   e1 | cs:7 | fs:min |
   
   %% 49
-  b:7/ds | d | b:min7 |
+  b1:7/ds | d | b:min7 |
   
   %% 52
-  a | d/a | a |
+  a1 | d/a | a |
   
   %% 55
-  d/a | a2 ~ a8 d4./a | a2 ~ a8 d4./a | 
+  d1/a | a2 ~ a8 d4./a | a2 ~ a8 d4./a | 
+  
+  %% 58
+  a1 | d/a | a |
+  
+  %% 61
+  fs1:min | e | e 
+   
+  %% 64
+  e8. fs16:min ~ fs2.:min
+  e8. fs16:min ~ fs2.:min
 
+  %% 66
+  b1:min7 | e
+  
+  %% 68
+  d1/a
+  
+  %% 69
+  a1 | b:min7/a |
+  
+  %% 71
+  a1 | b:min7/a | e8./gs a16 s8 a8 ~ a2 |
 }
 
 ticktock = \drummode {
