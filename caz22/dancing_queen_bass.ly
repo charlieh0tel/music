@@ -118,16 +118,39 @@ my_notes = \relative c, {
   a8. a16-. a8-. a8 r16 a16 e'16 fs a8 r8 |
   
   %% 41
-  \break
+  \cbreak
   a,8. a16-. a8-. a8 r16 e16-. e8 fs e16-. fs-. | 
   a8. a16-. a8-. a8 r16 a16 e'16 fs a8 r8 |
   
   %% 43
-  \break
+  \cbreak
   a,8. a16-. a8-. a8 r16 e16-. e8 fs e16 fs | 
   a8. a16-. a8-. a8 r16 a16 a8-. gs4 |
   fs8. fs16-. fs8-. e r16 e16 e8-. \grace gs (a8) e8 \bar "||"
   
+  %% 46
+  \sbreak
+  \mark \markup { \box E }
+  e8 r16 e16 e8-. e r16 b'16 e b e8 b16-. c-. |
+  cs8. cs16 r8 cs8 ~ cs16 cs16 ds16-. ds-. f8 ds16-. f-. |
+  fs8 r16 fs16 fs8-. fs r16 fs16 fs8-. fs8 e8-. |
+  
+  %% 49
+  \cbreak
+  ds8 r16 ds16 ds8-. ds r ds-. ds b16 cs |
+  d8. a16 d8-. d r16 a16 d8-. d16-> cs8. |
+  b8. b16 b8-. b8 ~ b16 fs-. b-. fs-. e8 fs |
+  
+  %% 52
+  \cbreak
+  a8. a16-. a8-. a r16 a16-. a8 e'16 fs a8 |
+  a,8. a16-. a8-. a r16 e16 e e fs8 e16 fs |
+  a8. a16-. a8-. a r16 a16-. a8 e'16 fs a8 \GotoCoda \bar "||"
+  
+  %% 55
+  a,8. a16-. a8-. a8 r16 a16 a-. a e8 e16-. fs-.  |
+  a8. a16 a8 r8 r8 e'16 \> fs a8-. a,8 |
+  a8. a16-. a8 r8 r8 e'16 fs a8-. fs,16 gs \! \bar "||"
   
   
   
@@ -183,7 +206,19 @@ my_chords = \chordmode {
   b1:min7/a | a |
   
   % 43
-  b1:min7/a | 
+  b1:min7/a | e8./a a16 ~ a4. e/gs | d2/fs a |
+  
+  %% 46
+  e1 | cs:7 | fs:min |
+  
+  %% 49
+  b:7/ds | d | b:min7 |
+  
+  %% 52
+  a | d/a | a |
+  
+  %% 55
+  d/a | a2 ~ a8 d4./a | a2 ~ a8 d4./a | 
 
 }
 
