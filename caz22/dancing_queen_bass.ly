@@ -106,7 +106,7 @@ my_notes = \relative c, {
   e,8 r16 e16 r8 gs8 r8 e'8-.\3 e8\3 cs16\4 e16\3 | e8\3 r16 fs\3 fs8-.\3 fs8\3 ~ fs8\3 a8-.\3 a'16 a e,8\4 |
   
   %% 35
-  e8-. r16 fs fs8-. fs8 ~ fs fs fs cs |
+  e8-.\3 r16 fs\3 fs8-.\3 fs8\3 ~ fs\3 fs\3 fs\3 cs\4 |
   b8.-"cresc." b16 b8-. b8 ~ b16 fs-. b-. fs-. b8 gs |
   e8. e16 e8-. e r16 gs16 gs8 gs e8 \bar "||"
   
