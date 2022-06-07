@@ -137,7 +137,7 @@ my_notes = \relative c, {
   
   %% 49
   \cbreak
-  ds8\3 r16 ds16\3 ds8-.\3 ds\3 r ds-.\3 ds\3 b16\4 cs |
+  ds8\3 r16 ds16\3 ds8-.\3 ds\3 r ds-.\3 ds\3 b16\4 	cs |
   d8.\3 a16\4 d8-.\3 d\3 r16 a16\4 d8-.\3 d16->\3 cs8.\3 |
   b8. b16 b8-. b8 ~ b16 fs-. b-. fs-. e8 fs |
   
