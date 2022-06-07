@@ -10,8 +10,8 @@
 }
 
 \paper { 
-  left-margin = 1.5 \in	
-  right-margin = 1.25 \in
+  left-margin = 1 \in	
+  right-margin = 1 \in
   top-margin = 1.0 \in
   bottom-margin = 1.0 \in
 }
