@@ -57,13 +57,13 @@ my_notes = \relative c, {
   \sbreak
   \mark \markup { \box A }
   e,8 r16 e16 r8 e8 r8 e'8-. e16 b8 c16 | 
-  cs8. cs16-. cs8 cs8~ cs16 ds16-. ds8 f8 ds16 f16 |
-  fs8. fs16-. fs8-. fs8 r16 fs16 fs8 r16 e8. | 
+  cs8. cs16-. cs8 cs8~ cs16 ds16-.\3 ds8\3 f8\3 ds16\3 f16\3 |
+  fs8.\3 fs16-.\3 fs8-.\3 fs8\3 r16 fs16\3 fs8\3 r16 e8.\3 | 
   
   %% 13
   \cbreak
-  ds8. ds16-. ds8-. ds8~ ds16 ds8. b'16-> ds,8. |
-  d8. d16-. d8-. d8 r8 d8 r16 cs8.-> |
+  ds8.\3 ds16-.\3 ds8-.\3 ds8~\3 ds16 ds8.\3 b'16->\2 ds,8.\3 |
+  d8.\3 d16-.\3 d8-.\3 d8\3 r8 d8\3 r16 cs8.->\3 |
   b8. b16-. b8-. b8~ b16 fs-. b8 e,8 gs |
   a8. a16-. a8-. a8 r16 a16 e'16 fs16 a8 r8 |
   
@@ -82,12 +82,12 @@ my_notes = \relative c, {
   
   %% 23
   \cbreak
-  fs8 r16 fs fs8-. fs r16 fs-. cs8 \afterGrace fs4 \glissando { \hideNotes e, \unHideNotes } |
-  e8 r16 e16 r8 gs8 r8 e'8 g16 (gs) b8-. |
-  e,,8 r16 e16 r8 gs8 r8 e'8 g16 (gs) b8-. |
+  fs8\3 r16 fs\3 fs8-.\3 fs\3 r16 fs-.\3 cs8\4 \afterGrace fs4\3 \glissando { \hideNotes e, \unHideNotes } |
+  e8 r16 e16 r8 gs8 r8 e'8\3 g16\2 (gs\2) b8-.\1 |
+  e,,8 r16 e16 r8 gs8 r8 e'8\3 g16\2 (gs\2) b8-.\1 |
   
   %% 26
-  e,8 r16 fs16 fs8-. fs8 ~ fs16 fs e8-. fs8 fs,8-. |
+  e,8\3 r16 fs16\3 fs8-.\3 fs8\3 ~ fs16\3 fs\3 e8-.\3 fs8\3 fs,8-. |
   e-. e16 fs r8 fs8 ~ fs16 fs-. fs fs fs8 fs16 gs \bar "||"
   
   %%\sbreak
@@ -98,12 +98,12 @@ my_notes = \relative c, {
   \sbreak
   a,8. a16-. a8-. a8 r16 e16-. e e fs8-. a16 fs | 
   a8. a16-. a8-. a8 r16 a16 a8-. e'16 fs a8 |
-  fs,8 r16 fs'16 fs8-. fs r16 fs16-. cs8 \afterGrace fs4 \glissando { \hideNotes e, \unHideNotes } |
+  fs,8 r16 fs'16\3 fs8-.\3 fs\3 r16 fs16-.\3 cs8\4 \afterGrace fs4\3 \glissando { \hideNotes e, \unHideNotes } |
   
   %% 32
   \cbreak
-  e8 r16 e16 r8 gs8 r8 g'16 (gs) gs'8-. \afterGrace ds8 \glissando { \hideNotes e, \unHideNotes } |
-  e,8 r16 e16 r8 gs8 r8 e'8-. e8 cs16 e16 | e8 r16 fs fs8-. fs8 ~ fs8 a8-. a'16 a e,8 |
+  e8 r16 e16 r8 gs8 r8 g'16\3 (gs\3) gs'8-. \afterGrace ds8 \glissando { \hideNotes e, \unHideNotes } |
+  e,8 r16 e16 r8 gs8 r8 e'8-.\3 e8\3 cs16\4 e16\3 | e8\3 r16 fs\3 fs8-.\3 fs8\3 ~ fs8\3 a8-.\3 a'16 a e,8\4 |
   
   %% 35
   e8-. r16 fs fs8-. fs8 ~ fs fs fs cs |
@@ -132,13 +132,13 @@ my_notes = \relative c, {
   \sbreak
   \mark \markup { \box E }
   e8 r16 e16 e8-. e r16 b'16 e b e8 b16-. c-. |
-  cs8. cs16 r8 cs8 ~ cs16 cs16 ds16-. ds-. f8 ds16-. f-. |
-  fs8 r16 fs16 fs8-. fs r16 fs16 fs8-. fs8 e8-. |
+  cs8. cs16 r8 cs8 ~ cs16 cs16 ds16-.\3 ds-.\3 f8\3 ds16-.\3 f-.\3 |
+  fs8\3 r16 fs16\3 fs8-.\3 fs\3 r16 fs16\3 fs8-.\3 fs8\3 e8-.\3 |
   
   %% 49
   \cbreak
-  ds8 r16 ds16 ds8-. ds r ds-. ds b16 cs |
-  d8. a16 d8-. d r16 a16 d8-. d16-> cs8. |
+  ds8\3 r16 ds16\3 ds8-.\3 ds\3 r ds-.\3 ds\3 b16\4 cs |
+  d8.\3 a16\4 d8-.\3 d\3 r16 a16\4 d8-.\3 d16->\3 cs8.\3 |
   b8. b16 b8-. b8 ~ b16 fs-. b-. fs-. e8 fs |
   
   %% 52
@@ -161,9 +161,9 @@ my_notes = \relative c, {
   
   %% 61
   \cbreak
-  fs8 r16 e fs8-. fs r16 a16 fs cs \afterGrace fs4 \glissando { \hideNotes e, \unHideNotes } |
-  e8 r16 e16 r8 gs8 r8 e'8 g16 (gs) b8-. |
-  e,,8 r16 e16 r8 gs8 r8 e'8 g16 (gs) b8-. |
+  fs8\3 r16 e\3 fs8-.\3 fs\3 r16 a16\2 fs\3 cs\4 \afterGrace fs4\3 \glissando { \hideNotes e, \unHideNotes } |
+  e8 r16 e16 r8 gs8 r8 e'8\3 g16\2 (gs\2) b8-.\1 |
+  e,,8 r16 e16 r8 gs8 r8 e'8\3 g16\2 (gs\2) b8-.\1 |
   
   %% 64
   \cbreak
@@ -172,8 +172,8 @@ my_notes = \relative c, {
   
   %% 66
   \cbreak
-  b8 r16 b16-. r8 b8 r16 d16 \grace cs (d8-.) \grace cs (d8) b |
-  e,8 r16 e16 d'16 e, r16 d'16 r16 e,16 d'8 r16 d8-> \DScoda b16 \bar "||"
+  b8 r16 b16-. r8 b8 r16 d16\3 \grace cs\3 (d8-.\3) \grace cs\3 (d8\3) b |
+  e,8 r16 e16 d'16\3 e, r16 d'16\3 r16 e,16 d'8\3 r16 d8->\3 \DScoda b16 \bar "||"
   
   %% 68
   \sbreak
