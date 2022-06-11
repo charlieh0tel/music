@@ -5,7 +5,7 @@
 
 \header {
   piece = \markup { \fontsize #4 \bold "Working My Way Back To You Girl" }
-  opus = \markup { \italic "The	 Spinners" }
+  opus = \markup { \italic "The	Spinners" }
 }
 
 \paper { 
