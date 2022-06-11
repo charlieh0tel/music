@@ -16,7 +16,7 @@
   bottom-margin = 1.0 \in
 }
 
-#(set-global-staff-size 15.5)
+#(set-global-staff-size 18)
 		
 cbreak = { 
   \break
@@ -82,12 +82,12 @@ my_notes = \relative c, {
   
   %% 23
   \cbreak
-  fs8\3 r16 fs\3 fs8-.\3 fs\3 r16 fs-.\3 cs8\4 \afterGrace fs4\3 \glissando { \hideNotes e, \unHideNotes } |
-  e8 r16 e16 r8 gs8 r8 e'8\3 g16\2 (gs\2) b8-.\1 |
-  e,,8 r16 e16 r8 gs8 r8 e'8\3 g16\2 (gs\2) b8-.\1 |
+  fs8\2 r16 fs\2 fs8-.\2 fs\2 r16 fs-.\2 cs8\3 \afterGrace fs4\2 \glissando { \hideNotes e, \unHideNotes } |
+  e8 r16 e16 r8 gs8 r8 e'8 g16\2 (gs\2) b8-. |
+  e,,8 r16 e16 r8 gs8 r8 e'8 g16\2 (gs\2) b8-.\1 |
   
   %% 26
-  e,8\3 r16 fs16\3 fs8-.\3 fs8\3 ~ fs16\3 fs\3 e8-.\3 fs8\3 fs,8-. |
+  e,8 r16 fs16 fs8-. fs8 ~ fs16 fs e8-. fs8 fs,8-. |
   e-. e16 fs r8 fs8 ~ fs16 fs-. fs fs fs8 fs16 gs \bar "||"
   
   %%\sbreak
@@ -98,15 +98,15 @@ my_notes = \relative c, {
   \sbreak
   a,8. a16-. a8-. a8 r16 e16-. e e fs8-. a16 fs | 
   a8. a16-. a8-. a8 r16 a16 a8-. e'16 fs a8 |
-  fs,8 r16 fs'16\3 fs8-.\3 fs\3 r16 fs16-.\3 cs8\4 \afterGrace fs4\3 \glissando { \hideNotes e, \unHideNotes } |
+  fs,8 r16 fs'16 fs8-. fs r16 fs16-. cs8 \afterGrace fs4 \glissando { \hideNotes e, \unHideNotes } |
   
   %% 32
   \cbreak
-  e8 r16 e16 r8 gs8 r8 g'16\3 (gs\3) gs'8-. \afterGrace ds8 \glissando { \hideNotes e, \unHideNotes } |
-  e,8 r16 e16 r8 gs8 r8 e'8-.\3 e8\3 cs16\4 e16\3 | e8\3 r16 fs\3 fs8-.\3 fs8\3 ~ fs8\3 a8-.\3 a'16 a e,8\4 |
+  e8 r16 e16 r8 gs8 r8 g'16\3 (gs\3) gs'8\1-. \afterGrace ds8\2 \glissando { \hideNotes e, \unHideNotes } |
+  e,8 r16 e16 r8 gs8 r8 e'8\3-. e8\3 cs16\4 e16\3 | e8\3 r16 fs\3 fs8-.\3 fs8\3 ~ fs8\3 a8-.\3 a'16 a e,8\4 |
   
   %% 35
-  e8-.\3 r16 fs\3 fs8-.\3 fs8\3 ~ fs\3 fs\3 fs\3 cs\4 |
+  e8-. r16 fs fs8-. fs8 ~ fs fs fs cs |
   b8.-"cresc." b16 b8-. b8 ~ b16 fs-. b-. fs-. b8 gs |
   e8. e16 e8-. e r16 gs16 gs8 gs e8 \bar "||"
   
@@ -161,9 +161,9 @@ my_notes = \relative c, {
   
   %% 61
   \cbreak
-  fs8\3 r16 e\3 fs8-.\3 fs\3 r16 a16\2 fs\3 cs\4 \afterGrace fs4\3 \glissando { \hideNotes e, \unHideNotes } |
-  e8 r16 e16 r8 gs8 r8 e'8\3 g16\2 (gs\2) b8-.\1 |
-  e,,8 r16 e16 r8 gs8 r8 e'8\3 g16\2 (gs\2) b8-.\1 |
+  fs8 r16 e fs8-. fs r16 a16 fs cs \afterGrace fs4 \glissando { \hideNotes e, \unHideNotes } |
+  e8 r16 e16 r8 gs8 r8 e'8 g16\2 (gs\2) b8-.\1 |
+  e,,8 r16 e16 r8 gs8 r8 e'8 g16\2 (gs\2) b8-.\1 |
   
   %% 64
   \cbreak
