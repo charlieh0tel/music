@@ -1,7 +1,8 @@
 all: \
   working_my_way_spinners_bass \
   just_what_i_needed_bass \
-  dancing_queen_bass
+  dancing_queen_bass \
+  ill_take_you_there
 .PHONY: all
 
 working_my_way_spinners_bass: \
@@ -14,10 +15,10 @@ just_what_i_needed_bass: \
   just_what_i_needed_bass.wav just_what_i_needed_bass.mp3
 .PHONY: just_what_i_needed_bass
 
-dancing_queen_bass: \
-  dancing_queen_bass.pdf dancing_queen_bass.midi \
-  dancing_queen_bass.wav dancing_queen_bass.mp3
-.PHONY: dancing_queen_bass
+ill_take_you_there: \
+  ill_take_you_there.pdf ill_take_you_there.midi \
+  ill_take_you_there.wav ill_take_you_there.mp3
+.PHONY: ill_take_you_there
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3
