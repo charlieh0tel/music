@@ -12,11 +12,11 @@
 \paper { 
   left-margin = 1 \in	
   right-margin = 1 \in
-  top-margin = 1.0 \in
-  bottom-margin = 1.0 \in
+  top-margin = 0.75 \in
+  bottom-margin = 0.75 \in
 }
 
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 		
 cbreak = { 
   \break
@@ -64,7 +64,6 @@ my_notes = \relative c, {
     f,8 f f f f f f f | f8 f f f f f f f | c'8 c c c c c c c | c8 c c c c c c c |
     \cbreak
     d8\3 d\3 d\3 d\3 d\3 d\3 d\3 d\3 | d8\3 d\3 d\3 d\3 d\3 d\3 d\3 d\3 | 
-    \cbreak
     g8\3 g\3 g\3 g\3 g\3 g\3 g\3 g\3 | g4\3 r4 r2 | 
   }
   
@@ -78,7 +77,6 @@ my_notes = \relative c, {
   f8 f f f f f f f | f8 f f f f f f f | c'8 c c c c c c c | c8 c c c c c c c |
   \cbreak
   d8\3 d\3 d\3 d\3 d\3 d\3 d\3 d\3 | d8\3 d\3 d\3 d\3 d\3 d\3 d\3 d\3 | 
-  \cbreak
   g8\3 g\3 g\3 g\3 g\3 g\3 g\3 g\3 | g4\3 r4 r2 | 
 
   \sbreak
