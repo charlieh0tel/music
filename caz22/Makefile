@@ -3,7 +3,8 @@ all: \
   just_what_i_needed_bass \
   dancing_queen_bass \
   ill_take_you_there_bass \
-  here_comes_the_rain_bass
+  here_comes_the_rain_bass \
+  handle_with_care_slide_solo
 .PHONY: all
 
 working_my_way_spinners_bass: \
@@ -25,6 +26,11 @@ here_comes_the_rain_bass: \
   here_comes_the_rain_bass.pdf here_comes_the_rain_bass.midi \
   here_comes_the_rain_bass.wav here_comes_the_rain_bass.mp3
 .PHONY: here_comes_the_rain_bass
+
+handle_with_care_slide_solo: \
+  handle_with_care_slide_solo.pdf handle_with_care_slide_solo.midi \
+  handle_with_care_slide_solo.wav handle_with_care_slide_solo.mp3
+.PHONY: handle_with_care_slide_solo
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3
