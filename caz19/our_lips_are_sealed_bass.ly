@@ -29,36 +29,37 @@ global = {
 my_notes = \relative c {
   \clef "bass_8"
   \key af \major
-  \compressFullBarRests
   \override Glissando.style = #'zigzag
   \override MultiMeasureRest.expand-limit = #2
   
-  r1 | r1 \bar "||"
-  R1*3 |
+  \compressMMRests {
+    r1 | r1 \bar "||"
+    R1*3 |
+  }
   
-  r2 r4 af8\4 \glissando af,8 \bar "||"
-  af8 af af af'-.\2 r f\3 ef\3 f\3 |
+  r4 r2 af8\4 \glissando af,8 \bar "||"
+  af8 af af af'-.\2 r f ef c |
   \break
   %% 8
-  gf8 gf gf gf-. r ef\3 df bf\4	 |
+  gf'8 gf gf gf-. r ef df bf	 |
   df8 df df df df df df df |
-  df8 df c c bf\4 bf\4 c c \bar "||"
+  df8 df c c bf bf c c \bar "||"
   
   \break
   \mark \markup { \bold { [A] } \musicglyph #"scripts.segno" (No Repeat on D.S.) }
   \repeat volta 2 {
     \bar ".|:"
     %% 11
-    af8 af af'\2 af\2 af\2 f\3 ef\3 c\4 |
-    gf8 gf gf' gf-. r ef\3 df bf\4 |
+    af8 af af'\2 af\2 r8 f ef c |
+    gf8 gf gf' gf-. r ef df bf |
     df8 df df df df df df df |
-    df8 df c c bf\4 bf\4 c c |
+    df8 df c c bf bf c c |
     
     %% 15
-    af8 af  af'\2 af-.\2 r f\3 ef\3 c\4 |
-    gf gf gf' gf-. r8 ef\3 df bf\4 |
+    af8 af  af'\2 af-.\2 r f ef c |
+    gf gf gf' gf-. r8 ef df bf |
     df8 df df df df df df df |
-    df8 df c c bf\4 bf\4 c c \bar "||"
+    df8 df c c bf bf c c \bar "||"
     
     %% 19
     \break
@@ -80,6 +81,7 @@ my_notes = \relative c {
     }
     %% 2
     {
+      \break
       af8 af af af af af af af |
     }
   }
