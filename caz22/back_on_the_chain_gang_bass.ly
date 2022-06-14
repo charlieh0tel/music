@@ -30,7 +30,7 @@ my_notes = \relative c {
   r2. | 
   
   \time 4/4
-  \sbreak
+  %\sbreak
   \repeat volta 3 {
     d,4. fs4. a4 | a,4. cs4. e4 | e,4. fs4. g4 | b4. g4. \mark \markup { x3 } b4 
   }
@@ -38,39 +38,39 @@ my_notes = \relative c {
   \sbreak
   \repeat volta 2 {
     d4. fs4. a4 | a,4. cs4. e4 | e,4. fs4. g4 | b4. g4. b4 |
-    \cbreak
+    %\cbreak
     d4. fs4. a4 | a,4. cs4. e4 | e,4. fs4. g4 | b4. g4. b4 |
     \cbreak
     d4. fs4. a4 | a,4. cs4. e4 | e,4. fs4. g4 | b4. g4. b4 |
-    \cbreak
+    %\cbreak
     d4. fs4. a4 | a,4. cs4. e4 | e,4. fs4. g4 | b2 g'8 b,8 d4 |
     \cbreak
-    e2 fs8 e cs b | a4. e'8 fs a fs4 |
-    e2 fs8 e cs b | a4. e'8 fs a fs4 |
+    e2 g8 e d b | a4. cs8 e a fs4 |
+    e2 g8 e d b | a4. cs8 e a fs4 |
     \cbreak
-    e2 fs8 e cs b | a4. e'8 fs a fs4 |
+    e2 g8 e d b | a4. cs8 e a fs4 |
   } \alternative {
     { 
       d2 a'8 fs a4 | a,2 e'8 cs e4 | \cbreak
       d2 a'8 fs a4 | a,2 e'8 cs e4 |
     }
     {
-      e2 fs8 e cs b | a4. e'8 fs a fs e |
+      e2 g8 e d b | a4. cs8 e a fs4 |
     }
   }
 
   \sbreak
   d4. fs4. a4 | a,4. cs4. e4 | e,4. fs4. g4 | b4. g4. b4 |
-  \cbreak
+  %\cbreak
   d4. fs4. a4 | a,4. cs4. e4 | e,4. fs4. g4 | b4. g4. b4 |
-  \cbreak
+  %\cbreak
   d4. fs4. a4 | a,4. cs4. e4 | e,4. fs4. g4 | b4. g4. b4 |
 
   \sbreak
-  r4 d4 ~ d4 d4 ~ | d4 d4 ~ d4 d'4\2 \glissando |
+  r4 d4\3 ~ d4\3 d4\3 ~ | d4\3 d4\3 ~ d4\3 d'4 \glissando |
   \repeat volta 10 {
-    d,2 cs'8 d8 ~ d4 |
-    a4 a,4 a'4 \mark \markup { x10 } a,4
+    d,4 d c'8 (d8 ~) d4 |
+    a,4 a4 a'4 \mark \markup { x10 } a,4 
   }
   
   \sbreak
@@ -78,25 +78,23 @@ my_notes = \relative c {
   \key e \major
 
   e'4. gs4. b4 | b,4. ds4. fs4 | a,4. cs4. e4 | b4. ds4. fs4 |
-  \cbreak
+  %\cbreak
   e4. gs4. b4 | b,4. ds4. fs4 | a,4. cs4. e4 | b4. ds4. fs4 |
-  \cbreak
+  %\cbreak
   e4. gs4. b4 | b,4. ds4. fs4 | a,4. cs4. e4 | b4. ds4. fs4 |
-  \cbreak
+  %\cbreak
   e4. gs4. b4 | b,4. ds4. fs4 | a,4. cs4. e4 | b4. ds4. fs4 |
-  \cbreak
+  %\cbreak
   e4. gs4. b4 | b,4. ds4. fs4 | a,4. cs4. e4 | b4. ds4. fs4 |
   
   \sbreak
-  a,2 e'4 a,4 | b4. fs'8 gs8 b gs4 |  
-  a,2 e'4 a,4 | b4. fs'8 gs8 b gs4 |  
+  a,4 r4 e'4 a,4 | b4. ds8 fs8 b fs4 |  
+  a,4 r4 e'4 a,4 | b4. ds8 fs8 b fs4 |  
   \cbreak
-  a,2 e'4 a,4 | b4. fs'8 gs8 b gs4 |  
+  a,2 e'4 a,4 | b4. ds8 fs8 b fs4 |  
   \repeat volta 2 {
-    e2 b'4 b4 |
-    %\cadenzaOn \hideNotes g16 \glissando \unHideNotes \cadenzaOff b4
-    %\cadenzaOn \hideNotes g16 \glissando \unHideNotes \cadenzaOff b4 | 
-    b,2 fs'8 ds8 fs4 | 
+    e2\3 a8\2 (b8\2) a8\2 (b8\2) |
+    b,2\4 fs'8 ds8\3 fs4 | 
   }
 } 
 
