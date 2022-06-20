@@ -11,12 +11,12 @@
 
 \paper { 
   left-margin = 1 \in	
-  right-margin = 1 \in
+  right-margin = 0.75 \in
   top-margin = 1.0 \in
   bottom-margin = 1.0 \in
 }
 
-#(set-global-staff-size 18)
+#(set-global-staff-size 16)
 		
 cbreak = { 
   \break
