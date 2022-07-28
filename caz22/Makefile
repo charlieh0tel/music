@@ -5,7 +5,9 @@ all: \
   ill_take_you_there_bass \
   here_comes_the_rain_again_bass \
   handle_with_care_slide_solo \
-  so_very_hard_to_go_bass
+  so_very_hard_to_go_bass \
+  as_always_harris_guitar \
+  as_always_harris_bass
 .PHONY: all
 
 working_my_way_spinners_bass: \
@@ -42,6 +44,16 @@ so_very_hard_to_go_bass: \
   so_very_hard_to_go_bass.pdf so_very_hard_to_go_bass.midi \
   so_very_hard_to_go_bass.wav so_very_hard_to_go_bass.mp3
 .PHONY: so_very_hard_to_go_bass
+
+as_always_harris_guitar: \
+  as_always_harris_guitar.pdf as_always_harris_guitar.midi \
+  as_always_harris_guitar.wav as_always_harris_guitar.mp3
+.PHONY: as_always_harris_guitar
+
+as_always_harris_bass: \
+  as_always_harris_bass.pdf as_always_harris_bass.midi \
+  as_always_harris_bass.wav as_always_harris_bass.mp3
+.PHONY: as_always_harris_bass
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3

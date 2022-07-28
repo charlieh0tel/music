@@ -18,6 +18,12 @@
   bottom-margin = 1\in
 }
 
+cbreak = { 
+  \break
+} 
+
+sbreak = { \break }
+
 global = {
   % \tempo "" 4 = xx
   % \time 4/4
