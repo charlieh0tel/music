@@ -27,21 +27,125 @@ sbreak = { \break }
 global = {
   \tempo "Soul/R&B" 4 = 100
   \time 4/4
-  % \compressFullBarRests
-  % \override MultiMeasureRest.expand-limit = #2
+  %\compressFullBarRests
+  %\override MultiMeasureRest.expand-limit = #2
 }
 
 my_notes = \relative c {
   \clef "bass_8"
   \key b \major
 
-  r1
+  \partial 2 r4 r4 \bar "||" 
+  \compressMMRests { \override MultiMeasureRest.expand-limit = #3 R1*4 } \bar "||"
+  
+  %% A
+  \mark \markup { \box A \italic { Vocals } } 
+  \compressMMRests { \override MultiMeasureRest.expand-limit = #3 R1*7 } |
+  
+  r2 r4 r8. b16 \mp \bar "||"               
+  
+  %% B
+  \sbreak
+  \mark \markup { \box B }
+  \set Score.currentBarNumber = #10
+  b,4-. r4 b16 b16 r8 r8. b16 | 
+  e16 e16 r8 r4 r16 g'16 (gs16 ~ <e, gs'>16 ~ <e gs'>4) |
+  b-. r8. fs16 b b r8 r8. b16 |
+  e4-. r4 \< b''8\harmonic r8 b,8\harmonic r8 \! |
+  
+  \repeat volta 2 {
+    %% C
+    \mark \markup { \box C }
+    b,4-. \mf r8. fs16 b b gs fs r8. b16 |
+    e4-. r8. b16 e8 r16 b e b d cs |
+    b4-. r8. fs'16 b8-. b,-. r16 b r e, |
+    a4-. r8. e16 a16 a r8 r16 fs gs8-. |
+    b4-. r8. fs16 b8-. b8-. r16 b r fs' |
+    e4-. r8. b16 e b e8-. r16 e,8. |
+    gs4-. r8. gs16 a4 ds4 | 
+    gs,4-> \< gs4-> cs4-> fs,4-> \! \bar "||"
+    
+    %% D
+    \mark \markup { \box D }
+    b4-. \mf r8. fs'16 b8-. b,-. r16 b r e |
+    e4-. r8. b16 e e cs b r8. fs16 |
+    b4-. r4 cs'16 fs, r8 r16 b16 r8 |
+    a,4-. r8. e16 a8-. a8-. r16 a16 r8 |
+    b4-. r8. fs16 b8-. b8-. r16 b16 r16 fs'16 |
+    e4-. r8. b16 e16 b e8-. r16 e r fs,16 |
+    gs2-> \< as4->-. ds4->-. \! \bar "||"
+    
+    %% E
+    \mark \markup { \box E }
+    gs,8 \f gs r16 gs r gs as8 as r16 as r as | 
+    b8 b r16 b r bs16 cs cs es,8 fs g |
+    gs8 \f gs r16 gs r gs as8 as r16 as r as | 
+    b8 b r16 b r bs16 cs cs es,8 fs g |
+    gs8 gs r16 gs r gs as as' as,8 as' as, |
+    \cbreak
+    b8 b r16 b r bs16 cs cs es,8 fs g |
+    gs8 \f gs r16 gs r gs as8 as r16 as r as
+    b8 \< b r16 b r8 f'4-> f4-> \! \bar "||"
+    
+    %% F
+    \mark \markup { \box F }
+    e8-. \> e8-. r8. b16 e b e8 r16 e r cs \! |
+    b8-. \mf b8-. r8. fs'16 cs' fs,16 b8-. r16 b r ds, |
+    e8-. e8-. r8. b16 e b e8 r16 cs8. \glissando |
+    d4\3 ~ d16 a'\2 e' a,\2 d8 d,8 ~ d16 d' d,8 |
+    e4-. r8. b16 e b e8 r16 e r as, |
+    b4-. r8. fs'16 cs' fs, b8-. r16 as, b bs |
+    cs4-. r8. gs16 cs8-. cs8-. r16 cs r8 |   
+  } \alternative {
+    {
+      gs4-.-> \< gs4-.-> cs-> fs,-> \! | 
+    }
+    {
+      gs4-.-> \< gs4-.-> cs-> fs,-> \! | 
+    }
+  }
+  
 }
 
 my_chords = \chordmode {
   \set majorSevenSymbol = \markup { maj7 }
 
-  r1
+  \partial 2 s4 s4 |
+  s1*12 |
+  
+  %% B
+  b2:maj9 b:9 | e1:maj9 | b2:maj9 b:9 | e1:maj9
+  
+  \repeat volta 2 {
+    %% C
+    b2:maj9 b:9 | e1:maj9 |
+    b1:maj9 | a:maj9 | b2:maj9 b:9 |
+    e1:maj9 | gs2:m7 as4:m7 ds:9 | 
+    gs4:m7 gs:m6 cs:m7 fs:9sus4 |
+    
+    %% D
+    b2:maj9 b:9 | e1:maj9 | b1:maj9 |
+    a1:maj9 | b2:maj9 b2:9 | e1:maj9 | gs2:min7 as4:min7 ds:9 
+    
+    %% E
+    gs2:min7 ds:7/as | gs2:m7/b cs:7 |
+    gs2:min7 ds:7/as | gs2:m7/b cs:7 |
+    gs2:min7 ds:7/as | gs2:m7/b cs:7 |
+    gs2:min7 ds:7/as | gs2:min7/b f:9.5- |
+    
+    %% F
+    e1:maj9 | b:maj9 | e:maj9 | 
+    d:maj9 | e:maj9 | b:maj9 |
+    cs1:min7 | 
+  } \alternative {
+    {
+      gs4:min7 gs:min6 cs:min7 fs:9sus4 |
+    }
+    {
+      gs4:min7 gs:min6 cs:min7 fs:9sus4 |
+    }
+  }
+
 }
 
 my_music = <<
