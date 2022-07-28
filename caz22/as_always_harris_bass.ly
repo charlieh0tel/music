@@ -7,8 +7,8 @@
 %#(load "../scm/swing.scm")
 
 \header {
-  piece = \markup { \fontsize #4 \bold "Piece" }
-  opus = \markup { \italic "Author" }
+  piece = \markup { \fontsize #4 \bold "As (Always) - Gene Harris" }
+  opus = \markup { \italic "Stevie Wonder / Gene Harris" }
 }
 
 \paper { 
@@ -25,19 +25,23 @@ cbreak = {
 sbreak = { \break }
 
 global = {
-  % \tempo "" 4 = xx
-  % \time 4/4
+  \tempo "Soul/R&B" 4 = 100
+  \time 4/4
   % \compressFullBarRests
   % \override MultiMeasureRest.expand-limit = #2
 }
 
 my_notes = \relative c {
   \clef "bass_8"
-  % \key b \major
+  \key b \major
+
+  r1
 }
 
 my_chords = \chordmode {
   \set majorSevenSymbol = \markup { maj7 }
+
+  r1
 }
 
 my_music = <<
