@@ -2,6 +2,7 @@ all: \
   working_my_way_spinners_bass \
   just_what_i_needed_bass \
   dancing_queen_bass \
+  dancing_queen_guitar \
   ill_take_you_there_bass \
   here_comes_the_rain_again_bass \
   handle_with_care_slide_solo \
@@ -24,6 +25,11 @@ dancing_queen_bass: \
   dancing_queen_bass.pdf dancing_queen_bass.midi \
   dancing_queen_bass.wav dancing_queen_bass.mp3
 .PHONY: dancing_queen_bass
+
+dancing_queen_guitar: \
+  dancing_queen_guitar.pdf dancing_queen_guitar.midi \
+  dancing_queen_guitar.wav dancing_queen_guitar.mp3
+.PHONY: dancing_queen_guitar
 
 ill_take_you_there_bass: \
   ill_take_you_there_bass.pdf ill_take_you_there_bass.midi \
