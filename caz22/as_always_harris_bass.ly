@@ -137,8 +137,7 @@ my_notes = \relative c {
   }
   
   %%\sbreak
-  \mark \markup { \box I }
-  gs8 gs r16 gs r gs as8 as r16 as r as | 
+  gs8 \mark \markup { \box I } gs r16 gs r gs as8 as r16 as r as | 
   b8 b r16 b r bs16 cs cs es,8 fs g |
   gs8 gs r16 gs r gs as8 as r16 as r as | 
   b8 b r16 b r bs16 cs cs es, es fs8 g |
@@ -146,6 +145,29 @@ my_notes = \relative c {
   b8 b r16 b r bs16 cs cs es,8 fs g |
   gs8 gs r16 gs r gs as8 as r16 as r as |
   b8 b r16 b r8 cs16 cs es,8 fs g |
+  
+  \repeat volta 2 {
+    \mark \markup { \box J }
+    gs8 gs r16 gs r gs as8 as r16 as r as |
+    b8 b r16 b r bs16 cs cs es,8 fs g |
+    gs8 gs r16 gs r gs as16 as'16 as,8-. r16 as r as |
+  } \alternative {
+    {
+      %% For more solos
+      b8 b r16 b r bs16 cs cs es, es fs fs g8 |
+    }
+    {
+      %% Last X
+      b8 b r16 b r bs16 cs cs es, es fs fs g8 |
+    }
+  }
+  
+  %%\sbreak
+  \mark \markup { \box K }
+  gs4-.-> \f \cresc gs4-.-> cs-> fs,->  \! |
+  gs4-.-> gs4-> cs-> fs,-> |
+  gs4-.-> \< gs4-.-> cs-> fs-> \! |
+  b,1 \fermata \ff \bar "|."
 }
 
 my_chords = \chordmode {
@@ -213,6 +235,26 @@ my_chords = \chordmode {
   gs2:min7 ds:7/as | gs2:m7/b cs:7 |
   gs2:min7 ds:7/as | gs2:m7/b cs:7 |
 
+  \repeat volta 2 {
+    %% J
+    gs2:min7 ds:7/as | gs2:m7/b cs:7 |
+    gs2:min7 ds:7/as |
+  } \alternative {
+    {
+      %% For more solos
+      gs2:m7/b cs:7 |
+    }
+    {
+      %% Last X
+      gs2:m7/b cs:7 |
+    }
+  }
+  
+  %% K
+  gs4:m7 gs:m6 cs:m7 fs:9sus4 |
+  gs4:m7 gs:m6 cs:m7 fs:9sus4 |
+  gs4:m7 gs:m6 cs:m7 fs:9sus4 |
+  b1:maj9
 }
 
 my_music = <<
