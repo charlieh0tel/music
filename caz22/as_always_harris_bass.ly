@@ -2,9 +2,7 @@
 
 \version "2.18.0"
 \include "english.ly"
-
-% If swing needed
-%#(load "../scm/swing.scm")
+\include "articulate.ly"
 
 \header {
   piece = \markup { \fontsize #4 \bold "As (Always) - Gene Harris" }
@@ -76,6 +74,7 @@ my_notes = \relative c {
     gs2-> \< as4->-. ds4->-. \! \bar "||"
     
     %% E
+    \sbreak
     \mark \markup { \box E }
     gs,8 \f gs r16 gs r gs as8 as r16 as r as | 
     b8 b r16 b r bs16 cs cs es,8 fs g |
@@ -88,6 +87,7 @@ my_notes = \relative c {
     b8 \< b r16 b r8 f'4-> f4-> \! \bar "||"
     
     %% F
+    \sbreak
     \mark \markup { \box F }
     e8-. \> e8-. r8. b16 e b e8 r16 e r cs \! |
     b8-. \mf b8-. r8. fs'16 cs' fs,16 b8-. r16 b r ds, |
@@ -101,10 +101,51 @@ my_notes = \relative c {
       gs4-.-> \< gs4-.-> cs-> fs,-> \! | 
     }
     {
-      gs4-.-> \< gs4-.-> cs-> fs,-> \! | 
+      gs4-.-> \< gs4-.-> cs-> fs,-> \! \bar "||"
+    }
+  }
+   
+  %% G
+  \sbreak
+  \mark \markup { \box G }
+  b4-. \mf r8. fs'16 cs' fs, b8-. r16 b r ds, |
+  e4-. r8. b16 e b e8-. r16 e r fs |
+  b,4-. r8. fs16 b fs b8-. fs gs |
+  << { a2 ~ a8 a4 a8 } \\ { s4 b'8 bs8 cs4 a'4-. } >> |
+  b,,4-. r8. fs16 b8-. b8-. r16 b fs' f |
+  e4 b16 gs e8 ~ e4 e8 fs16 fs | gs2-> \< as4-.-> ds-.-> \! |
+  
+  %% H
+  \sbreak
+  \repeat volta 2 {
+    \mark \markup { \box H }
+    gs,8 \f gs r16 gs r gs as8 as r16 as r as | 
+    b8 b r16 b r bs16 cs cs es,8 fs g |
+    gs8 \f gs r16 gs r gs as8 as r16 as r as |
+    b8 b r16 b r bs16 cs cs es,8 fs g |
+    gs8 gs r16 gs r gs as as' r as, as'8 as, |
+    \cbreak
+    b8 b r16 b r bs cs cs es,8 fs g |
+    gs8 gs r16 gs r gs as8 as r16 as r as | 
+  } \alternative {
+    {
+      b8 b r16 b r8 cs16 cs es,8 fs g |
+    }
+    {
+      b8 \< b r16 b r8 cs16 cs es,8 fs g \! |
     }
   }
   
+  %%\sbreak
+  \mark \markup { \box I }
+  gs8 gs r16 gs r gs as8 as r16 as r as | 
+  b8 b r16 b r bs16 cs cs es,8 fs g |
+  gs8 gs r16 gs r gs as8 as r16 as r as | 
+  b8 b r16 b r bs16 cs cs es, es fs8 g |
+  gs8 gs r16 gs r gs as as' r as, as'8 as, |
+  b8 b r16 b r bs16 cs cs es,8 fs g |
+  gs8 gs r16 gs r gs as8 as r16 as r as |
+  b8 b r16 b r8 cs16 cs es,8 fs g |
 }
 
 my_chords = \chordmode {
@@ -145,6 +186,32 @@ my_chords = \chordmode {
       gs4:min7 gs:min6 cs:min7 fs:9sus4 |
     }
   }
+  
+  %% G
+  b2:maj9 b:9 | e1:maj9 | b1:maj9 |
+  a1:maj9 | b2:maj9 b:9 | e1:maj9 |
+  g2:min7 as4:min7 ds:9 |
+  
+  %% H
+  \repeat volta 2 {
+    gs2:min7 ds:7/as | gs2:m7/b cs:7 |
+    gs2:min7 ds:7/as | gs2:m7/b cs:7 |
+    gs2:min7 ds:7/as | gs2:m7/b cs:7 |
+    gs2:min7 ds:7/as |
+  } \alternative {
+    {
+      gs2:min7/b cs:7 |
+    }
+    {
+      gs2:min7/b cs:7 \bar "||"
+    }
+  }
+  
+  %% I
+  gs2:min7 ds:7/as | gs2:m7/b cs:7 |
+  gs2:min7 ds:7/as | gs2:m7/b cs:7 |
+  gs2:min7 ds:7/as | gs2:m7/b cs:7 |
+  gs2:min7 ds:7/as | gs2:m7/b cs:7 |
 
 }
 
@@ -184,6 +251,7 @@ my_music = <<
 }
 
 \score {
+  \articulate
   \removeWithTag #'scoreOnly \unfoldRepeats \my_music
   \midi {}
 }

@@ -3,8 +3,7 @@
 \version "2.18.0"
 \include "english.ly"
 
-% If swing needed
-%#(load "../scm/swing.scm")
+\include "articulate.ly"
 
 \header {
   piece = \markup { \fontsize #4 \bold "As (Always) - Gene Harris" }
@@ -88,7 +87,7 @@ my_music = <<
     \my_chords
   }
   \new Staff {
-    \set Staff.midiInstrument = #"electric bass (finger)"
+    \set Staff.midiInstrument = #"electric guitar (muted)"
     \set Staff.midiMinimumVolume = #0.7
     \set Staff.midiMaximumVolume = #0.95
     \global
@@ -115,6 +114,7 @@ my_music = <<
 }
 
 \score {
+  \articulate
   \removeWithTag #'scoreOnly \unfoldRepeats \my_music
   \midi {}
 }
