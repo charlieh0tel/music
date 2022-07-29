@@ -3,9 +3,6 @@
 \version "2.18.0"
 \include "english.ly"
 
-% If swing needed
-%#(load "../scm/swing.scm")
-
 \header {
   piece = \markup { \fontsize #4 \bold "Piece" }
   opus = \markup { \italic "Author" }
