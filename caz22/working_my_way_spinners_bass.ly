@@ -33,7 +33,7 @@ my_notes = \relative c {
   \key c \major
   
   %% 1
-  r1-"Drum figure" \bar "||"
+  r1-"Drum figure" | r1 | r1 | r1 \bar "||" 
   
   %% 5
   \sbreak
@@ -151,7 +151,7 @@ my_chords = \chordmode {
   \set majorSevenSymbol = \markup { maj7 }
 
   %% 1
-  s1 |
+  s1 | s1 | s1| s1 |
   
   %% 5
   f1 | s1 | c4/g g s2 | s1 |
