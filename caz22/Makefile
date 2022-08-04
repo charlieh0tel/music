@@ -1,5 +1,7 @@
 all: \
   working_my_way_spinners_bass \
+  working_my_way_spinners_guitar \
+  working_my_way_spinners_guitar_excerpt \
   just_what_i_needed_bass \
   dancing_queen_bass \
   dancing_queen_guitar \
@@ -15,6 +17,16 @@ working_my_way_spinners_bass: \
   working_my_way_spinners_bass.pdf working_my_way_spinners_bass.midi \
   working_my_way_spinners_bass.wav working_my_way_spinners_bass.mp3
 .PHONY: working_my_way_spinners_bass
+
+working_my_way_spinners_guitar: \
+  working_my_way_spinners_guitar.pdf working_my_way_spinners_guitar.midi \
+  working_my_way_spinners_guitar.wav working_my_way_spinners_guitar.mp3
+.PHONY: working_my_way_spinners_guitar
+
+working_my_way_spinners_guitar_excerpt: \
+  working_my_way_spinners_guitar_excerpt.pdf working_my_way_spinners_guitar_excerpt.midi \
+  working_my_way_spinners_guitar_excerpt.wav working_my_way_spinners_guitar_excerpt.mp3
+.PHONY: working_my_way_spinners_guitar_excerpt
 
 just_what_i_needed_bass: \
   just_what_i_needed_bass.pdf just_what_i_needed_bass.midi \
