@@ -33,6 +33,7 @@ global = {
 my_notes = \relative c {
   \clef "G_8"
   \key b \major
+  
   < fs as ds fs >8->
   < \deadNote fs \deadNote \deadNote as \deadNote ds \deadNote fs >16
   < \deadNote fs \deadNote \deadNote as \deadNote ds \deadNote fs >16
@@ -49,7 +50,7 @@ my_notes = \relative c {
   < \deadNote fs \deadNote a \deadNote ds \deadNote fs >16
   < fs a ds fs >16
   < \deadNote fs \deadNote a \deadNote ds \deadNote fs >16
-  < \deadNote fs \deadNote a \deadNote ds \deadNote fs >16
+  < \deadNote fs \deadNote a \deadNote ds \deadNote fs >16  
  
  |
   
@@ -68,14 +69,41 @@ my_notes = \relative c {
   < b ds gs >8
   < \deadNote b \deadNote ds \deadNote gs >16
   < \deadNote b \deadNote ds \deadNote gs >16
+  
+  |
+  
+  \cbreak
+    
+  < fs as ds fs >8->
+  r8.
 
-  |  
+  < fs as ds fs >16
+  r8
 
+  < fs a ds fs >8->
+  r8.
+  
+  < fs a ds fs >16
+  r8  
+ 
+ |
+  
+  < gs ds' fs b >8->
+  r8.
+  
+  < gs ds' fs b >16
+  r8
+  
+  < ds' gs cs >8->
+  < ds gs b >8
+  
+  < b ds gs >8
+  r8
 }
 
 my_chords = \chordmode {
-  \set majorSevenSymbol = \markup { maj7 }
-  b2:maj9 b:9 | e1:maj9 
+  b2:maj9 b:9 | e1:maj9 |
+  b2:maj9 b:9 | e1:maj9 |
 }
 
 my_music = <<
