@@ -55,10 +55,10 @@ my_chords = \chordmode {
   }
   \sbreak
   \repeat volta 2 {
-    f1:min9 | f1:min9 | f1:min9 | f1:min9 |
+    f1:min7 | f1:min7 | f1:min7 | f1:min7 |
     \cbreak
-    bf1:min7 | bf1:min7 | f:min9 | f:min9 | 
-    \cbreak c:min7 | bf:min7 | f:min9 | f:min9 |
+    bf1:min7 | bf1:min7 | f:min7 | f:min7 | 
+    \cbreak df:7 | c:7 | f:min7 | f:min7 |
   }
   \sbreak
   \repeat volta 2 {

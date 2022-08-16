@@ -43,13 +43,12 @@ my_notes = \relative c {
     r4 df8 r8 c4. f8 |
   
     r1 |
-    ef2\3 d4.\3 af8 | 
+    \cbreak ef2\3 d4.\3 af8 | 
     r1 | 
     r4 df8 r8 c4. f8 |
-    \cbreak
     r1 |
    
-    r4 c2 c4 ~ | c4 df2 df4 | af'2 f2 |  
+    \cbreak r4 c2 c4 ~ | c4 df2 df4 | af'2 f2 |  
     r1 |
   
     ef4 g bf c | 
@@ -58,36 +57,24 @@ my_notes = \relative c {
 
   \sbreak
   \repeat volta 2 {
-    df,4 f c' ef | 
-    d c bf af |
-    g bf af c, |
-    df af' f c' |
-    %\cbreak
-    bf af ef df |
-    af' f bf g |
-    c af f df  |
-    c df bf' af |
-    g ef c ef |
-    %\cbreak
-    f bf f ef |
-    f c df f |
-    c df ef e
+    r1 | r1 | r1 | r1 |
+    r1 | r1 | r1 | r1 |
+    r1 | r1 | r1 | r1 |
   }
   
   \sbreak
   \repeat volta 2 {
-    df2 c4. f8 |
+    df,2 c4. f8 |
     r1 |
     r4 df8 r8 c4. f8 |
   
     r1 |
-    ef2\3 d4.\3 af8 | 
+    \cbreak ef2\3 d4.\3 af8 | 
     r1 | 
     r4 df8 r8 c4. f8 |
-    \cbreak
     r1 |
    
-    r4 c2 c4 ~ | c4 df2 df4 | af'2 f2 |  
+    \cbreak r4 c2 c4 ~ | c4 df2 df4 | af'2 f2 |  
     r1 |
   
     ef4 g bf c | 
@@ -118,8 +105,9 @@ my_chords = \chordmode {
     f1:min7 | gf:7.5- | f1:min7
   }
   \repeat volta 2 {
-    f1:min9 | f1:min9 | f1:min9 | f1:min9 |
-    bf1:min7 | bf1:min7 | f:min9 | f:min9 | c:min7 | bf:min7 | f:min9 | f:min9 |
+    f1:min7 | f1:min7 | f1:min7 | f1:min7 |
+    bf1:min7 | bf1:min7 | f:min7 | f:min7 | 
+    df:7 | c:7 | f:min7 | f:min7 |
   }
   \repeat volta 2 {
     df2:7 c4.:7 f8:min7 ~ | f1:min7 ~ |
