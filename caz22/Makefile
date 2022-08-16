@@ -1,16 +1,20 @@
-all: \
-  working_my_way_spinners_bass \
-  working_my_way_spinners_guitar \
-  working_my_way_spinners_guitar_excerpt \
-  just_what_i_needed_bass \
-  dancing_queen_bass \
-  dancing_queen_guitar \
-  ill_take_you_there_bass \
-  here_comes_the_rain_again_bass \
-  handle_with_care_slide_solo \
-  so_very_hard_to_go_bass \
-  as_always_harris_guitar \
-  as_always_harris_bass
+ALL:=
+ALL+=working_my_way_spinners_bass
+ALL+=working_my_way_spinners_guitar
+ALL+=working_my_way_spinners_guitar_excerpt
+ALL+=just_what_i_needed_bass
+ALL+=dancing_queen_bass
+ALL+=dancing_queen_guitar
+ALL+=ill_take_you_there_bass
+ALL+=here_comes_the_rain_again_bass
+ALL+=handle_with_care_slide_solo
+ALL+=so_very_hard_to_go_bass
+ALL+=as_always_harris_guitar
+ALL+=as_always_harris_bass
+ALL+=clarences_place_bass
+ALL+=clarences_place_keys
+
+all: $(ALL)
 .PHONY: all
 
 working_my_way_spinners_bass: \
@@ -72,6 +76,16 @@ as_always_harris_bass: \
   as_always_harris_bass.pdf as_always_harris_bass.midi \
   as_always_harris_bass.wav as_always_harris_bass.mp3
 .PHONY: as_always_harris_bass
+
+clarences_place_bass: \
+  clarences_place_bass.pdf clarences_place_bass.midi \
+  clarences_place_bass.wav clarences_place_bass.mp3
+.PHONY: clarences_place_bass
+
+clarences_place_keys: \
+  clarences_place_keys.pdf clarences_place_keys.midi \
+  clarences_place_keys.wav clarences_place_keys.mp3
+.PHONY: clarences_place_keys
 
 clean:
 	rm -f *.pdf *.midi *.wav *.mp3
