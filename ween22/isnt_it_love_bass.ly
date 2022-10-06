@@ -2,38 +2,8 @@
 
 \version "2.22.1"
 \include "english.ly"
+\include "../lib/click.ly"
 
-
-clickTrack = #(define-music-function (beat meter)
-  ((ly:duration? #f) fraction?)
-  (let* ((beat (if (ly:duration? beat) beat
-                 (make-duration-of-length
-                   (ly:make-moment (/ 1 (cdr meter))))))
-         (meter-moment (ly:make-moment (/ (car meter) (cdr meter))))
-         (beat-moment (ly:duration-length beat))
-         (beat-count (floor (ly:moment-main
-           (ly:moment-div meter-moment beat-moment))))
-         (final-moment (ly:moment-mod meter-moment beat-moment))
-         (final-duration (make-duration-of-length final-moment))
-         (needs-final? (ly:moment<? (ly:make-moment 0) final-moment)))
-    (make-sequential-music
-      (map (lambda (n)
-        (cond
-          ((eqv? 0 n) #{ \drummode { wbh $beat \ff } #})
-          ((eqv? beat-count n) #{ \drummode { r $final-duration } #})
-          (else #{ \drummode { wbl $beat \pp } #})))
-        (iota (if needs-final? (1+ beat-count) beat-count))))))
-
-clickTrackDuring = #(define-music-function (beat meter music)
-  ((ly:duration? #f) fraction? ly:music?)
-  (let* ((music-length (ly:music-length music))
-         (meter-moment (ly:make-moment (/ (car meter) (cdr meter))))
-         (repeat-count (floor (ly:moment-main
-           (ly:moment-div music-length meter-moment)))))
-  (if (ly:duration? beat)
-    #{ \repeat unfold $repeat-count \clickTrack $beat $meter #}
-   #{ \repeat unfold $repeat-count \clickTrack $meter #})))
-				  
 
 \header {
   piece = \markup { \fontsize #4 \bold "Isn't It Love?" }
@@ -65,8 +35,8 @@ my_notes = \relative c {
   \clef "bass_8"
   \key bf \major
   
-  %R1*13 |
-  r2. \afterGrace bf4\3 \glissando { \hideNotes bf,8 \unHideNotes } \bar "||"
+  R1*13 |
+  \mark \markup { \small \italic "Doesn't this have a name?"}  r2. \afterGrace bf4\3 \glissando { \hideNotes bf,8 \unHideNotes } \bar "||"
   \sbreak
   \xNote bf4 r8 bf16 bf d8 f\3 a g | 
   r4 r8 g16 g f8\3 d bf d |
