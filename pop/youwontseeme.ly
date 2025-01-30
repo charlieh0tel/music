@@ -19,8 +19,8 @@
 }
 
 global = {
-  % \tempo "" 4 = xx
-  % \time 4/4
+  \tempo "" 4 = 116
+  \time 4/4
   % \compressFullBarRests
   % \override MultiMeasureRest.expand-limit = #2
 }
