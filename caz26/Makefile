@@ -11,7 +11,7 @@ all: $(PDFS)
 # defined in the score.
 %.pdf: %.mscz
 	printf '[{"in": "%s", "out": ["%s", ["%s-", ".pdf"]]}]\n' "$<" "$@" "$*" > "$*.json"
-	$(MSCORE) -j "$*.json"
+	$(MSCORE) -f -j "$*.json"
 	rm -f "$*.json"
 
 clean:
